@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.container {
+  color: blue;
+}
+
+html {
+  background-color: #dcdcdc;
+  min-width: 400px;
+  min-height: 600px;
+}
+body {
+  min-height: 600px;
+  margin: 4% 4% 4% 4%;
+  background-color: white;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 5px 5px 5px 5px;
+  line-height: 40px;
+  color: #000 !important;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+}
+.container {
+  color: #080808;
+}
+.mat-tab-nav-bar-cust{
+  background-color:rgba(247, 234, 234, 0.533);
+  }
+  .mat-tab-link-cust {
+      line-height: 10px;
+      color:blue;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      vertical-align: center;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 14px;
+      font-style: normal;
+      font-variant: normal;
+      margin:0px;
+      padding:0px;
+  }
+  ul {
+    list-style-type: none;}
+    li:before{
+        content: "-      ";
+    }
+

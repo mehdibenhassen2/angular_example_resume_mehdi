@@ -1,0 +1,76 @@
+<p>
+    An electrical substation presents a high risk of electrocution to animals (e.g. birds and reptiles) that can damage
+    electrical components. To reduce this risk, the best solution is to insulate all connections, in particular those
+    located on top of insulators, with precisely fitted covers. In any substation, each insulator can have a different
+    size (radius) and form (number of rings), so each cover must be custom designed. In order to design these covers,
+    this study focuses on the automatic detection of insulators and the extraction of their position and morphological
+    parameters using laser scanner data.
+</p>
+<div>
+<img src='../../../../../assets/project/university of calgary/image1.jpeg'>
+<img src='../../../../../assets/project/university of calgary/image2.jpeg'>
+<img src='../../../../../assets/project/university of calgary/image3.png'>
+<img src='../../../../../assets/project/university of calgary/image4.png'>
+</div>
+<p>To detect the insulators , four steps are required: data collection and registration of the point cloud acquired from
+    multiple stations; data cleaning; cylinder detection and insulator detection. A terrestrial laser scanner "Leica HDS
+    6100" was used to collect data from an electrical substation located in Airdrie, Alberta Canada. The substation had
+    to be scanned from seven different locations. </p>
+<div>
+    <strong>Architecture of software:</strong>
+</div>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image5.png'>
+</div>
+<p>To develop this software we used:</p>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image6.png'>
+</div>
+<div>
+    <strong>Graphical interface of the software:</strong>
+    <p>The laser scanner software has many components. The data can be displayed and manipulated in three zoom in three
+        different windows: works view, full view and zoom view.</p>
+</div>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image7.png'>
+</div>
+<div><strong>Import laser scanner data:</strong></div>
+<div class='center_image'>
+    <img src='../../../../../assets/project/university of calgary/image8.png'>
+</div>
+<div><strong>Layers Tree and Toolbars :</strong></div>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image9.png'>
+</div>
+<div><strong>Remove the ground :</strong></div>
+<div class='center_image'>
+    <img src='../../../../../assets/project/university of calgary/image10.png'>
+</div>
+<div><strong>Crop data:</strong></div>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image11.png'>
+</div>
+<div>
+    <strong>
+        Noise filter:
+    </strong>
+</div>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image12.png'>
+</div>
+<div>
+    <strong>Calculation of the curvature: </strong>
+    <p>Calculated of curvature at every point and display points based on the value of curvature. The surface of
+        insulator is curve. Then, the cylinder is considered as an insulator if it has a pattern of high level of
+        curvature.</p>
+</div>
+<div class='center_image'>
+    <img class='img_small' src='../../../../../assets/project/university of calgary/image13.png'>
+</div>
+<div>
+    <strong>Extract insulator based on the curvature</strong>
+    <p>The insulator have a highest curvature value (>0.19). </p>
+</div>
+<div class='center_image'>
+    <img class='img_very_small' src='../../../../../assets/project/university of calgary/image14.png'>
+</div>

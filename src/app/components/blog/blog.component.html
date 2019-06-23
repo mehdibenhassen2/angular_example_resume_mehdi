@@ -1,0 +1,35 @@
+<div class='data_bloc' *ngFor='let data of blocData; let i=index'>
+  <div class="container-fluid title_row">
+    <div class='row'>
+      <div class="blog-title col-sm-8 col-md-8 col-lg-8"> {{data.title}}</div>
+      <div class='col-sm-4 col-md-4 col-lg-4'>
+        <button id="{{ 'button_label' + i }}" class='btn-read-more' (click)='readmore(i)'>Read More</button>
+      </div>
+    </div>
+
+  </div>
+  <div class='blog-place'> {{data.place}}</div>
+  <div class='blog-date'> {{data.date}}</div>
+  <div class="container-fluid" *ngIf='blocData[i].visibility==true'>
+    <div class="row">
+      <div>{{data.text}}</div>
+    </div>
+    <div class="row">
+      <div *ngFor='let image of (data.imageSet); let j= index'>
+        <img class='image-extended' src="{{image}}">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid" *ngIf='blocData[i].visibility==false'>
+    <div class="row">
+      <div class="col-sm-9 col-md-9 col-lg-9">{{data.text}}</div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <img class='image-collapsed' src="{{data.imageSet[0]}}">
+      </div>
+    </div>
+  </div>
+
+</div>

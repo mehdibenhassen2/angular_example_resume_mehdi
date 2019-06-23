@@ -1,0 +1,81 @@
+// responsive : when the size is less then 900 (ipad), hide the title label in the nav bar
+.active_nav{
+    background-color: red;
+}
+
+.profile_photo {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.ali-right{
+    text-align: right;
+
+}
+.head_page{
+    margin-top: 20px;
+    line-height: 15px;
+    margin-bottom: 20px;
+
+}
+.title_row{
+    margin-bottom: 10px;
+}
+.nav-bar-cust{
+background-color: #8881ee;
+color: white;
+padding-bottom: 0px;
+padding-top:0px;
+
+}
+.nav-bar-cust  a {
+    color: white;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-top:0px;
+
+}
+
+.icons-param-white{
+    color: white;
+    margin:0;
+    margin-right: 5px;
+    padding:0;
+    font-size: 10px;
+}
+
+.title_style{
+    font-family: 'Garamond Nova Soft', 'Helvetica Neue', sans-serif;
+    font-family: Garamond;
+    font-size: 24px;
+    line-height: 23px;
+
+}
+.under-title{
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+}
+// only for the menu code in the nav bar
+.right_in_nav{
+float: right;
+}
+
+@media (max-width: 900px) { 
+
+    .label_navbar {
+      height   : 1px;
+      width    : 1px;
+      position : absolute;
+      overflow : hidden;
+      top      : -1000px; 
+    }
+    .icons-param-white{
+        color: white;
+        margin:0;
+        margin-right: 5px;
+        padding:0;
+        font-size: 20px;
+    }
+  }

@@ -1,0 +1,114 @@
+.total {
+    background-color: beige;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top:20px;
+  }
+  .small-size{
+    font-size: 15px;
+  }
+
+  .role {
+    font-size: 17px;
+    background-color: burlywood;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .company_name{
+    font-style: italic;
+    font-size: 12px;
+  }
+    .sizelogo{
+      height: 30px;
+    }
+  
+  
+  .line-height{
+    line-height: 25px;
+  }
+  .with_border{
+  border-left: 1px solid rgb(88, 87, 87);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);}
+  .without_border{
+    border-left: none;
+    box-shadow: none;
+  }
+  
+  .projectTitle {
+    font-size: 12px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+  }
+  .details{
+    background-color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 11px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  
+  }
+  .full{
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  
+  .button_set {
+    position: sticky;
+  margin:5px 5px;
+  
+  bottom: 20px;
+  
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.6);
+  
+  
+  }
+  
+  
+  
+  
+  
+  .button {
+  background-color:#b08ffd;
+  font-family: 'Open Sans', sans-serif;
+  font-size:12px;
+  text-decoration:none;
+  color:#fff;
+  padding:5px 20px 5px 20px;
+  
+  border-radius: 20px;
+  line-height: 15px;
+  position: relative;
+  margin-right:  16px;
+  
+  }
+  
+  .for_cursor{
+  cursor: hand;
+  }
+  
+  .not_cursor{
+  cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .alg-right{
+    text-align: right;
+  }
+  
+  

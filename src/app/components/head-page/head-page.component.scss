@@ -1,0 +1,47 @@
+
+.profile_photo {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.ali-right{
+    text-align: right;
+
+}
+.icons-param{
+    color:#8881ee;
+    margin:0;
+    padding:0;
+    margin-right: 10px;
+    font-size: 20px;
+    }
+.head_page{
+    margin-top: 20px;
+    line-height: 15px;
+    margin-bottom: 20px;
+
+}
+.title_row{
+    margin-bottom: 10px;
+}
+
+
+
+
+.title_style{
+    font-family: 'Garamond Nova Soft', 'Helvetica Neue', sans-serif;
+    font-family: Garamond;
+    font-size: 24px;
+    line-height: 23px;
+
+}
+.under-title{
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+}
+// only for the menu code in the nav bar
+.right_in_nav{
+float: right;
+}

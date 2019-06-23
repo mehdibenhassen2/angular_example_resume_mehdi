@@ -17,6 +17,17 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@imagepath/*": [
+        "../../../src/assets/*"
+      ],
+      "@components/*": [
+        "src/app/components/*"
+      ],
+      "@listOfProjects/*": [
+        "src/app/components/professional-experience/list-of-projects/*"
+      ]
+    }
   }
 }

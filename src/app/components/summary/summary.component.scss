@@ -1,0 +1,21 @@
+ul {
+  list-style-type: none;
+}
+li:before {
+  content: "- ";
+}
+#espace_map {
+  height: 500px;
+  width: 500px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+}
+.title-image {
+  text-align: center;
+}
