@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ImgExternalUrlService} from '../../services/img-external-url.service';
-
+import { ImgExternalUrlService } from '../../services/img-external-url.service';
+import { BannerComponent } from '@components/banner/banner.component';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',

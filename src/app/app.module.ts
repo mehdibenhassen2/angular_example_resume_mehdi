@@ -36,6 +36,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CodeComponent } from './components/code/code.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeadPageComponent } from './components/head-page/head-page.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { HeadPageComponent } from './components/head-page/head-page.component';
     CodeComponent,
     NavBarComponent,
     HeadPageComponent,
+    BannerComponent,
     
     
   ],
