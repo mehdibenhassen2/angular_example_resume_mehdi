@@ -30,6 +30,8 @@ import { ScotiabankProject2Component } from './components/professional-experienc
 import { GeomaticaProject1Component } from './components/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
 import { GeoenvironementProject1Component } from './components/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
 
+
+import { WINDOW_PROVIDERS } from './services/window-scroll.service';
 import {MatCardModule} from '@angular/material/card';
 import { CodeComponent } from './components/code/code.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -75,7 +77,7 @@ import { HeadPageComponent } from './components/head-page/head-page.component';
     MatIconModule,
     MatCardModule,
   ],
-  providers: [],
+  providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
