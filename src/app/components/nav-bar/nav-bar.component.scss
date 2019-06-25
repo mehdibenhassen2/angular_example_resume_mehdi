@@ -37,6 +37,30 @@ padding-top:0px;
 
 }
 
+
+
+#navbarNavAltMarkup {
+    .navbar-nav {
+        border-bottom: none;
+      &:hover {
+        background-color: #3399FF;
+
+
+        cursor:pointer;
+      }
+      &.active {
+        background-color: #912CEE;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
 .icons-param-white{
     color: white;
     margin:0;

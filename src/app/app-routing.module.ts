@@ -25,14 +25,14 @@ import { GeomaticaProject1Component } from '@listOfProjects/geomatica-project1/g
 import { GeoenvironementProject1Component } from '@listOfProjects/geoenvironement-project1/geoenvironement-project1.component';
 import {CodeComponent} from '@components/code/code.component'
 const routes: Routes = [
-  { path: '', component: SummaryComponent },
+  { path: '', redirectTo: 'Summary', pathMatch: 'full' },
   { path: 'Summary', component: SummaryComponent },
   { path: 'home', component: SummaryComponent },
   {
     path: 'ProfessionalExperience', component: ProfessionalExperienceComponent,
 
     children: [
-      { path: '', component: TasksComponent },
+      { path: '', redirectTo:'Tasks', pathMatch: 'full'},
       { path: 'Tasks', component: TasksComponent },
       { path: 'ListOfProject', component: ListOfProjectsComponent },
       { path: 'training', component: TrainingComponent },
@@ -49,7 +49,7 @@ const routes: Routes = [
     path: 'Education', component: EducationComponent,
     children: [
       // education
-      { path: '', component: DiplomaComponent },
+      { path: '', redirectTo: 'Diploma', pathMatch: 'full' },
       { path: 'Diploma', component: DiplomaComponent },
       { path: 'Publication', component: PublicationComponent },
       { path: 'Conference', component: ConferenceComponent },
