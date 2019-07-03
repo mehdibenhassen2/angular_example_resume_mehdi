@@ -1,53 +1,80 @@
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm nav-bar-cust">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav active">
-          <a class="nav-item nav-link " routerLink="/Summary">
-              <mat-icon [inline]="true" class='icons-param-white'>fingerprint</mat-icon>
-              <span class='label_navbar'>Summary </span>
-          </a>
-      </div>
-      <div class="navbar-nav">
-          <a class="nav-item nav-link " routerLink="/ProfessionalExperience">
-              <mat-icon [inline]="true" class='icons-param-white'>description</mat-icon>
-              <span class='label_navbar'>Professional Experience</span>
-          </a>
-      </div>
-      <div class="navbar-nav">
-          <a class="nav-item nav-link " routerLink="/SoftwareSkills">
-              <mat-icon [inline]="true" class='icons-param-white'>important_devices</mat-icon>
-              <span class='label_navbar'>Software Skills</span>
-          </a>
-      </div>
-      <div class="navbar-nav">
-          <a class="nav-item nav-link " routerLink="/Education">
-              <mat-icon [inline]="true" class='icons-param-white'>school</mat-icon>
-              <span class='label_navbar'>Education </span>
-          </a>
-      </div>
-      <div class="navbar-nav">
-          <a class="nav-item nav-link " routerLink="/Blog">
-              <mat-icon [inline]="true" class='icons-param-white'>supervisor_account</mat-icon>
-              <span class='label_navbar'>Blog </span>
-          </a>
-      </div>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup2">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav active">
+            <a class="nav-item nav-link " routerLink="/Summary">
+                <mat-icon [inline]="true" class='icons-param-white'>assignment_ind</mat-icon>
+                <span class='label_navbar'>Summary </span>
+            </a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " routerLink="/ProfessionalExperience">
+                <mat-icon [inline]="true" class='icons-param-white'>description</mat-icon>
+                <span class='label_navbar'>Professional Experience</span>
+            </a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " routerLink="/SoftwareSkills">
+                <mat-icon [inline]="true" class='icons-param-white'>important_devices</mat-icon>
+                <span class='label_navbar'>Software Skills</span>
+            </a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " routerLink="/Education">
+                <mat-icon [inline]="true" class='icons-param-white'>school</mat-icon>
+                <span class='label_navbar'>Education </span>
+            </a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " routerLink="/Blog">
+                <mat-icon [inline]="true" class='icons-param-white'>supervisor_account</mat-icon>
+                <span class='label_navbar'>Blog </span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" >
 
-      <div class="navbar-nav">
-          <a class="nav-item nav-link " routerLink="/Contact">
-              <mat-icon [inline]="true" class='icons-param-white'> contact_mail</mat-icon>
-              <span class='label_navbar'>Contact </span>
-          </a>
-      </div>
-  </div>
-      <div class="navbar-nav">
-          <a class="nav-item nav-link " routerLink="/Code">
-              <mat-icon [inline]="true" class='icons-param-white'> code</mat-icon>
-              <span class='label_navbar'>Code </span>
-          </a>
-      </div>
-  </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link " routerLink="/Contact">
+                    <mat-icon [inline]="true" class='icons-param-white'> email</mat-icon>
+                    <span class='label_navbar'>Contact </span>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " routerLink="/Code">
+                <mat-icon [inline]="true" class='icons-param-white'> code</mat-icon>
+                <span class='label_navbar'>Code </span>
+            </a>
+        </div>
+    </div>
 </nav>
+<!--vertical menu bar-->
+
+<div class="menu2"  [ngClass]=" ((offset > 200)? 'menu2Displayed': 'menu2NotDisplayed')">
+    <div class="vertical-menu" id='navbarVertical'>
+            <a class="nav-item nav-link vertical_btn activeVertical" routerLink="/Summary">
+                <mat-icon [inline]="true" class='icons-param-white'>assignment_ind</mat-icon>
+            </a>
+            <a class="nav-item nav-link vertical_btn" routerLink="/ProfessionalExperience">
+                <mat-icon [inline]="true" class='icons-param-white'>description</mat-icon>
+            </a>
+            <a class="nav-item nav-link vertical_btn" routerLink="/SoftwareSkills">
+                <mat-icon [inline]="true" class='icons-param-white'>important_devices</mat-icon>
+            </a>
+            <a class="nav-item nav-link vertical_btn" routerLink="/Education">
+                <mat-icon [inline]="true" class='icons-param-white'>school</mat-icon>
+            </a>
+            <a class="nav-item nav-link vertical_btn" routerLink="/Blog">
+                <mat-icon [inline]="true" class='icons-param-white'>supervisor_account</mat-icon>
+            </a>
+            <a class="nav-item nav-link vertical_btn" routerLink="/Contact">
+                <mat-icon [inline]="true" class='icons-param-white'> email</mat-icon>
+            </a>
+            <a class="adiv6 nav-item nav-link vertical_btn" routerLink="/Code">
+                <mat-icon [inline]="true" class='icons-param-white'> code</mat-icon>
+        </a>
+    </div>
+</div>

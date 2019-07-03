@@ -194,7 +194,7 @@ export class DataCompanyService {
           {
             projectIndex: '1',
             type: 'Web App',
-            projectName: 'Build four web applicaiton (for advisor, distributor, carrier, and policy owner) using AngularJS, html, CSS, JavaScript, Angular',
+            projectName: 'Build four web applicaitons (for advisor, distributor, carrier, and policy owner) using Angular, html, CSS, JavaScript',
             projectdetails: {
               data: InsuredConnectProject1Component,
               visible: false,

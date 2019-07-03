@@ -7,7 +7,7 @@ import {ImgExternalUrlService} from '../../../../services/img-external-url.servi
   styleUrls: ['./scotiabank-project1.component.scss']
 })
 export class ScotiabankProject1Component implements OnInit {
-  // pathimage = '../../../../../assets/project/scotiabank_project1';
+   pathimage = '../../../../../assets/project/scotiabank_project1';
   constructor(public imgExternalUrlService: ImgExternalUrlService ){
   }
   ngOnInit() {

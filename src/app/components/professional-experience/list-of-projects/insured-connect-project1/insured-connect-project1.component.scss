@@ -1,6 +1,7 @@
 img {
-    max-width: 50%;
-    margin-bottom: 10px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 3px;
   }
   .title2{
       margin-top: 10px;
@@ -10,11 +11,11 @@ img {
     width: 70%;
     padding-bottom: 40px;
   }
-  .img_very_small {
-    width: 40%;
-    padding-bottom: 40px;
-  }
+
   .center_image {
     margin: auto;
     text-align: center;
+  }
+  p{
+    margin: 0px;
   }
