@@ -45,6 +45,12 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@angular/fire/database';
+import { MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule } from '@angular/material';
+
+// import interface
+import { DialogData } from './interfaces/dialog-data';
+import { DialogComponent} from '@components/dialog/dialog.component';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 
 @NgModule({
@@ -72,7 +78,8 @@ import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@
     CodeComponent,
     NavBarComponent,
     HeadPageComponent,
-    BannerComponent
+    BannerComponent,
+    DialogComponent
 
   ],
   imports: [
@@ -91,10 +98,23 @@ import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@
     AngularFireAuthModule, // Only required for auth features,
     AngularFireStorageModule, // Only required for storage features
     ReactiveFormsModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule,
+    
 
   ],
-  providers: [WINDOW_PROVIDERS],
-  bootstrap: [AppComponent]
+  exports:[
+    // tslint:disable-next-line:no-unused-expression
+
+     MatFormFieldModule,
+      MatButtonModule, 
+      MatInputModule,DialogComponent],
+      
+  providers: [WINDOW_PROVIDERS,
+    { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: [] },],
+
+  bootstrap: [AppComponent, DialogComponent],
+
 })
 export class AppModule { }

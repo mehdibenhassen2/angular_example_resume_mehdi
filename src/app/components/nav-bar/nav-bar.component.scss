@@ -147,4 +147,8 @@ float: right;
   opacity: 0;
   
   }
+  .collapse:not(.show){
+    display: flex!important;
+    flex-basis: auto;
+  }
   
