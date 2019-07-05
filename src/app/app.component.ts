@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogData } from './interfaces/dialog-data';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { MatDialogConfig } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -10,24 +11,15 @@ import { DialogComponent } from './components/dialog/dialog.component';
 })
 export class AppComponent implements OnInit {
   title = 'resumeMehdiWebFE';
-  name: string;
-  user: string;
-  constructor(private matDialog: MatDialog,
-              private dialogRef: MatDialogRef<DialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: DialogData
+  constructor(private matDialog: MatDialog) { }
 
-  ) { }
 
-   
   openDialog(): void {
-    this.dialogRef = this.matDialog.open(DialogComponent, {
-      width: '50%',
-      data: {user: this.user, name: this.name}
-    });
-
-
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = false;
+    this.matDialog.open(DialogComponent, dialogConfig);
   }
-
   ngOnInit() {
     this.openDialog();
   }

@@ -36,6 +36,7 @@ import { CodeComponent } from './components/code/code.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeadPageComponent } from './components/head-page/head-page.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { FormGroup } from '@angular/forms';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -51,7 +52,7 @@ import { MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule } 
 import { DialogData } from './interfaces/dialog-data';
 import { DialogComponent} from '@components/dialog/dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-
+import { FormBuilder } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
     HttpClientModule,
     NgbModule,
     FormsModule, // to add email form
+
     MatTabsModule, //to add tab from material agular
     BrowserAnimationsModule, //for animation tab
     AngularFontAwesomeModule,
@@ -108,13 +110,13 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
      MatFormFieldModule,
       MatButtonModule, 
-      MatInputModule,DialogComponent],
+      MatInputModule],
       
   providers: [WINDOW_PROVIDERS,
     { provide: MatDialogRef, useValue: {} },
     { provide: MAT_DIALOG_DATA, useValue: [] },],
 
-  bootstrap: [AppComponent, DialogComponent],
-
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule { }

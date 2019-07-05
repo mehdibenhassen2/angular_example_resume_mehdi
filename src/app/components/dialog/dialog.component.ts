@@ -1,19 +1,23 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { DialogData } from '../../interfaces/dialog-data';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
+  constructor(private dialogRef: MatDialogRef<DialogComponent>,
+              @Inject(MAT_DIALOG_DATA) data) {
 
-  constructor(public dialogRef: MatDialogRef<DialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+  }
 
   ngOnInit() {
   }
-  onNoClick(): void {
-     this.dialogRef.afterClosed();
+
+
+  close() {
+    this.dialogRef.close();
   }
 }
