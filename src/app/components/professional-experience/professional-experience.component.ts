@@ -19,11 +19,12 @@ export class ProfessionalExperienceComponent implements OnInit {
           label: 'List Of Project',
           link: './ListOfProject',
           index: 1
-      },  {
+      }
+      /*,  {
       label: 'Training',
       link: './training',
       index: 2
-  }
+  }*/
   ];
    }
 
