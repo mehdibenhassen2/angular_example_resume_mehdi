@@ -47,9 +47,10 @@
         </div>
     </div>
 </nav>
+
 <!--vertical menu bar-->
 
-<div class="menu2"  [ngClass]=" ((offset > 200)? 'menu2Displayed': 'menu2NotDisplayed')">
+<div [ngClass]=" ((offset > 200)? 'vertical-menu_displayed': 'vertical-menu_hiddeed')">
     <div class="vertical-menu" id='navbarVertical'>
             <a class="nav-item nav-link vertical_btn activeVertical" routerLink="/Summary">
                 <mat-icon [inline]="true" class='icons-param-white'>assignment_ind</mat-icon>

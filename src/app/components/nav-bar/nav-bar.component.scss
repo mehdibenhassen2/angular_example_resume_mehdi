@@ -1,154 +1,102 @@
-// responsive : when the size is less then 900 (ipad), hide the title label in the nav bar
-.active_nav{
-    background-color: red;
-}
+// in this page, we used two navigation bar: one horizontal and one vertical.
+// the horizontal bar is displayed only when the user scroll down
 
-.profile_photo {
-    object-fit: cover;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-}
-.ali-right{
+// 1- horizontal navigation bar-------------------------------------------
+
+.nav-bar-cust {
+  background-color: #8881ee;
+  padding: 0;
+  & a {
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    line-height: 20px;
     text-align: right;
 
+  }
 }
-.head_page{
-    margin-top: 20px;
-    line-height: 15px;
-    margin-bottom: 20px;
-
-}
-.title_row{
-    margin-bottom: 10px;
-}
-.nav-bar-cust{
-background-color: #8881ee;
-color: white;
-padding-bottom: 0px;
-padding-top:0px;
-
-}
-.nav-bar-cust  a {
-    color: white;
-    padding-right: 20px;
-    padding-bottom: 0px;
-    padding-top:0px;
-
-}
-
-
 
 #navbarNavAltMarkup {
-    .navbar-nav {
-        border-bottom: none;
-      &:hover {
-        background-color: #3399FF;
-
-
-        cursor:pointer;
-      }
-      &.active {
-        background-color: #912CEE;
-      }
+  .navbar-nav {
+    border-bottom: none;
+    &:hover {
+      background-color: #3399ff;
+      cursor: pointer;
+    }
+    &.active {
+      background-color: #912cee;
     }
   }
-
-
-
-
-
-
-
-
-.icons-param-white{
-    color: white;
-    margin:0;
-    margin-right: 5px;
-    padding:0;
-    font-size: 10px;
 }
 
-.title_style{
-    font-family: 'Garamond Nova Soft', 'Helvetica Neue', sans-serif;
-    font-family: Garamond;
-    font-size: 24px;
-    line-height: 23px;
-
+.icons-param-white {
+  color: white;
+  padding-right: 10px;
+  font-size: 10px;
 }
-.under-title{
-    font-size: 14px;
-    font-style: italic;
-    line-height: 20px;
+
+.title_style {
+  font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
+  font-family: Garamond;
+  font-size: 24px;
+  line-height: 23px;
+}
+.under-title {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
+}
+.collapse:not(.show) {
+  display: flex !important;
 }
 // only for the menu code in the nav bar
-.right_in_nav{
-float: right;
+.right_in_nav {
+  float: right;
+}
+// responsive : when the size is less then 900 (ipad), hide the title label in the nav bar
+
+@media (max-width: 900px) {
+  .label_navbar {
+    position: absolute;
+    overflow: hidden;
+    top: -1000px;
+  }
+  .icons-param-white {
+    display: flex;
+    height: 100vh;
+  }
 }
 
-@media (max-width: 900px) { 
+// 2- vertical navigation bar-------------------------------------------
 
-    .label_navbar {
-      height   : 1px;
-      width    : 1px;
-      position : absolute;
-      overflow : hidden;
-      top      : -1000px; 
-    }
-    .icons-param-white{
-        color: white;
-        margin:0;
-        margin-right: 5px;
-        padding:0;
-        font-size: 20px;
-    }
+.vertical-menu {
+  line-height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  top: 25%;
+  left: 0;
+
+  &_displayed {
+    opacity: 1;
+  }
+  &_hiddeed {
+    opacity: 0;
   }
 
-
-  // only for the menu code in the nav bar
-.menu2 {
-    position: fixed;
-    top: 25%;
-    left: -10px;
-  }
-  
-  // vertical tools bar
-  .vertical-menu {
-    line-height: 20px;
-    border-radius: 50%;
-  }
-  
-  .vertical-menu a {
+  & a {
     background-color: #8881ee;
     color: black;
-  
     margin: 5px;
     height: 40px;
     border-radius: 50%;
+    &:hover {
+      background-color: #3399ff;
+    }
+    &.activeVertical {
+      background-color: #912cee;
+    }
   }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc;
-  }
-  
-  .vertical-menu a.activeVertical {
-    background-color: #912CEE;
-
-  }
-  .icons-param-white {
-      padding: 0px;
-  }
+}
 
 
-  .menu2Displayed{
-    opacity: 1;
-  }
-  .menu2NotDisplayed{
-  opacity: 0;
-  
-  }
-  .collapse:not(.show){
-    display: flex!important;
-    flex-basis: auto;
-  }
-  

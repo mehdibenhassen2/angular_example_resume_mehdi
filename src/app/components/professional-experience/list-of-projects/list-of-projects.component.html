@@ -1,6 +1,17 @@
+<div class='content'>
+  <div class='row'>
+  <div class='col-sm-12 col-md-8 col-lg-8 information'>
+      <i class="fas fa-info-circle information_icon"></i> &nbsp;  Please use &nbsp; <i  class="fas fa-angle-up information_icon"></i>  &nbsp;  and  &nbsp; <i  class="fas fa-angle-down information_icon"></i>   &nbsp; in the right side to extend and collapse any project details.
+
+</div>
+<div class='col-sm-12 col-md-4 col-lg-4'>
+
 <div class="button_set">
   <button class="button" (click)="dataCompanyService.showAll()">Expand All</button>
   <button class="button" (click)="dataCompanyService.hideAll()">Collapse All</button>
+</div>
+</div>
+</div>
 </div>
 <div class="total" *ngFor="let project of (projectList); let i = index" >
   <div class="full ">
