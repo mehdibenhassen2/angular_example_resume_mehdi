@@ -480,7 +480,7 @@ export class DataCompanyService {
             type: 'GIS app',
             projectName: 'Analysis of the evolution of the coastline north of Sousse (Tunisia).',
             projectdetails: {
-              data: 'data',
+              data: '',
               visible: false,
             },
           }, {

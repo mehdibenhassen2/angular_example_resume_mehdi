@@ -1,4 +1,5 @@
 
+@import 'colors';
 .profile_photo {
     object-fit: cover;
     border-radius: 50%;
@@ -10,7 +11,7 @@
 
 }
 .icons-param{
-    color:#8881ee;
+    color:$base_blue;
     margin:0;
     padding:0;
     margin-right: 10px;

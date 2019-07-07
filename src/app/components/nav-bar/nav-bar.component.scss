@@ -1,10 +1,12 @@
+
+@import 'colors';
 // in this page, we used two navigation bar: one horizontal and one vertical.
 // the horizontal bar is displayed only when the user scroll down
 
 // 1- horizontal navigation bar-------------------------------------------
 
 .nav-bar-cust {
-  background-color: #8881ee;
+  background-color: $base_blue;
   padding: 0;
   & a {
     color: white;
@@ -97,7 +99,7 @@
   }
 
   & a {
-    background-color: #8881ee;
+    background-color: $base_blue;
     color: black;
     margin: 5px;
     height: 40px;

@@ -1,18 +1,19 @@
-.blog-title {
+@import "colors";
+@import 'inheritance';
+.blog_title {
   margin-top: 10px;
   margin-bottom: 0px;
   line-height: 20px;
   font-weight: bold;
 }
-.blog-date {
+.blog_date {
   width: 400px;
   font-size: 10px;
   font-weight: 100;
-  margin-top: 0px;
+  margin: 0px 10px;
   line-height: 10px;
-  padding-left: 10px;
 }
-.blog-place {
+.blog_place {
   width: 400px;
   font-size: 12px;
   font-weight: 100;
@@ -20,35 +21,20 @@
   line-height: 15px;
   padding-left: 10px;
 }
-.blog-text {
+.blog_text {
   padding-left: 10px;
 }
-.blog-img {
-  width: 400px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 300px;
+.blog_img {
   margin-right: 10px;
   text-align: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 10px auto;
   width: 50%;
 }
-.btn-read-more {
-  background-color: #b08ffd;
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 20px;
-  line-height: 20px;
-  position: relative;
-
-  float:right;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin:10px;
+.btn_read_more {
+  @extend %btn_standard;
+  float: right;
+  margin: 10px;
 }
 .data_bloc {
   border: solid 1px gray;
@@ -56,45 +42,33 @@
   margin-bottom: 10px;
   border-radius: 20px;
   padding-left: 10px;
-  background-color: beige;
+  background-color: $background_title_details;
 }
-.image-collapsed:hover {
+.image_collapsed:hover {
   opacity: 1;
 }
 
-.image-collapsed {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.image_collapsed {
   text-align: center;
-  width: 250px;
-  height: 200px;
   opacity: 0.4;
   border-radius: 50%;
-  margin:auto;
+  margin: auto;
   padding: 0px;
   width: auto;
-  height : auto;
+  height: auto;
   max-height: 100%;
   max-width: 100%;
 }
 .title_row {
-  margin: 0px;
   padding-left: 10px;
-  margin-left: -10px;
-  margin-right: -10px;
-
+  margin: 0 -10px 0 -10px;
   border-radius: 20px;
 }
-.image-extended {
-  width: 400px;
+.image_extended {
   max-height: 500px;
-  margin-top: 10px;
-  margin-bottom: 10px;
   text-align: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
   box-shadow: 2px 2px 3px;
-
+  width: 50%;
+  margin: 10px auto 10px auto;
 }

@@ -10,7 +10,7 @@ export class BlogComponent implements OnInit {
   ];
 
 
-  constructor() { 
+  constructor() {
 
     this.blocData = [
       {
@@ -22,7 +22,7 @@ export class BlogComponent implements OnInit {
         visibility: false,
         imageSet: [
           '../../../assets/blog/insured1.png',
-]
+        ]
       },
       {
         id: 2,
@@ -51,72 +51,77 @@ export class BlogComponent implements OnInit {
           '../../../assets/blog/Scotiabank2/5.JPG',
           '../../../assets/blog/Scotiabank2/1.JPG']
       },
-      {      id: 4,
-      title: 'Scotiabank: Share culture',
-      place: 'Downtown Toronto - King St W- ON - Canada',
-      date: '10/31/2016',
-      text: '- Scotiabank: Time to enjoy and to share culture !',
-      visibility: false,
-      imageSet: [
-        '../../../assets/blog/Scotiabank3/3.JPG',
-        '../../../assets/blog/Scotiabank3/2.JPG',
-        '../../../assets/blog/Scotiabank3/1.JPG',
-        '../../../assets/blog/Scotiabank3/4.JPG'
-      ]
-    },
-    {      id: 5,
-      title: 'Scotiabank: 4th place top team (with business team)',
-      place: 'Downtown Toronto - King St W- ON - Canada',
-      date: '11/30/2016',
-      text: '- Scotiabank: win the reward of best of the best team 2016',
-      visibility: false,
-      imageSet: [
-        '../../../assets/blog/Scotiabank4/1.JPG',
-        '../../../assets/blog/Scotiabank4/2.JPG',
-        '../../../assets/blog/Scotiabank4/3.JPG'
+      {
+        id: 4,
+        title: 'Scotiabank: Share culture',
+        place: 'Downtown Toronto - King St W- ON - Canada',
+        date: '10/31/2016',
+        text: '- Scotiabank: Time to enjoy and to share culture !',
+        visibility: false,
+        imageSet: [
+          '../../../assets/blog/Scotiabank3/3.JPG',
+          '../../../assets/blog/Scotiabank3/2.JPG',
+          '../../../assets/blog/Scotiabank3/1.JPG',
+          '../../../assets/blog/Scotiabank3/4.JPG'
+        ]
+      },
+      {
+        id: 5,
+        title: 'Scotiabank: 4th place top team (with business team)',
+        place: 'Downtown Toronto - King St W- ON - Canada',
+        date: '11/30/2016',
+        text: '- Scotiabank: win the reward of best of the best team 2016',
+        visibility: false,
+        imageSet: [
+          '../../../assets/blog/Scotiabank4/1.JPG',
+          '../../../assets/blog/Scotiabank4/2.JPG',
+          '../../../assets/blog/Scotiabank4/3.JPG'
 
-      ]
-    },
-    {      id: 6,
-      title: 'Scotiabank: exelent environement to learn',
-      place: 'Downtown Toronto - King St W- ON - Canada',
-      date: '11/30/2016',
-      text: '- Scotiabank: win the reward of best of the best team 2016',
-      visibility: false,
-      imageSet: [
-        '../../../assets/blog/Scotiabank5/1.JPG',
-        '../../../assets/blog/Scotiabank5/2.JPG',
-        '../../../assets/blog/Scotiabank5/3.JPG'
+        ]
+      },
+      {
+        id: 6,
+        title: 'Scotiabank: exelent environement to learn',
+        place: 'Downtown Toronto - King St W- ON - Canada',
+        date: '11/30/2016',
+        text: '- Scotiabank: win the reward of best of the best team 2016',
+        visibility: false,
+        imageSet: [
+          '../../../assets/blog/Scotiabank5/1.JPG',
+          '../../../assets/blog/Scotiabank5/2.JPG',
+          '../../../assets/blog/Scotiabank5/3.JPG'
 
-      ]
-    },
-    {      id: 7,
-      title: 'Scotiabank: Meeting with business side',
-      place: 'Downtown Toronto - King St W- ON - Canada',
-      date: '03/5/2017',
-      text: '- Scotiabank: win the reward of best of the best team 2016',
-      visibility: false,
-      imageSet: [
-        '../../../assets/blog/Scotiabank6/1.JPG',
-        '../../../assets/blog/Scotiabank6/2.JPG'
-    
+        ]
+      },
+      {
+        id: 7,
+        title: 'Scotiabank: Meeting with business side',
+        place: 'Downtown Toronto - King St W- ON - Canada',
+        date: '03/5/2017',
+        text: '- Scotiabank: win the reward of best of the best team 2016',
+        visibility: false,
+        imageSet: [
+          '../../../assets/blog/Scotiabank6/1.JPG',
+          '../../../assets/blog/Scotiabank6/2.JPG'
 
-      ]
-    },
-    {      id: 8,
-      title: 'Scotiabank: Developer team',
-      place: 'Downtown Toronto - King St W- ON - Canada',
-      date: '05/20/2017',
-      text: '- Scotiabank: win the reward of best of the best team 2016',
-      visibility: false,
-      imageSet: [
-        '../../../assets/blog/Scotiabank7/1.JPG',
-        '../../../assets/blog/Scotiabank7/2.JPG',
-        '../../../assets/blog/Scotiabank7/3.JPG',
-        '../../../assets/blog/Scotiabank7/4.JPG'
 
-      ]
-    },
+        ]
+      },
+      {
+        id: 8,
+        title: 'Scotiabank: Developer team',
+        place: 'Downtown Toronto - King St W- ON - Canada',
+        date: '05/20/2017',
+        text: '- Scotiabank: win the reward of best of the best team 2016',
+        visibility: false,
+        imageSet: [
+          '../../../assets/blog/Scotiabank7/1.JPG',
+          '../../../assets/blog/Scotiabank7/2.JPG',
+          '../../../assets/blog/Scotiabank7/3.JPG',
+          '../../../assets/blog/Scotiabank7/4.JPG'
+
+        ]
+      },
 
 
 
@@ -135,7 +140,7 @@ export class BlogComponent implements OnInit {
         id: 4,
         title: 'Collect laser scanner data with the team',
         date: '12/14/2012',
-        place:'Airdrie - Alberta - Canada',
+        place: 'Airdrie - Alberta - Canada',
         text: 'A terrestrial laser scanner "Leica HDS 6100" was used to collect data from an electrical substation located in Airdrie, Alberta Canada. The substation had to be scanned from seven different locations. ',
         visibility: false,
         imageSet: [
@@ -151,11 +156,11 @@ export class BlogComponent implements OnInit {
         visibility: false,
         imageSet: [
           '../../../assets/blog/geomatica1.png',
-    ]
+        ]
       },
-  
-  
-  
+
+
+
     ];
 
   }
@@ -163,16 +168,14 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
 
   }
- readmore(i: number){
-  this.blocData[i].visibility = !this.blocData[i].visibility;
-  
-  if (this.blocData[i].visibility == true){
-  document.getElementById('button_label' + i).innerHTML = 'Read Less';
-  }
-  else{
-    document.getElementById('button_label'+ i).innerHTML = 'Read More';
+  readmore(i: number) {
+    this.blocData[i].visibility = !this.blocData[i].visibility;
+    if (this.blocData[i].visibility == true) {
+      document.getElementById('button_label' + i).innerHTML = 'Read Less';
+    } else {
+      document.getElementById('button_label' + i).innerHTML = 'Read More';
 
+    }
   }
- }
 
 }

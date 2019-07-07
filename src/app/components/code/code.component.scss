@@ -1,45 +1,46 @@
-.btn_download{
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    height: 40px;
-    border-radius: 10px;
-    display: block;
-    max-width: 300px;
-    margin: auto;
-    -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-top-colors:  #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-
+.btn_download {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  -moz-border-bottom-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+  -moz-border-top-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+  -moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+  -moz-border-right-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
 }
-a{
-    line-height: 10px;
-    color:white;
+a {
+  line-height: 10px;
+  color: white;
 }
-.btn_download:hover{
-    background-color: blue;
-}
-.icons-param-white{
-    color:white;
-    margin-right: 20px;
+.btn_download:hover {
+  background-color: blue;
 }
 
-.image_center{
-    text-align: center;
-    margin:auto;
-
-}
-.small_size{
-width: 50%;
-opacity: 0.5;
-}
-.large_size{
-    width: 80%;  
-    opacity: 0.5;
+.icons-param-white {
+  color: white;
+  margin-right: 20px;
 }
 
-.small_line_height{
-line-height: 20px;
-margin: 0px;
-padding: 0px;
+.image_center {
+  text-align: center;
+  margin: auto;
+}
+
+.small_size {
+  width: 50%;
+  opacity: 0.5;
+}
+
+.large_size {
+  width: 80%;
+  opacity: 0.5;
+}
+
+.small_line_height {
+  line-height: 20px;
+  margin: 0px;
+  padding: 0px;
 }
