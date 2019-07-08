@@ -1,14 +1,96 @@
+@import 'colors';
+.row{
+    margin: 10px 0 10px 0;
+}
 .carousel-caption {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: blue;
+    background-color: $background_title_details;
+    opacity:0.6;
     margin:0;
     padding:0px;
-    border-radius: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    bottom: 0;
+
 }
 .image_size{
     width: 100%;
     height: 250px;
 }
 .carousel {
-    margin: 10px;
+    margin:0;
+
 }
+.image_discription_list{
+    margin-left: 0px;
+    
+    padding: 5px;
+height: 250px;
+overflow-y: auto;
+background-color: $background_title_details; 
+line-height: 20px;
+
+}
+
+
+.title{
+
+    &_active{
+        font-size: 15px;
+        color: blue;
+    font-weight: bold;
+    padding: 10px 5px 0 5px;
+
+
+        &::before{
+            content: "> ";
+        }
+    }
+    &_not_active{
+        font-size: 15px;
+        color: gray;
+        font-weight: normal;
+        padding: 10px 5px 0 5px;
+
+
+
+
+    }
+}
+.sub_title{
+    
+    &_active{
+        font-size: 12px;
+        color: blue;
+        margin: 0 5px 10px 18px;
+
+
+            
+        }
+    
+    &_not_active{
+        font-size: 12px;
+        color: gray;
+        margin: 0 5px 10px 5px;
+
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $background_title_details; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $background_title; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
