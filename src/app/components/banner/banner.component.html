@@ -1,6 +1,6 @@
 <div class='content'>
   <div class='row'>
-    <div class='col-sm-12 col-md-8 col-lg-8'>
+    <div class='col-sm-12 col-md-8 col-lg-8 image_list'>
       <ngb-carousel *ngIf="images" (slide)="onSlide($event)">
         <ng-template *ngFor='let slide of images; let i=index' ngbSlide [id]="'slideId_' + i">
           <img class='image_size' [src]='slide.srcPath'>

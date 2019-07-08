@@ -1,96 +1,91 @@
-@import 'colors';
-.row{
-    margin: 10px 0 10px 0;
+@import "colors";
+.row {
+  margin: 10px 0 10px 0;
 }
 .carousel-caption {
-    color: blue;
-    background-color: $background_title_details;
-    opacity:0.6;
-    margin:0;
-    padding:0px;
-    font-size: 15px;
-    line-height: 20px;
-    bottom: 0;
-
+  color: blue;
+  background-color: $background_title_details;
+  opacity: 0.6;
+  margin: 0;
+  padding: 0px;
+  font-size: 15px;
+  line-height: 20px;
+  bottom: 0;
 }
-.image_size{
-    width: 100%;
-    height: 250px;
+.image_size {
+  width: 100%;
+  height: 250px;
 }
 .carousel {
-    margin:0;
-
+  margin: 0;
 }
-.image_discription_list{
-    margin-left: 0px;
-    
-    padding: 5px;
-height: 250px;
-overflow-y: auto;
-background-color: $background_title_details; 
-line-height: 20px;
-
+.image_list{
+    margin-top: 10px;
+}
+.image_discription_list {
+  margin-left: 0px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 250px;
+  overflow-y: auto;
+  background-color: $background_title_details;
+  line-height: 20px;
 }
 
-
-.title{
-
-    &_active{
-        font-size: 15px;
-        color: blue;
-    font-weight: bold;
+.title {
+  &_active {
+    font-size: 15px;
+    color: blue;
+    opacity: 1;
+    // font-weight: bold;
     padding: 10px 5px 0 5px;
 
+    &::before {
+      font-family: "Material Icons";
 
-        &::before{
-            content: "> ";
-        }
+      content: "keyboard_arrow_right";
     }
-    &_not_active{
-        font-size: 15px;
-        color: gray;
-        font-weight: normal;
-        padding: 10px 5px 0 5px;
-
-
-
-
-    }
+  }
+  &_not_active {
+    font-size: 15px;
+    color: blue;
+    font-weight: normal;
+    padding: 10px 5px 0 5px;
+    opacity: 0.5;
+  }
 }
-.sub_title{
-    
-    &_active{
-        font-size: 12px;
-        color: blue;
-        margin: 0 5px 10px 18px;
+.sub_title {
+  &_active {
+    font-size: 12px;
+    color: blue;
+    margin: 0 5px 10px 18px;
 
+    opacity: 1;
+  }
 
-            
-        }
-    
-    &_not_active{
-        font-size: 12px;
-        color: gray;
-        margin: 0 5px 10px 5px;
-
-    }
+  &_not_active {
+    font-size: 12px;
+    color: blue;
+    margin: 0 5px 10px 5px;
+    opacity: 0.5;
+  }
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $background_title_details; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $background_title; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background_title_details;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $background_title;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
