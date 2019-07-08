@@ -21,17 +21,13 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     // for the horizontal menu
     const header = document.getElementById('navbarNavAltMarkup');
-    // console.log(header);
-
     const btns = header.getElementsByClassName('navbar-nav');
     // for the vertical menu
     const headerVertical = document.getElementById('navbarVertical');
-    // console.log(headerVertical);
     const btnsVertical = headerVertical.getElementsByClassName('vertical_btn');
-    // console.log(btns.length);
-    // console.log(btnsVertical.length);
 
-    // when the use click on any button of horizontal bar
+    // when the user click on any button of horizontal bar
+
     for (let i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function () {
         // for horizontal bar
@@ -44,13 +40,11 @@ export class NavBarComponent implements OnInit {
 
           if (j === i) {
             btnsVertical[j].className += ' activeVertical';
-            // console.log(btnsVertical[j].className);
           }
         }
       });
     }
-    // when the use click on any button of vertical bar
-
+    // when the user click on any button of vertical bar
 
     for (let i = 0; i < btnsVertical.length; i++) {
       btnsVertical[i].addEventListener('click', function () {
@@ -64,7 +58,6 @@ export class NavBarComponent implements OnInit {
 
           if (j === i) {
             btns[j].className += ' active';
-            // console.log(btns[j].className);
           }
         }
       });

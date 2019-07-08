@@ -20,12 +20,12 @@
         <div class="row">
           <div class="col-sm-4 col-md-4 col-lg-4">{{project.role}} </div>
           <div class="col-sm-4 col-md-4 col-lg-4 company_name">{{project.company }}</div>
-          <div class="col-sm-2 col-md-2 col-lg-2"><img class= "sizelogo" src ="{{project.logo }}"></div>
-          <div class="col-sm-2 col-md-2 col-lg-2 alg-right small-size">{{project.year}}</div>
+          <div class="col-sm-2 col-md-2 col-lg-2"><img class= "logo" src ="{{project.logo }}"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2 project_year">{{project.year}}</div>
         </div>
       </div>
     </div>
-    <div class="projectTitle"  [ngClass]=" ((projectList[i].projectCompany[j].projectdetails.visible == true) && (projectList[i].projectCompany[j].projectdetails.data!=''))? 'with_border':'without_border' "   *ngFor="let projectC of (project.projectCompany); let j = index" >
+    <div class="project_title"  [ngClass]=" ((projectList[i].projectCompany[j].projectdetails.visible == true) && (projectList[i].projectCompany[j].projectdetails.data!=''))? 'with_border':'without_border' "   *ngFor="let projectC of (project.projectCompany); let j = index" >
       <div class="container-fluid line-height ">
         <div class="row" [ngClass]=" (projectC.projectdetails.data !='')? 'not_cursor':'for_cursor' " (click)="dataCompanyService.iconChange(i,j)">
           <div class="col-sm-11 col-md-11 col-lg-11">

@@ -1,5 +1,4 @@
-
-@import 'colors';
+@import "colors";
 // in this page, we used two navigation bar: one horizontal and one vertical.
 // the horizontal bar is displayed only when the user scroll down
 
@@ -31,25 +30,20 @@
     &.active {
       opacity: 1;
       font-weight: 900;
-      box-shadow:
-0px 2px 2px 0px rgba(0, 0, 0, 0.5),
-0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
-&:hover{
-  transform: scale(1);
-}
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+      &:hover {
+        transform: scale(1);
+      }
     }
   }
 }
 
-.icons-param-white {
+.icons_white {
   color: white;
-  padding-right: 10px;
-  font-size: 10px;
 }
 
 .title_style {
   font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
-  font-family: Garamond;
   font-size: 24px;
   line-height: 23px;
 }
@@ -73,7 +67,7 @@
     overflow: hidden;
     top: -1000px;
   }
-  .icons-param-white {
+  .icons_white {
     display: flex;
     height: 100vh;
   }
@@ -86,24 +80,21 @@
 
 .vertical-menu {
   line-height: 20px;
-  border-radius: 50%;
   position: fixed;
   top: 25%;
   left: 0;
-
   &_displayed {
     opacity: 1;
   }
   &_hiddeed {
     opacity: 0;
   }
-
   & a {
     background-color: $base_blue;
-    color: black;
-    margin: 5px;
+    margin: 6px;
     height: 40px;
     border-radius: 50%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
     &:hover {
       transform: scale(1.2);
     }

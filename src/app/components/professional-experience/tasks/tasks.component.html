@@ -3,11 +3,11 @@
     <div class="row role">
       <div class="col-sm-4 col-md-4 col-lg-4">{{project.role}} </div>
       <div class="col-sm-4 col-md-4 col-lg-4 company_name">{{project.company }}</div>
-      <div class="col-sm-2 col-md-2 col-lg-2"><img class="sizelogo" src="{{project.logo }}"></div>
-      <div class="col-sm-2 col-md-2 col-lg-2 alg-right small-size">{{project.year}}</div>
+      <div class="col-sm-2 col-md-2 col-lg-2"><img class="logo" src="{{project.logo }}"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2 alg-right  project_year">{{project.year}}</div>
     </div>
   </div>
-  <div class="projectTitle" *ngFor="let task of (project.tasks); let j = index">
+  <div class="project_title" *ngFor="let task of (project.tasks); let j = index">
     <div class="container-fluid line-height ">
         <ul >
           <li>{{task}}</li>
