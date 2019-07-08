@@ -20,15 +20,15 @@ export class BannerComponent implements OnInit {
     },
     {
       srcPath: '../../../assets/bannier/ban2.png',
-      title:'Work as team',
-      discription:'Collaboration with Back-End, design, business, DataBase, QA teams',
-      position:'15%',
+      title: 'Work as team',
+      discription: 'Collaboration with Back-End, design, business, DataBase, QA teams',
+      position: '15%',
     },
     {
       srcPath: '../../../assets/bannier/ban3.png',
-      title:'Best of the Best team for 2016',
-      discription:'Many projects in same time, respect of timeline and follow of business requerements ',
-      position:'15%',
+      title: 'Best of the Best team for 2016',
+      discription: 'Many projects in same time, respect of timeline and follow of business requerements ',
+      position: '15%',
     },
     {
       srcPath: '../../../assets/bannier/ban4.png',
@@ -38,9 +38,9 @@ export class BannerComponent implements OnInit {
     },
     {
       srcPath: '../../../assets/bannier/ban5.png',
-      title:'Scotiabank: Launch of "win" project',
-      discription:'Big project with big prospective for ScotiaBank International ',
-      position:'15%',
+      title: 'Scotiabank: Launch of "win" project',
+      discription: 'Big project with big prospective for ScotiaBank International ',
+      position: '15%',
     }
 
   ]
@@ -48,14 +48,14 @@ export class BannerComponent implements OnInit {
   constructor(ngbCarouselConfig: NgbCarouselConfig) { 
     ngbCarouselConfig.interval = 5000;
     ngbCarouselConfig.wrap = true;
-    ngbCarouselConfig.keyboard = false;
+    ngbCarouselConfig.keyboard = true;
     ngbCarouselConfig.pauseOnHover = false;
   }
   onSlide(event) {
     this.dataEvent = JSON.stringify(event);
-    console.log(event);
-    const imageIndex = parseInt(event.current.replace('ngb-slide-', ''), 10);
-    console.log('image index', imageIndex); 
+    // console.log(event);
+    const imageIndex = parseInt(event.current.replace('slideId_', ''), 10);
+    // console.log('image index', imageIndex); 
     this.currentImageId = imageIndex;
 
   }
