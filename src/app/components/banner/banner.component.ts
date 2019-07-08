@@ -32,7 +32,7 @@ export class BannerComponent implements OnInit {
     },
     {
       srcPath: '../../../assets/bannier/ban4.png',
-      title:'IOS app TabLauncher',
+      title: 'IOS app TabLauncher',
       discription: 'Develop mobile application “TabLauncher” for branches in twelve countries in south America',
       position: '5%',
     },
@@ -45,7 +45,7 @@ export class BannerComponent implements OnInit {
 
   ]
 
-  constructor(ngbCarouselConfig: NgbCarouselConfig) { 
+  constructor(ngbCarouselConfig: NgbCarouselConfig) {
     ngbCarouselConfig.interval = 5000;
     ngbCarouselConfig.wrap = true;
     ngbCarouselConfig.keyboard = true;
@@ -53,12 +53,18 @@ export class BannerComponent implements OnInit {
   }
   onSlide(event) {
     this.dataEvent = JSON.stringify(event);
-    // console.log(event);
+     // console.log(event);
     const imageIndex = parseInt(event.current.replace('slideId_', ''), 10);
-    // console.log('image index', imageIndex); 
+     // console.log('image index', imageIndex); 
     this.currentImageId = imageIndex;
+    // the scroll bar should fellow the active title in the left side
+    const elmnt = document.getElementById('title' + (imageIndex));
+    // console.log(elmnt);
+    elmnt.scrollIntoView({ block: 'end',  behavior: 'smooth' });
 
   }
+
+
   ngOnInit() {
   }
 
