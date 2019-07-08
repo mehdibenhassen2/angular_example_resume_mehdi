@@ -2,7 +2,7 @@
   <div class='row'>
     <div class='col-sm-12 col-md-8 col-lg-8'>
 <ngb-carousel *ngIf="images" (slide)="onSlide($event)">
-  <div *ngFor='let slide of images; let i=index' ngbSlide [id]="'slideId_' + i">
+  <div *ngFor='let slide of images; let i=index' ngbSlide [id]="'ngb-slide-' + i">
     <ng-template ngbSlide>
       <img class='image_size' [src]='images[i].srcPath' >
       <div *ngIf= "images[i].title" class="carousel-caption">
