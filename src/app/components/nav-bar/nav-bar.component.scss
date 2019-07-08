@@ -40,6 +40,9 @@
 
 .icons_white {
   color: white;
+  &_horizontal{
+    padding-right: 10px;
+  }
 }
 
 .title_style {
