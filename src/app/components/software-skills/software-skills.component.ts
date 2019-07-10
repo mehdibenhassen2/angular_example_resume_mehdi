@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataCompanyService } from '../../services/data-company.service';
+import { TranslationEnFrService} from '../../services/translation-en-fr.service';
 
 @Component({
   selector: 'app-software-skills',
@@ -8,7 +9,8 @@ import {DataCompanyService } from '../../services/data-company.service';
 })
 export class SoftwareSkillsComponent implements OnInit {
   softwareList: Array<any>;
-  constructor(public dataCompanyService: DataCompanyService) { }
+  constructor(public dataCompanyService: DataCompanyService,
+              public translationEnFrService: TranslationEnFrService) { }
 
   ngOnInit() {
     this.softwareList = this.dataCompanyService.softwareList;

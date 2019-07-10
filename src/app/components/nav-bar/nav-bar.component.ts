@@ -2,6 +2,7 @@ import { WINDOW } from '../../services/window-scroll.service';
 import { Component, HostListener, Inject, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -10,7 +11,8 @@ import { DOCUMENT } from '@angular/common';
 export class NavBarComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window) { }
+              @Inject(WINDOW) private window: Window
+              ) { }
   offset = 0;
   @HostListener('window:scroll', [])
   onWindowScroll() {

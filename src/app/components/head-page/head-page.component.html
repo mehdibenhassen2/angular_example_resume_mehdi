@@ -3,8 +3,9 @@
     <div class="col-lg-8 col-md-6 col-sm-6 col-6">
       <div class='title_style ali-left title_row'> Mehdi BEN HASSEN </div>
       <div class='ali-left under-title'>
-        <mat-icon [inline]="true" class='icons-param'>work</mat-icon>Front End developer
-      </div>
+        <mat-icon [inline]="true" class='icons-param'>work</mat-icon>
+        {{ 'head_page.title' | translate }}
+            </div>
       <div class='ali-left under-title'>
         <mat-icon [inline]="true" class='icons-param'> email</mat-icon> <a
           href="mailto:m.ben.hassen80@gmail.com">m.ben.hassen80@gmail.com</a>
@@ -17,10 +18,26 @@
       </div>
     </div>
     <div class="col-lg-4 col-sm-6 col-md-6 col-6 ali-right">
-      <img class="profile_photo" src="../../../assets/photo mehdi.jpg">
+      <div class='row '>
+          <div class="col-lg-12 col-sm-12 col-md-12 col-12 ali-right">
+
+          <div class='btn_translate'> 
+            <button  [ngClass]= "((translationEnFrService.language == 'en')? 'lang_active':'lang_not_active')" class= "translate_1"(click)="translationEnFrService.useLanguage('en'); translationEnFrService.switch_lang()">En</button>
+            <button  [ngClass]= "((translationEnFrService.language == 'fr')? 'lang_active':'lang_not_active')" class= "translate_2" (click)="translationEnFrService.useLanguage('fr'); translationEnFrService.switch_lang()">Fr</button>  
+            </div>
+            </div>  
+      </div>
+      <div class='row'>
+          <div class="col-lg-12 col-sm-12 col-md-12 col-12 ali-right">
+        <img class="profile_photo" src="../../../assets/photo mehdi.jpg">
+      </div>
+    </div>
+        <div class="col-lg-12 col-sm-12 col-md-12 col-12 ali-right">
 
       <!--<img class="profile_photo" [src]="imgExternalUrlService.appImg.photo_mehdi">     from server-->
 
     </div>
   </div>
 </div>
+
+

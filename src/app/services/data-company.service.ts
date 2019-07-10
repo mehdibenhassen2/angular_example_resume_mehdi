@@ -28,136 +28,138 @@ export class DataCompanyService {
     this.softwareList = [
       {
         domaine: 'Programming:',
+        domaine_fr: 'Programmation:',
         domaineLogo: '../../../assets/software/code.png',
         Softwares: [
           {
             softwareName: 'Angular Js/2/4/5/6/78',
             logo: '../../../assets/software/angular-logo.jpg',
-            sizeLogo: '6 years',
+            years: '6 ',
           },
           {
             softwareName: 'HTML/HTML5',
             logo: '../../../assets/software/html.png',
-            sizeLogo: '7 years',
+            years: '7 ',
           },
           {
             softwareName: 'CSS/CSS3/SCSS',
             logo: '../../../assets/software/css.png',
-            sizeLogo: '7 years',
+            years: '7 ',
           },
           {
             softwareName: 'JavaScript',
             logo: '../../../assets/software/javascript.jpeg',
-            sizeLogo: '7 years',
+            years: '7 ',
           },
           {
             softwareName: 'Java',
             logo: '../../../assets/software/java-logo.png',
-            sizeLogo: '1 year',
+            years: '1 ',
           },          {
             softwareName: 'Node.JS',
             logo: '../../../assets/software/node.jpg',
-            sizeLogo: '1 year',
+            years: '1 ',
           },
-          
           {
             softwareName: 'JQuery',
             logo: '../../../assets/software/jquery-logo.jpg',
-            sizeLogo: '2 years',
+            years: '2 ',
           },
           {
             softwareName: 'Qt',
             logo: '../../../assets/software/Qt.jpeg',
-            sizeLogo: '2 years',
+            years: '2 ',
           },
           {
             softwareName: 'Python',
             logo: '../../../assets/software/python-logo.png',
-            sizeLogo: '2 years',
+            years: '2 ',
           },
           {
             softwareName: 'PHP',
             logo: '../../../assets/software/php-logo.jpg',
-            sizeLogo: '1 year',
+            years: '1 ',
           },
           {
             softwareName: 'Visual Basic',
             logo: '../../../assets/software/visual-studio-logo.jpg',
-            sizeLogo: '1 year',
+            years: '1 ',
           },
           {
             softwareName: 'C',
             logo: '../../../assets/software/c.png',
-            sizeLogo: '1 year',
+            years: '1 ',
           },
           {
             softwareName: 'C++',
             logo: '../../../assets/software/C++.png',
-            sizeLogo: '3 years',
+            years: '3 ',
           },
           {
             softwareName: 'C#',
             logo: '../../../assets/software/Csharp.png',
-            sizeLogo: '1 year',
+            years: '1 ',
           }
         ]
 
       },
       {
         domaine: 'Design and Multimedia:',
+        domaine_fr:'Design et multimédia:',
         domaineLogo: '../../../assets/software/design.jpg',
         Softwares: [
           {
             softwareName: 'Adobe Photoshop',
             logo: '../../../assets/software/Adobe_Photoshop.png',
-            sizeLogo: '2 years',
+            years: '2 ',
           },
           {
             softwareName: 'Adobe Illustrator',
             logo: '../../../assets/software/Adobe_Illustrator.png',
-            sizeLogo: '4 years',
+            years: '4 ',
           },
           {
             softwareName: 'Adobe Flash',
             logo: '../../../assets/software/Adobe_Flash_Player.png',
-            sizeLogo: '4 years',
+            years: '4 ',
           },
           {
             softwareName: 'Adobe Golive',
             logo: '../../../assets/software/adobe_golive_logo.jpg',
-            sizeLogo: '1 year',
+            years: '1 ',
           },
           {
             softwareName: 'Adobe Director',
             logo: '../../../assets/software/Adobe_Director.jpg',
-            sizeLogo: '2 years',
+            years: '2 ',
           },
           {
             softwareName: 'Dreamweaver',
             logo: '../../../assets/software/Adobe_Dreamweaver_logo.png',
-            sizeLogo: '1 year',
+            years: '1 ',
           }
 
         ]
       },
       {
         domaine: 'DataBase:',
+        domaine_fr: 'Base de Données',
         domaineLogo: '../../../assets/software/db.png',
         Softwares: [
           {
             softwareName: 'Oracle',
             logo: '../../../assets/software/oracle.gif',
-            sizeLogo: '6 months',
+            years: '1 ',
           },
           {
             softwareName: 'Access',
             logo: '../../../assets/software/f-access.jpg',
-            sizeLogo: '3 years',
+            years: '3 ',
           },
           {
             softwareName: 'WinDEV',
             logo: '../../../assets/software/windev.jpg',
-            sizeLogo: '1 year',
+            years: '1',
           }
 
         ]

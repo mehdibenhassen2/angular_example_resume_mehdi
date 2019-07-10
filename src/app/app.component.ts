@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogData } from './interfaces/dialog-data';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogConfig } from '@angular/material';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ import { MatDialogConfig } from '@angular/material';
 })
 export class AppComponent implements OnInit {
   title = 'resumeMehdiWebFE';
-  constructor(private matDialog: MatDialog) { }
+  constructor(private matDialog: MatDialog,
+              private translate: TranslateService) { 
+                translate.setDefaultLang('banner/fr');
+            }
 
 
   openDialog(): void {
@@ -20,6 +24,9 @@ export class AppComponent implements OnInit {
     dialogConfig.autoFocus = false;
     this.matDialog.open(DialogComponent, dialogConfig);
   }
+  useLanguage(language: string) {
+    this.translate.use(language);
+}
   ngOnInit() {
     this.openDialog();
   }

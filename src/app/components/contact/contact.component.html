@@ -1,6 +1,6 @@
 <section class="section">
   <div class="container">
-      <div> <strong>Email me:</strong></div>
+      <div> <strong>{{ 'contact-me.Email_me' | translate }}</strong></div>
       <div *ngIf='messageSent===true'>
         <ng-container *ngTemplateOutlet="responseMessageSent"></ng-container>
       </div>
@@ -12,7 +12,7 @@
         <div class="alert alert-danger">
           <span class='error-icon'>
             <i class="fas fa-times" style="color:'red'"></i></span>
-          <strong>&nbsp; Error!</strong> please try again.
+          <strong>&nbsp;  {{ 'contact-me.Error' | translate }}</strong> {{ 'contact-me.please try again.' | translate }}
         </div>
       </ng-template>
 
@@ -21,7 +21,7 @@
           <span class='ok-icon'>
             <i class="fas fa-thumbs-up"> </i>
           </span>
-          <strong>&nbsp;Success!</strong> Thanks for your Email.
+          <strong>&nbsp;{{ 'contact-me.Success' | translate }}</strong> {{ 'contact-me.Thanks' | translate }}
 
         </div>
       </ng-template>
@@ -31,13 +31,13 @@
       <div class="row">
         <!-- name -->
         <div class="field col-sm-12 col-md-6 col-lg-6 ">
-          <input class='line-data' type="text" id="contactFormName" name="name" class="input" placeholder="Your Name"
+          <input class='line-data' type="text" id="contactFormName" name="name" class="input" placeholder="{{ 'contact-me.Your_Name' | translate }}"
             formControlName="contactFormName"  mdbInputDirective [(ngModel)]="yourName">
         </div>
 
         <!--company-->
         <div class="field col-sm-12 col-md-6 col-lg-6">
-          <input class='line-data' type="text" name="comapny" class="input" placeholder="Your company" id="contactFormEmail" formControlName="ContactFormCompany"
+          <input class='line-data' type="text" name="comapny" class="input" placeholder="{{ 'contact-me.Your_company' | translate }}" id="contactFormEmail" formControlName="ContactFormCompany"
             [(ngModel)]="yourCompnay">
         </div>
       </div>
@@ -45,7 +45,7 @@
       <div class="row">
         <!-- email -->
         <div class="field col-sm-12 col-md-6 col-lg-6">
-          <input class='line-data' type="email" name="email" class="input" placeholder="Your Email"
+          <input class='line-data' type="email" name="email" class="input" placeholder="{{ 'contact-me.Your_Email' | translate }} "
             id="contactFormEmail" formControlName="contactFormEmail"  mdbInputDirective
             [(ngModel)]="yourEmail">
 
@@ -54,21 +54,21 @@
 
         <!--phone number-->
         <div class="field col-sm-12 col-md-6 col-lg-6 file-path-wrapper">
-          <input class='line-data' type="text" name="phone" class="input" placeholder="Your phone" formControlName="ContactFormPhone"
+          <input class='line-data' type="text" name="phone" class="input" placeholder="{{ 'contact-me.Your_phone' | translate }}" formControlName="ContactFormPhone"
             [(ngModel)]="yourPhone">
         </div>
       </div>
       <!-- subject -->
       <div class="row">
         <div class="field  col-sm-12 col-md-12 col-lg-12">
-          <input class="line-data" type="text" name="message" placeholder="Subject" id="contactFormSubject"
+          <input class="line-data" type="text" name="message" placeholder="{{ 'contact-me.Subject' | translate }}" id="contactFormSubject"
             formControlName="contactFormSubject" mdbInputDirective [(ngModel)]="yourSubject">
         </div>
       </div>
       <!-- message -->
       <div class="row">
         <div class="field  col-sm-12 col-md-12 col-lg-12">
-          <textarea class=" textarea" name="message" placeholder="Your message" id="contactFormMessage"
+          <textarea class=" textarea" name="message" placeholder="{{ 'contact-me.Your_message' | translate }}" id="contactFormMessage"
             formControlName="contactFormMessage"   mdbInputDirective
             [(ngModel)]="yourMessage">
           </textarea>
@@ -77,7 +77,7 @@
       <div class="row">
         <div class="  col-sm-12 col-md-12 col-lg-12">
           <button type=" submit" class=" btn_submit" [disabled]="contactForm.invalid" (click)="sendEmail()"
-            (click)="clearForm()" mdbWavesEffect>Submit</button>
+            (click)="clearForm()" mdbWavesEffect>{{ 'contact-me.Submit' | translate }}</button>
         </div>
       </div>
     </form>

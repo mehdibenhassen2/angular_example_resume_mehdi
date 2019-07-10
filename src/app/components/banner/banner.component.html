@@ -13,11 +13,18 @@
     <div class='col-sm-12 col-md-4 col-lg-4 image_discription_list'>
       <div *ngFor='let slide of images; let i=index' class="discription_bloc">
         <div *ngIf="slide.title" id="title{{i}}">
-          <div [ngClass]=" ((currentImageId == i)? 'title_active': 'title_not_active')">{{slide.title}}</div>
-          <div [ngClass]=" ((currentImageId == i)? 'sub_title_active': 'sub_title_not_active')">{{slide.discription}}
+          <div [ngClass]=" ((currentImageId == i)? 'title_active': 'title_not_active')">
+
+            <span *ngIf="translationEnFrService.language == 'en'">{{slide.title}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{slide.title_fr}}</span>
+          </div>
+
+          <div [ngClass]=" ((currentImageId == i)? 'sub_title_active': 'sub_title_not_active')">
+            <span *ngIf="translationEnFrService.language == 'en'">{{slide.discription}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{slide.discription_fr}}</span>
           </div>
         </div>
-        
+
 
       </div>
     </div>

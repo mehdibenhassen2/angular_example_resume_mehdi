@@ -20,7 +20,7 @@ import { TasksComponent } from './components/professional-experience/tasks/tasks
 import { ListOfProjectsComponent } from './components/professional-experience/list-of-projects/list-of-projects.component';
 import { TrainingComponent } from './components/professional-experience/training/training.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 // tslint:disable-next-line:max-line-length
 import { UniversityOfCalgaryProject1Component } from './components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
@@ -53,6 +53,9 @@ import { DialogData } from './interfaces/dialog-data';
 import { DialogComponent} from '@components/dialog/dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormBuilder } from '@angular/forms';
+// translation
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -102,6 +105,13 @@ import { FormBuilder } from '@angular/forms';
     ReactiveFormsModule,
     AngularFireDatabaseModule,
     MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  }),
     
 
   ],
@@ -120,3 +130,7 @@ import { FormBuilder } from '@angular/forms';
   entryComponents: [DialogComponent]
 })
 export class AppModule { }
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

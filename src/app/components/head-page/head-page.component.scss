@@ -1,48 +1,77 @@
-
-@import 'colors';
+@import "colors";
+@import "inheritance";
 .profile_photo {
-    object-fit: cover;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  text-align: center;
 }
-.ali-right{
-    text-align: right;
-
+.ali-right {
+  text-align: right;
 }
-.icons-param{
-    color:$base_blue;
-    margin:0;
-    padding:0;
-    margin-right: 10px;
-    font-size: 20px;
-    }
-.head_page{
-    margin-top: 20px;
-    line-height: 15px;
-    margin-bottom: 20px;
-
+.icons-param {
+  color: $base_blue;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  font-size: 20px;
 }
-.title_row{
-    margin-bottom: 10px;
+.head_page {
+  margin-top: 20px;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+.title_row {
+  margin-bottom: 10px;
 }
 
-
-
-
-.title_style{
-    font-family: 'Garamond Nova Soft', 'Helvetica Neue', sans-serif;
-    font-family: Garamond;
-    font-size: 24px;
-    line-height: 23px;
-
+.title_style {
+  font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
+  font-family: Garamond;
+  font-size: 24px;
+  line-height: 23px;
 }
-.under-title{
-    font-size: 14px;
-    font-style: italic;
-    line-height: 20px;
+.under-title {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
 }
 // only for the menu code in the nav bar
-.right_in_nav{
-float: right;
+.right_in_nav {
+  float: right;
+}
+
+.translate {
+  &_1 {
+    @extend %btn_standard;
+    border-radius: 0px;
+    padding: 0 5px 0 5px;
+    width: 30px;
+    height: 15px;
+    margin: 0;
+    background-color: none;
+
+  }
+  &_2 {
+    @extend %btn_standard;
+    background-color: none;
+    padding: 0 5px 0 5px;
+    width: 30px;
+    height: 15px;
+    border-radius: 0px;
+    margin: 0 0 0 1px;
+  }
+}
+.btn_translate {
+  text-align: right;
+}
+.lang_active{
+  background-color: blue;
+  pointer-events: none;
+
+}
+.lang_not_active{
+  background-color: #b08ffd;
+
 }

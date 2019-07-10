@@ -1,0 +1,39 @@
+{
+    "head_page": {
+        "title": "Front End developer"
+    },
+    "nav-bar": {
+        "Summary": "Summary",
+        "ProfessionalExperience": "Professional Experience",
+        "SoftwareSkills": "Software Skills",
+        "Education": "Education",
+        "Blog": "Blog",
+        "Contact": "Contact",
+        "Code": "Code"
+    },
+    "summary": {
+        "1": "7 years of experience working as Front End developer.",
+        "2": "6 years experience working with Angular Js and Angular 2/4/5/6/7.",
+        "3": "Familiar with the following languages: Angular JS, Angular 2/4, Node.JS, JQuery, JavaScript, HTML/HTML5, CSS/CSS3, SQL, Python, C, C++, C#, Java, …",
+        "4": "Use of Git as code versioning toll.",
+        "5": "Master in Information Processing Science.",
+        "6": "Fluency in English and French."
+    },
+    "contact-me": {
+        "Email_me": "Email me:",
+        "Success":"Success!",
+        "Thanks" : "Thanks for your Email.",
+        "Error":"Error, ",
+        "please_try_again.":"please try again.",
+        "Your_Name": "Your Name",
+        "Your_company": "Your company",
+        "Your_Email": "Your Email",
+        "Your_phone": "Your phone",
+        "Subject": "Subject",
+        "Your_message" :"Your message",
+        "Submit":"Submit"
+    },
+    "software":{
+        "years": "years"
+    }
+}
