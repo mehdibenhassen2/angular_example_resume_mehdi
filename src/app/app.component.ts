@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'resumeMehdiWebFE';
   constructor(private matDialog: MatDialog,
               private translate: TranslateService) { 
-                translate.setDefaultLang('banner/fr');
+                translate.setDefaultLang('en');
             }
 
 
