@@ -1,6 +1,6 @@
 {
     "head_page": {
-        "title": "Développeur frontal"
+        "title": "Développeur Frontal"
     },
     "nav-bar": {
         "Summary": "Résumé",
@@ -21,19 +21,42 @@
     },
     "contact-me": {
         "Email_me": "Envoyez moi un Email:",
-        "Success":"Succès!",
-        "Thanks" : "Merci pour votre Email.",
-        "Error":"Erreur, ",
-        "please_try_again.":"Veuillez réessayer.",
+        "Success": "Succès!",
+        "Thanks": "Merci pour votre Email.",
+        "Error": "Erreur, ",
+        "please_try_again.": "Veuillez réessayer.",
         "Your_Name": "Votre nom",
         "Your_company": "Votre entreprise",
         "Your_Email": "Votre Email",
         "Your_phone": "Votre Téléphone",
         "Subject": "Sujet",
-        "Your_message" :"Votre message",
-        "Submit":"Soumettre"
+        "Your_message": "Votre message",
+        "Submit": "Soumettre"
     },
-    "software":{
+    "software": {
         "years": "ans"
+    },
+    "project_Details":{
+        "information1":"Merci de voulor utiliser",
+        "information2": "et",
+        "information3":" dans le côté droit pour étendre et réduire tous les détails du projet.",
+
+        "Expand_All":"Tout Etendre ",
+        "Collapse_All":"Tout Réduire"
+    },
+    "code": {
+        "title1": "Aperçu de l'application",
+        "p1": "Ce site web a été développée en utilisant angular8, html5, javascript et scss.",
+        "p2": "Ce projet est un example, incluant l'architecture, la conception, le contenu, l'écriture du code et le déploiement de l'application.",
+        "p3": "Dans ce projet, j'ai essayé d'utiliser le maximum des outils offerts par angular (utilisation de composant , service, module, interface, routage, liaison de données, demande httpClient get et post, etc.)",
+        "p4": "Pour le déploiement, j'ai utilisé firebase (également utilisé pour le stockage et la base de données).",
+        "p5": "Cette application est responsive. Exemple de barre de navigation:",
+        "p6": "Grand écran:",
+        "p7": "Petit écran:",
+        "title2": "Accès au code source",
+        "p8": "Pour télécharger le code source de cette application à partir de Github, cliquez ici:",
+        "p9": "Accéder au code source",
+        "title3": "Architecture de l'application",
+        "p10": "Cette figure affiche l'architecture racine de cette application. La documentation du projet a été générée par Compodoc:"
     }
 }

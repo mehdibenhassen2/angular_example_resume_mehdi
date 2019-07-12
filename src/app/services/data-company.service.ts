@@ -55,7 +55,7 @@ export class DataCompanyService {
             softwareName: 'Java',
             logo: '../../../assets/software/java-logo.png',
             years: '1 ',
-          },          {
+          }, {
             softwareName: 'Node.JS',
             logo: '../../../assets/software/node.jpg',
             years: '1 ',
@@ -105,7 +105,7 @@ export class DataCompanyService {
       },
       {
         domaine: 'Design and Multimedia:',
-        domaine_fr:'Design et multimédia:',
+        domaine_fr: 'Design et multimédia:',
         domaineLogo: '../../../assets/software/design.jpg',
         Softwares: [
           {
@@ -175,11 +175,11 @@ export class DataCompanyService {
       // role 1
       {
         role: 'Front End developer',
+        role_fr: 'Développeur Frontal',
         company: 'Insured Connect ',
         year: '2018-2019',
         logo: '../../../assets/logo/insured connect.png',
         tasks: [
-
           'Working with the Front-End team to build an Angular 7 web application',
           'Design, build and test web components based on high fidelity UI mockups',
           'Delivering a complete front end application in cooperation with the back-end development team',
@@ -192,11 +192,26 @@ export class DataCompanyService {
           'Communicate with external web services and outsourced front-end developers to the IC development team and architects to design and build the new software platform.',
           'Collaborate with other software developers, business sponsors, and software architects to plan, design, develop, test, and maintain the platform and web-based mobile applications.',
         ],
+        tasks_fr: [
+          'Travailler avec l\'équipe Front-End pour créer une application Web Angular 7',
+          'Concevoir, construire et tester des composants Web basés sur des maquettes d\'interface utilisateur haute fidélité',
+          'Fournir une application frontale complète en coopération avec l\'équipe de développement back - end',
+          'Assurer des performances élevées sur les applications mobiles et Web',
+          'Utiliser les bonnes pratiques de conception, réutiliser le code et écrire du code JavaScript, TypeScript, HTML et CSS efficace et documenté',
+          'Communiquer les exigences de l\'API RESTful à l\'équipe de back-end',
+          'Communication avec des services Web externes',
+          'Ecrire testé, idiomatique et documenté Angular, JavaScript, HTML et CSS',
+          'Coordonner les flux de travail entre le côté commercial, le graphiste, l\'analyste de données et l\'équipe de back - end',
+          'Communiquez avec les services Web externes et les développeurs front-outs externalisés avec l\'équipe de développement de circuits intégrés et les architectes pour concevoir et créer la nouvelle plate-forme logicielle.',
+          'Collaborer avec d\'autres développeurs de logiciels, sponsors commerciaux et architectes de logiciels pour planifier, concevoir, développer, tester et gérer la plate-forme et les applications mobiles basées sur le Web.',
+        ],
+
         projectCompany: [
           {
             projectIndex: '1',
             type: 'Web App',
             projectName: 'Build four web applicaitons (for advisor, distributor, carrier, and policy owner) using Angular, html, CSS, JavaScript',
+            projectName_fr: 'Construire quatre applications Web (pour conseiller, distributeur, opérateur et propriétaire de police) en utilisant Angular, HTML, CSS, JavaScript',
             projectdetails: {
               data: InsuredConnectProject1Component,
               visible: false,
@@ -209,6 +224,7 @@ export class DataCompanyService {
       // role 2
       {
         role: 'Front End developer',
+        role_fr: 'Développeur Frontal',
         company: 'Scotiabank ',
         year: '2016-2018',
         logo: '../../../assets/logo/scotia.png',
@@ -228,11 +244,27 @@ export class DataCompanyService {
           'Use Agile produces (Jira, Confluence, Bitbucket) to organize tasks in the team ',
           'Build solid relationships with other departments to acquire pertinent datasets across the organization',
         ],
+        tasks_fr: [
+          'Développer / gérer / maintenir le site Web de 12 pays (Mexique, Colombie, Chili,…) pour fournir les données (en utilisant HTML5, JavaScript, Angular JS, jQuery, Node.JS et CSS3)',
+          'Jouer un rôle actif dans la structuration des applications d\'une page pour les rendre faciles à gérer (Angular JS 2)',
+          'Maintenance d\'applications avec des technologies telles que JQuery / HTML5 / Javascript / Angular / Bootstrap',
+          'Développer l’application mobile «TabLauncher» pour les filiales de douze pays (avec JavaScript, HTML5, CSS3, NodeJS, Angular 2/4…) ',
+          'Développer et mettre à jour des fonctionnalités destinées aux utilisateurs',
+          'Développer, concevoir et concevoir le site Web de l\'équipe de distribution réseau en utilisant JavaScript, HTML5, CSS3, Angular JS.',
+          'Traitement d\'images et de vidéos.',
+          'Collaborer avec les développeurs back-end, l\'équipe marketing, l\'équipe de petites entreprises',
+          'Collaborer avec l\'équipe d\'assurance qualité pour définir les scénarios de test et résoudre les problèmes',
+          'Travailler avec UI / UX designer',
+          'Configuration et administration du serveur cloud',
+          'Utiliser Agile produit (Jira, Confluence, Bitbucket) pour organiser les tâches de l\'équipe',
+          'Construire des relations solides avec d\'autres départements pour acquérir des ensembles de données pertinents dans l\'ensemble de l\'organisation',
+        ],
         projectCompany: [
           {
             projectIndex: '1',
             type: 'Mobile App',
             projectName: 'Build Mobile application IOS for iPad using AngularJS, html, CSS, JavaScript.',
+            projectName_fr: 'Construire application mobile IOS pour iPad en utilisant AngularJS, HTML, CSS, JavaScript.',
             projectdetails: {
               data: ScotiabankProject1Component,
               visible: false,
@@ -243,6 +275,7 @@ export class DataCompanyService {
             projectIndex: '2',
             type: 'Web Map',
             projectName: 'Configuration, installation, and development of Atlas Decision Support System.',
+            projectName_fr: 'Configuration, installation et développement du système d\'aide à la décision : Atlas.',
             projectdetails: {
               data: ScotiabankProject2Component,
               visible: false,
@@ -253,6 +286,7 @@ export class DataCompanyService {
       // role 3
       {
         role: 'Technology Lead',
+        role_fr: 'Responsable technique',
         company: 'Cansel Survey Equipment(Calgary) ',
         year: '2015- 2016',
         logo: '../../../assets/logo/logo-cansel.png',
@@ -267,6 +301,18 @@ export class DataCompanyService {
           'Develop customized solutions to customers.',
           'Assist in the development of product related instructional programs',
           'Assist in the development of technical support documentation',
+        ],
+        tasks_fr: [
+          'Développer et mettre en œuvre des solutions web',
+          'Construire un site web en utilisant HTML5, CSS3, Javascript et AngularJS, Node.JS.',
+          'Développer une application mobile en utilisant JQuery et AngularJS.',
+          'Développer et mettre à jour des fonctionnalités destinées aux utilisateurs;',
+          'Développement de scripts et création de nouvelles boîtes à outils pour le géotraitement et l\'analyse spatiale.',
+          'Développer une application API.',
+          'Organiser une formation sur les produits dans un environnement de classe et / ou en ligne',
+          'Développer des solutions personnalisées pour les clients.',
+          'Aider à l\'élaboration de programmes d\'instruction liés aux produits',
+          'Aider à l\'élaboration de la documentation de support technique',
         ],
         projectCompany: [
           {
@@ -284,6 +330,7 @@ export class DataCompanyService {
       // role 4
       {
         role: 'Developer',
+        role_fr: 'Développeur',
         company: 'University of Calgary ',
         year: '2012-2014',
         logo: '../../../assets/logo/University-Of-Calgary-Logo.png',
@@ -294,11 +341,19 @@ export class DataCompanyService {
           'Remove noise data,',
           'Write the user manual for this software.',
         ],
+        tasks_fr: [
+          'Développer, concevoir et concevoir un nouveau logiciel pour la segmentation des données de scanner laser et de données de photogrammétrie à proximité (en utilisant C / C ++, Java et python)',
+          'Collecte de données de scanner laser 3D et de données de photogrammétrie à courte portée',
+          'Enregistrement des données du scanner laser et des données de photogrammétrie à courte portée',
+          'Supprimer les données bruit',
+          'Rédigez le manuel d\'utilisation de ce logiciel.',
+        ],
         projectCompany: [
           {
             projectIndex: '1',
             type: 'Software app',
             projectName: ' Software development for Automatic extraction of Insulator feature from close range photogrammetry and laser scanner data.',
+            projectName_fr: 'Développement d\'un logiciel pour l\'extraction automatique des Insulators à partir de données de photogrammétrie et de scanner laser à courte portée.',
             projectdetails: {
               data: UniversityOfCalgaryProject1Component,
               visible: false,
@@ -311,6 +366,7 @@ export class DataCompanyService {
       // role 5
       {
         role: 'Front-End Developer',
+        role_fr: 'Développeur Frontal',
         company: 'Geomatica company ',
         year: '2010-2012',
         logo: '../../../assets/logo/logo-GEOMATICA.jpg',
@@ -322,11 +378,20 @@ export class DataCompanyService {
           'Configuration and maintenance of Oracle Applications and Database server ',
           'Write the monitoring reports and technical reports.',
         ],
+        tasks_fr: [
+          'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS',
+          'Conception et mise en œuvre de solutions web et mobiles.',
+          'Conception de base de données pour de nombreuses entreprises',
+          'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.',
+          'Configuration et maintenance des applications Oracle et du serveur de base de données',
+          'Rédiger les rapports de suivi et les rapports techniques.',
+        ],
         projectCompany: [
           {
             projectIndex: '1',
             type: 'GIS app',
-            projectName: '  Mapping of the marble stones of Tataouine (south Tunisia).',
+            projectName: 'Mapping of the marble stones of Tataouine (south Tunisia).',
+            projectName_fr: 'Cartographie des pierres de marbre de Tataouine (sud tunisien).',
             projectdetails: {
               data: '',
               visible: false,
@@ -336,6 +401,7 @@ export class DataCompanyService {
             projectIndex: '2',
             type: 'GIS app',
             projectName: '  Environmental impact assessment of the sand quarry SISE Henchir MOUROUJ EL - EL MOUADEN Imada, Sejnane delegation, Governorate of Bizerte (Tunisia).',
+            projectName_fr: 'Etude d\'impact sur l\'environnement de la carrière de sable SISE Henchir MOUROUJ EL-EL MOUADEN Imada, délégation de Sejnane, gouvernorat de Bizerte (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -346,6 +412,7 @@ export class DataCompanyService {
             projectIndex: '3',
             type: 'GIS app',
             projectName: 'Technical and social studies of three small lakes and their integrated management of watersheds in the governorate of Sidi Bouzid. Thmed (delegation of Sidi Bouzid Est), El Magroun (Delegation Jelma) and Faidh Lahchim (Delegation Cebbala).',
+            projectName_fr: 'Etudes techniques et sociales sur trois petits lacs et leur gestion intégrée des bassins versants dans le gouvernorat de Sidi Bouzid. Thmed (délégation de Sidi Bouzid Est), El Magroun (Délégation Jelma) et Faidh Lahchim (Délégation Cebbala).',
             projectdetails: {
               data: '',
               visible: false,
@@ -356,6 +423,7 @@ export class DataCompanyService {
             projectIndex: '4',
             type: 'GIS app',
             projectName: '  Implementation of Urban GIS in Kerkena (Tunisia)',
+            projectName_fr: 'Mise en place de SIG urbain à Kerkena (Tunisie)',
             projectdetails: {
               data: GeomaticaProject1Component,
               visible: false,
@@ -368,6 +436,7 @@ export class DataCompanyService {
 
       {
         role: 'Web Developer',
+        role_fr: 'Développeur Web',
         company: 'Geo-Environnment company',
         year: '2007-2010',
         logo: '../../../assets/logo/geo-environement.png',
@@ -379,11 +448,20 @@ export class DataCompanyService {
           'Configuration and maintenance of Oracle Applications and Database server ',
           'Write the monitoring reports and technical reports.',
         ],
+        tasks_fr: [
+          'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS',
+          'Conception et mise en œuvre de solutions web et mobiles.',
+          'Conception de base de données pour de nombreuses entreprises',
+          'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.',
+          'Configuration et maintenance des applications Oracle et du serveur de base de données',
+          'Rédiger les rapports de suivi et les rapports techniques.',
+        ],
         projectCompany: [
           {
             projectIndex: '1',
             type: 'GIS app',
-            projectName: ' 1. Estimation of the Gypsum deposits of three licenses in sabkha NDGHAMCHA north of the city of Nouakchott (Mauritania).',
+            projectName: ' Estimation of the Gypsum deposits of three licenses in sabkha NDGHAMCHA north of the city of Nouakchott (Mauritania).',
+            projectName_fr: 'Estimation des gisements de gypse de trois permis à sabkha NDGHAMCHA au nord de la ville de Nouakchott (Mauritanie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -392,6 +470,7 @@ export class DataCompanyService {
             projectIndex: '2',
             type: 'GIS app',
             projectName: 'Estimation of the cement deposit in J. Ressas (Tunisia).',
+            projectName_fr: 'Estimation du gisement de ciment à J. Ressas (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -400,6 +479,7 @@ export class DataCompanyService {
             projectIndex: '3',
             type: 'GIS app',
             projectName: 'Study the Environmental impact assessment of the current licence to operate the gold mine of Kiniero (Guinea).',
+            projectName_fr: 'Etudier l\'évaluation de l\'impact sur l\'environnement de la licence actuelle d\'exploitation de la mine d\'or de Kiniero (Guinée).',
             projectdetails: {
               data: GeoenvironementProject1Component,
               visible: false,
@@ -408,7 +488,8 @@ export class DataCompanyService {
           {
             projectIndex: '4',
             type: 'GIS app',
-            projectName: '  4. Study of environmental impact assessment of the extension of the gold mine in Western Kinièro Balan (Guinea).',
+            projectName: ' Study of environmental impact assessment of the extension of the gold mine in Western Kinièro Balan (Guinea).',
+            projectName_fr: 'Étude d’évaluation de l’impact sur l’environnement de l’extension de la mine d’or de Kinièro Balan occidental (Guinée).',
             projectdetails: {
               data: '',
               visible: false,
@@ -418,6 +499,7 @@ export class DataCompanyService {
             projectIndex: '5',
             type: 'GIS app',
             projectName: 'Study of environmental impact assessment of quarrying limestone and marl for cement project projected in Zouarine, Delegation of Sers, Kef Governorate (Tunisia).',
+            projectName_fr: 'Etude d’impact sur l’environnement d’un projet d’extraction du ciment et de la pierre calcaire à Zouarine, Délégation de Sers, Gouvernorat du Kef (Tunisie).', 
             projectdetails: {
               data: '',
               visible: false,
@@ -426,7 +508,8 @@ export class DataCompanyService {
           {
             projectIndex: '6',
             type: 'GIS app',
-            projectName: '  6. Study of environmental impact of marble quarry, projected in BENI Hazem, Delegation of Makthar Seliana Governorate (Tunisia).',
+            projectName: '  Study of environmental impact of marble quarry, projected in BENI Hazem, Delegation of Makthar Seliana Governorate (Tunisia).',
+            projectName_fr: 'Étude d\'impact sur l\'environnement de la carrière de marbre, projeté à BENI Hazem, délégation du gouvernorat de Maktar Siliana (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -435,7 +518,8 @@ export class DataCompanyService {
           {
             projectIndex: '7',
             type: 'GIS app',
-            projectName: '  7. Environmental impact assessment of the clay pit in Sidi Jedidi, Governorate of Nabeul (Tunisia).',
+            projectName: 'Environmental impact assessment of the clay pit in Sidi Jedidi, Governorate of Nabeul (Tunisia).',
+            projectName_fr: 'Etude d\'impact sur l\'environnement de la carrière d\'argile à Sidi Jedidi, Gouvernorat de Nabeul (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -445,6 +529,7 @@ export class DataCompanyService {
             projectIndex: '8',
             type: 'GIS app',
             projectName: 'Environmental impact assessment the quarrying of aggregate on the slick in J.OUST (Tunisia).',
+            projectName_fr: 'Etude d\'impact sur l\'environnement de l\'extraction d\'agrégats sur la nappe à J.OUST (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -454,6 +539,7 @@ export class DataCompanyService {
             projectIndex: '9',
             type: 'GIS app',
             projectName: 'Environmental impact assessment of the quarry aggregate SISE AIN EL Babouch, Zriba delegation, Governorate zaghouan (Tunisia).',
+            projectName_fr: 'Etude d\'impact sur l\'environnement des granulats de carrière SISE AIN EL Babouch, délégation de Zriba, gouvernorat de zaghouan (Tunisie)',
             projectdetails: {
               data: '',
               visible: false,
@@ -465,6 +551,7 @@ export class DataCompanyService {
       // role 7
       {
         role: 'Web Developer',
+        role_fr: 'Développeur Web',
         company: 'Geo-Service company ',
         year: '2005-2007',
         logo: '../../../assets/logo/geo-service.png',
@@ -476,11 +563,20 @@ export class DataCompanyService {
           'Configuration and maintenance of Oracle Applications and Database server ',
           'Write the monitoring reports and technical reports.',
         ],
+        tasks_fr: [
+          'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS',
+          'Conception et mise en œuvre de solutions web et mobiles.',
+          'Conception de base de données pour de nombreuses entreprises',
+          'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.',
+          'Configuration et maintenance des applications Oracle et du serveur de base de données',
+          'Rédiger les rapports de suivi et les rapports techniques.',
+        ],
         projectCompany: [
           {
             projectIndex: '1',
             type: 'GIS app',
             projectName: 'Analysis of the evolution of the coastline north of Sousse (Tunisia).',
+            projectName_fr: 'Analyse de l\'évolution du littoral au nord de Sousse (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -489,6 +585,7 @@ export class DataCompanyService {
             projectIndex: '2',
             type: 'GIS app',
             projectName: 'Analysis of the coastal erosion of Kerkennah (Tunisia).',
+            projectName_fr: 'Analyse de l\'érosion côtière de Kerkennah (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -498,6 +595,7 @@ export class DataCompanyService {
             projectIndex: '3',
             type: 'GIS app',
             projectName: 'Environmental impact assessment of the development of Gammarth marine (Tunisia).',
+            projectName_fr: 'Etude d\'impact sur l\'environnement du développement de Gammarth marine (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,

@@ -1,12 +1,18 @@
 <div class="total" *ngFor="let project of (projectList) let i = index">
   <div class="container-fluid">
     <div class="row role">
-      <div class="col-sm-4 col-md-4 col-lg-4">{{project.role}} </div>
+      <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'en'">{{project.role}} </div>
+      <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'fr'">{{project.role_fr}} </div>
+
+
+
+
       <div class="col-sm-4 col-md-4 col-lg-4 company_name">{{project.company }}</div>
       <div class="col-sm-2 col-md-2 col-lg-2"><img class="logo" src="{{project.logo }}"></div>
       <div class="col-sm-2 col-md-2 col-lg-2 alg-right  project_year">{{project.year}}</div>
     </div>
   </div>
+<div *ngIf="translationEnFrService.language == 'en'">
   <div class="project_title" *ngFor="let task of (project.tasks); let j = index">
     <div class="container-fluid line-height ">
         <ul >
@@ -14,5 +20,17 @@
         </ul>
     </div>
   </div>
+</div>
+<div *ngIf="translationEnFrService.language == 'fr'">
+  <div class="project_title" *ngFor="let task_fr of (project.tasks_fr); let j = index">
+    <div class="container-fluid line-height ">
+        <ul >
+          <li>{{task_fr}}</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
 </div>
 

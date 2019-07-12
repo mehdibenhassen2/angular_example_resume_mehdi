@@ -5,7 +5,8 @@
         <ng-template *ngFor='let slide of images; let i=index' ngbSlide [id]="'slideId_' + i">
           <img class='image_size' [src]='slide.srcPath'>
           <div *ngIf="slide.title" class="carousel-caption">
-            <span>{{slide.title}}</span>
+            <span *ngIf="translationEnFrService.language == 'en'">{{slide.title}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{slide.title_fr}}</span>
           </div>
         </ng-template>
       </ngb-carousel>
