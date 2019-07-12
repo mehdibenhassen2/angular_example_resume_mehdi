@@ -35,9 +35,23 @@
         transform: scale(1);
       }
     }
+    &.notactive {
+      border-bottom: none;
+      opacity: 0.9;
+      font-weight: normal;
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
 }
-
+.active {
+  opacity: 1;
+  font-weight: 900;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+  &:hover {
+    transform: scale(1);
+  }}
 .icons_white {
   color: white;
   &_horizontal{
@@ -77,7 +91,21 @@
   .navbar-nav :hover {
     transform: scale(1.3);
   }
+  .active .icons_white_horizontal{
+    transform: scale(1.6); 
+
+  padding-right: 10%;
+
+
 }
+
+
+}
+.icons_white_horizontal{
+font-size: inherit;
+height: inherit;
+line-height: inherit;
+width: inherit;}
 
 // 2- vertical navigation bar-------------------------------------------
 
@@ -105,4 +133,7 @@
       background-color: #912cee;
     }
   }
+}
+.activeVertical {
+  background-color: #912cee;
 }

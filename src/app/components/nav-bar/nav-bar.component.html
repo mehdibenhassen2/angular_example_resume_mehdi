@@ -1,47 +1,47 @@
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm nav-bar-cust">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav active">
-            <a class="nav-item nav-link " routerLink="/Summary">
-                <mat-icon [inline]="true" class='icons_white_horizontal'>assignment_ind</mat-icon>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"(click)="defineRoot()">
+        <div  [ngClass]="(router.url=='/Summary')? 'active':'navbar-nav'" >
+            <a class="nav-item nav-link " routerLink="/Summary" >
+                <mat-icon  class='icons_white_horizontal'>assignment_ind</mat-icon>
                 <span class='label_navbar'> {{ 'nav-bar.Summary' | translate }} </span>
             </a>
         </div>
-        <div class="navbar-nav">
+        <div [ngClass]="((router.url).match('/ProfessionalExperience'))? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/ProfessionalExperience">
-                <mat-icon [inline]="true" class='icons_white_horizontal'>description</mat-icon>
+                <mat-icon  class='icons_white_horizontal'>description</mat-icon>
                 <span class='label_navbar'>{{ 'nav-bar.ProfessionalExperience' | translate }} </span>
             </a>
         </div>
-        <div class="navbar-nav">
+        <div [ngClass]="(router.url=='/SoftwareSkills')? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/SoftwareSkills">
-                <mat-icon [inline]="true" class='icons_white_horizontal'>important_devices</mat-icon>
+                <mat-icon  class='icons_white_horizontal'>important_devices</mat-icon>
                 <span class='label_navbar'>{{ 'nav-bar.SoftwareSkills' | translate }} </span>
             </a>
         </div>
-        <div class="navbar-nav">
+        <div [ngClass]="(router.url.match('/Education'))? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/Education">
-                <mat-icon [inline]="true" class='icons_white_horizontal'>school</mat-icon>
+                <mat-icon  class='icons_white_horizontal'>school</mat-icon>
                 <span class='label_navbar'> {{ 'nav-bar.Education' | translate }}  </span>
             </a>
         </div>
-        <div class="navbar-nav">
+        <div [ngClass]="(router.url=='/Blog')? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/Blog">
-                <mat-icon [inline]="true" class='icons_white_horizontal'>supervisor_account</mat-icon>
+                <mat-icon  class='icons_white_horizontal'>supervisor_account</mat-icon>
                 <span class='label_navbar'> {{ 'nav-bar.Blog' | translate }}  </span>
             </a>
         </div>
         <div class="collapse navbar-collapse" >
 
-            <div class="navbar-nav">
+            <div [ngClass]="(router.url=='/Contact')? 'active':'navbar-nav'" >
                 <a class="nav-item nav-link " routerLink="/Contact">
-                    <mat-icon [inline]="true" class='icons_white_horizontal'> email</mat-icon>
+                    <mat-icon  class='icons_white_horizontal'> email</mat-icon>
                     <span class='label_navbar'>{{ 'nav-bar.Contact' | translate }}  </span>
                 </a>
             </div>
         </div>
-        <div class="navbar-nav">
+        <div [ngClass]="(router.url=='/Code')? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/Code">
-                <mat-icon [inline]="true" class='icons_white_horizontal'> code</mat-icon>
+                <mat-icon  class='icons_white_horizontal'> code</mat-icon>
                 <span class='label_navbar'>{{ 'nav-bar.Code' | translate }}  </span>
             </a>
         </div>
@@ -52,25 +52,25 @@
 
 <div [ngClass]=" ((offset > 200)? 'vertical-menu_displayed': 'vertical-menu_hiddeed')">
     <div class="vertical-menu" id='navbarVertical'>
-            <a class="nav-item nav-link vertical_btn activeVertical" routerLink="/Summary">
+            <a  class="nav-item nav-link vertical_btn"  routerLink="/Summary" [ngClass]="(router.url=='/Summary')? ' activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>assignment_ind</mat-icon>
             </a>
-            <a class="nav-item nav-link vertical_btn" routerLink="/ProfessionalExperience">
+            <a  class="nav-item nav-link vertical_btn" routerLink="/ProfessionalExperience" [ngClass]="((router.url).match('/ProfessionalExperience'))? ' activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>description</mat-icon>
             </a>
-            <a class="nav-item nav-link vertical_btn" routerLink="/SoftwareSkills">
+            <a class="nav-item nav-link vertical_btn" routerLink="/SoftwareSkills"[ngClass]="(router.url=='/SoftwareSkills')? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>important_devices</mat-icon>
             </a>
-            <a class="nav-item nav-link vertical_btn" routerLink="/Education">
+            <a class="nav-item nav-link vertical_btn" routerLink="/Education"[ngClass]="((router.url).match('/Education'))? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>school</mat-icon>
             </a>
-            <a class="nav-item nav-link vertical_btn" routerLink="/Blog">
+            <a class="nav-item nav-link vertical_btn" routerLink="/Blog" [ngClass]="(router.url=='/Blog')? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>supervisor_account</mat-icon>
             </a>
-            <a class="nav-item nav-link vertical_btn" routerLink="/Contact">
+            <a class="nav-item nav-link vertical_btn" routerLink="/Contact" [ngClass]="(router.url=='/Contact')? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'> email</mat-icon>
             </a>
-            <a class="adiv6 nav-item nav-link vertical_btn" routerLink="/Code">
+            <a class="adiv6 nav-item nav-link vertical_btn" routerLink="/Code" [ngClass]="(router.url=='/Code')? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'> code</mat-icon>
         </a>
     </div>

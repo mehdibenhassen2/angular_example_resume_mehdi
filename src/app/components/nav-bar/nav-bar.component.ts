@@ -2,6 +2,7 @@ import { WINDOW } from '../../services/window-scroll.service';
 import { Component, HostListener, Inject, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,8 @@ import { DOCUMENT } from '@angular/common';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document,
+  constructor(public router: Router,
+              @Inject(DOCUMENT) private document: Document,
               @Inject(WINDOW) private window: Window
               ) { }
   offset = 0;
@@ -20,7 +22,9 @@ export class NavBarComponent implements OnInit {
     //if (offset > 250){console.log(offset); } else {console.log('mehdi'); }
     return this.offset;
   }
+
   ngOnInit() {
+    /*
     // for the horizontal menu
     const header = document.getElementById('navbarNavAltMarkup');
     const btns = header.getElementsByClassName('navbar-nav');
@@ -63,13 +67,14 @@ export class NavBarComponent implements OnInit {
           }
         }
       });
+      
     }
 
 
 
 
 
-
+*/
 
 
 
