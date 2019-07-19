@@ -56,6 +56,7 @@ import { FormBuilder } from '@angular/forms';
 // translation
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     NavBarComponent,
     HeadPageComponent,
     BannerComponent,
-    DialogComponent
+    DialogComponent,
+    ExperienceChartComponent
 
   ],
   imports: [

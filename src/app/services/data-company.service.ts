@@ -32,19 +32,19 @@ export class DataCompanyService {
         domaineLogo: '../../../assets/software/code.png',
         Softwares: [
           {
-            softwareName: 'Angular Js/2/4/5/6/78',
+            softwareName: 'Angular Js/ 2 -> 8',
             logo: '../../../assets/software/angular-logo.jpg',
             years: '6 ',
           },
           {
-            softwareName: 'HTML/HTML5',
+            softwareName: 'HTML5',
             logo: '../../../assets/software/html.png',
-            years: '7 ',
+            years: '8 ',
           },
           {
-            softwareName: 'CSS/CSS3/SCSS',
+            softwareName: 'CSS3',
             logo: '../../../assets/software/css.png',
-            years: '7 ',
+            years: '8 ',
           },
           {
             softwareName: 'JavaScript',
