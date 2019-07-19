@@ -17,7 +17,11 @@
         "3": "Maîtrise des languages suivantes: Angular JS, Angular 2/4, Node.JS, JQuery, JavaScript, HTML / HTML5, CSS / CSS3, SQL, Python, C, C ++, C #, Java,…",
         "4": "Utilisation de Git comme version de code.",
         "5": "Master en sciences de traitement de l'information.",
-        "6": "Maîtrise de l'anglais et du français."
+        "6": "Maîtrise de l'anglais et du français.",
+        "about_me": "À propos de moi:",
+        "News": "Actualités",
+        "software_skills": "Compétences logicielles"
+
     },
     "contact-me": {
         "Email_me": "Envoyez moi un Email:",

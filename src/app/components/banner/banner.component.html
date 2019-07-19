@@ -12,6 +12,10 @@
       </ngb-carousel>
     </div>
     <div class='col-sm-12 col-md-4 col-lg-4 image_discription_list'>
+        <div >
+            <mat-icon [inline]="true" class='icons_param'>notifications_active</mat-icon>
+            <span class='title_summary'>{{ 'summary.News' | translate }}</span>
+          </div>
       <div *ngFor='let slide of images; let i=index' class="discription_bloc">
         <div *ngIf="slide.title" id="title{{i}}">
           <div [ngClass]=" ((currentImageId == i)? 'title_active': 'title_not_active')">

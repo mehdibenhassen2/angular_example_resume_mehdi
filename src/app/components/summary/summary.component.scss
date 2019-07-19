@@ -1,3 +1,6 @@
+
+@import "colors";
+
 ul {
   list-style-type: none;
 }
@@ -28,4 +31,11 @@ img {
 .chart_experience{
   padding: 20px 0 20px;
 
+}
+ul{
+  margin:0;
+  padding: 0;
+}
+.list_summary{
+  padding-top:0;
 }

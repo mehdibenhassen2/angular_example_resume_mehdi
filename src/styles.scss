@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "colors";
+
 .container {
   color: blue;
 }
@@ -68,5 +70,22 @@ body {
 .mat-dialog-actions {
     margin-right: 0 !important;
     margin-left: 0 !important;
+}
+// for home page 
+.icons_param {
+  color: $base_blue;
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.title_summary{
+  color:$base_blue;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 20px;
+  padding-left:0;
+  text-decoration: underline;
 }
 

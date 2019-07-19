@@ -75,7 +75,7 @@ export class ExperienceChartComponent implements OnInit {
         },
         title: {
           text: 'Experience',
-          display: true,
+          display: false,
         },
         scales: {
           xAxes: [{
@@ -112,8 +112,8 @@ export class ExperienceChartComponent implements OnInit {
             },
             afterDataLimits: 10,
             gridLines: {
-              color: "black",
-              borderDash: [2, 5],
+              display: false,
+  
             },
             scaleLabel: {
               display: true,
