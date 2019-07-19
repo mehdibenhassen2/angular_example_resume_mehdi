@@ -17,7 +17,7 @@ export class ExperienceChartComponent implements OnInit {
   softwareList: Array<any>;
   constructor(public dataCompanyService: DataCompanyService) { }
   getRandomColor() {
-    for (let i=0; i<20;i++){
+    for (let i = 0; i < 20; i++) {
     var color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
     this.barColor.push(color);
   }
@@ -58,7 +58,6 @@ export class ExperienceChartComponent implements OnInit {
     this.BarChart = new Chart('barChart', {
       type: 'bar',
       data: {
-
         labels: this.softwaresLabel,
         datasets: [{
           label: '# of Years',
@@ -66,7 +65,6 @@ export class ExperienceChartComponent implements OnInit {
           backgroundColor: this.barColor,
           borderColor: [
             'none',
-
           ],
           borderWidth: 0
         }]
@@ -77,24 +75,30 @@ export class ExperienceChartComponent implements OnInit {
         },
         title: {
           text: 'Experience',
-          display: true
+          display: true,
         },
         scales: {
-
           xAxes: [{
             ticks: {
               beginAtZero: true,
-
-
+              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontSize: 10,
+              fontColor: 'blue',
             },
             gridLines: {
               display: false,
               color: "black"
             },
             scaleLabel: {
-              display: true,
+              display: false,
               labelString: "Languages",
-              fontColor: "green"
+              fontColor: "green",
+              padding: 0,
+                            fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontSize: 10,
+
+
+
             }
           }],
           yAxes: [{
@@ -102,7 +106,9 @@ export class ExperienceChartComponent implements OnInit {
               beginAtZero: true,
               min: 0,
               max: 9,
-
+              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontSize: 9,
+              fontColor: 'blue',
             },
             afterDataLimits: 10,
             gridLines: {
@@ -112,15 +118,14 @@ export class ExperienceChartComponent implements OnInit {
             scaleLabel: {
               display: true,
               labelString: "Number of years",
-              fontColor: "green"
+              fontColor: "green",
+              padding: 0,
+              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontSize: 10,
+
             }
           }]
-
         },
-
-
-
-
       }
     });
 
