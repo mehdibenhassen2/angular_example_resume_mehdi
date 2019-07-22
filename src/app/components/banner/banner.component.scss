@@ -68,22 +68,3 @@
     opacity: 0.5;
   }
 }
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: $background_title_details;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $base_blue;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}

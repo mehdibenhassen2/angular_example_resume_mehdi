@@ -21,5 +21,6 @@ export class TranslationEnFrService {
     this.language = 'en';
     console.log(this.language);
     }
+    return this.language;
   }
 }

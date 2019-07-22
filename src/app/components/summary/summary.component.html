@@ -3,30 +3,31 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-6 col-sm-12 col-md-12">
-        <div>
-          <mat-icon [inline]="true" class='icons_param'>assignment_ind</mat-icon>
-          <span class='title_summary'>{{ 'summary.about_me' | translate }}</span>
+      <div class="col-lg-6 col-sm-12 col-md-12 box_size'">
+        <div class="col-lg-12 col-sm-12 col-md-12 Chart_box box_size ">
+          <div>
+            <mat-icon [inline]="true" class='icons_param'>assignment_ind</mat-icon>
+            <span class='title_summary'>{{ 'summary.about_me' | translate }}</span>
+          </div>
+          <div class='list_summary'>
+            <ul class='translate '>
+              <li>{{ 'summary.1' | translate }}</li>
+              <li>{{ 'summary.2' | translate }}</li>
+              <li>{{ 'summary.3' | translate }}</li>
+              <li>{{ 'summary.4' | translate }}</li>
+              <li>{{ 'summary.5' | translate }}</li>
+              <li>{{ 'summary.6' | translate }}</li>
+            </ul>
+          </div>
         </div>
-        <div class='list_summary'>
-          <ul class='translate'>
-            <li>{{ 'summary.1' | translate }}</li>
-            <li>{{ 'summary.2' | translate }}</li>
-            <li>{{ 'summary.3' | translate }}</li>
-            <li>{{ 'summary.4' | translate }}</li>
-            <li>{{ 'summary.5' | translate }}</li>
-            <li>{{ 'summary.6' | translate }}</li>
-          </ul>
+        <div class="col-lg-12 col-sm-12 col-md-12 chart_experience">
+          <app-chart_tasks></app-chart_tasks>
         </div>
       </div>
-
-
-
 
       <div class=" col-lg-6 col-sm-12 col-md-12 chart_experience">
-
-
         <app-experience-chart></app-experience-chart>
       </div>
-
     </div>
+  </div>
+</div>

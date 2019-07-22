@@ -13,14 +13,15 @@
     },
     "summary": {
         "1": "7 années d'expérience en tant que développeur frontal.",
-        "2": "6 ans d'expérience avec Angular Js et Angular 2/4/5/6/7.",
-        "3": "Maîtrise des languages suivantes: Angular JS, Angular 2/4, Node.JS, JQuery, JavaScript, HTML / HTML5, CSS / CSS3, SQL, Python, C, C ++, C #, Java,…",
+        "2": "6 ans d'expérience avec Angular Js et Angular 2/4/5/6/7/8.",
+        "3": "Maîtrise des languages suivantes:  Node.JS, JQuery, JavaScript, HTML / HTML5, CSS / CSS3, SQL, Python, C, C ++, C #, Java",
         "4": "Utilisation de Git comme version de code.",
         "5": "Master en sciences de traitement de l'information.",
         "6": "Maîtrise de l'anglais et du français.",
         "about_me": "À propos de moi:",
         "News": "Actualités",
-        "software_skills": "Compétences logicielles"
+        "software_skills": "Compétences logicielles",
+        "tasks": "Tâches"
 
     },
     "contact-me": {

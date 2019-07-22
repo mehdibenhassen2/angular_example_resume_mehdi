@@ -57,6 +57,7 @@ import { FormBuilder } from '@angular/forms';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
+import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { ExperienceChartComponent } from './components/experience-chart/experien
     HeadPageComponent,
     BannerComponent,
     DialogComponent,
-    ExperienceChartComponent
+    ExperienceChartComponent,
+    ChartTasksComponent
 
   ],
   imports: [
@@ -94,7 +96,6 @@ import { ExperienceChartComponent } from './components/experience-chart/experien
     HttpClientModule,
     NgbModule,
     FormsModule, // to add email form
-
     MatTabsModule, //to add tab from material agular
     BrowserAnimationsModule, //for animation tab
     AngularFontAwesomeModule,

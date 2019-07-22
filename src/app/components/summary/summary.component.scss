@@ -29,7 +29,8 @@ img {
 }
 
 .chart_experience{
-  padding: 20px 0 20px;
+  padding: 0;
+  margin:0;
 
 }
 ul{
@@ -38,4 +39,10 @@ ul{
 }
 .list_summary{
   padding-top:0;
+
+}
+
+.box_size{
+  height:210px ;
+  overflow: auto;
 }
