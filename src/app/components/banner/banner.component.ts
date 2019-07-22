@@ -73,7 +73,7 @@ export class BannerComponent implements OnInit {
     // the scroll bar should fellow the active title in the left side
     const elmnt = document.getElementById('title' + (imageIndex));
     // console.log(elmnt);
-    elmnt.scrollIntoView({ block: 'nearest',  behavior: 'smooth' });
+    //elmnt.scrollIntoView({ block: 'nearest',  behavior: 'smooth' });
 
   }
 

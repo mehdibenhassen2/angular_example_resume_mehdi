@@ -18,12 +18,12 @@
                 <span class='label_navbar'>{{ 'nav-bar.SoftwareSkills' | translate }} </span>
             </a>
         </div>
-        <div [ngClass]="(router.url.match('/Education'))? 'active':'navbar-nav'" >
+        <!--<div [ngClass]="(router.url.match('/Education'))? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/Education">
                 <mat-icon  class='icons_white_horizontal'>school</mat-icon>
                 <span class='label_navbar'> {{ 'nav-bar.Education' | translate }}  </span>
             </a>
-        </div>
+        </div>-->
         <div [ngClass]="(router.url=='/Blog')? 'active':'navbar-nav'" >
             <a class="nav-item nav-link " routerLink="/Blog">
                 <mat-icon  class='icons_white_horizontal'>supervisor_account</mat-icon>
@@ -61,9 +61,9 @@
             <a class="nav-item nav-link vertical_btn" routerLink="/SoftwareSkills"[ngClass]="(router.url=='/SoftwareSkills')? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>important_devices</mat-icon>
             </a>
-            <a class="nav-item nav-link vertical_btn" routerLink="/Education"[ngClass]="((router.url).match('/Education'))? 'activeVertical':''">
+           <!-- <a class="nav-item nav-link vertical_btn" routerLink="/Education"[ngClass]="((router.url).match('/Education'))? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>school</mat-icon>
-            </a>
+            </a>-->
             <a class="nav-item nav-link vertical_btn" routerLink="/Blog" [ngClass]="(router.url=='/Blog')? 'activeVertical':''">
                 <mat-icon [inline]="true" class='icons_white'>supervisor_account</mat-icon>
             </a>
