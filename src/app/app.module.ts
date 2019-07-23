@@ -46,7 +46,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import { MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, } from '@angular/material';
+import {MatMenuModule} from '@angular/material/menu';
 
 // import interface
 import { DialogData } from './interfaces/dialog-data';
@@ -58,6 +59,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
 import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,7 @@ import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.compone
     BannerComponent,
     DialogComponent,
     ExperienceChartComponent,
-    ChartTasksComponent
+    ChartTasksComponent,
 
   ],
   imports: [
@@ -107,7 +109,7 @@ import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.compone
     AngularFireStorageModule, // Only required for storage features
     ReactiveFormsModule,
     AngularFireDatabaseModule,
-    MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule,
+    MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatListModule, MatMenuModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
@@ -122,8 +124,8 @@ import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.compone
     // tslint:disable-next-line:no-unused-expression
 
      MatFormFieldModule,
-      MatButtonModule, 
-      MatInputModule],
+      MatButtonModule,
+      MatInputModule, MatListModule, MatMenuModule ],
       
   providers: [WINDOW_PROVIDERS,
     { provide: MatDialogRef, useValue: {} },
