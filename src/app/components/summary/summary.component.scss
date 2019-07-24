@@ -99,41 +99,37 @@ li:nth-child(even) {
 .three_dot {
   position: absolute;
   right: 0;
+  &_active {
+    opacity: 1;
+  }
+  &_not_active {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.mat-list-item{
   &_active{
-    opacity: 1;    
+    
   }
   &_not_active{
-opacity: 0.5;    
-pointer-events: none;
-  cursor: not-allowed;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;}
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }
-.mat-menu-item {
+/*.mat-menu-item {
   color: blue !important;
   padding: 0 5px 0 5px;
-  line-height: 20px;
-}
-
-button{
-  line-height: 20px;
-}
-
-
-.mat-list-base {
-  padding-top: 0px !important;
-  display: block;
-}
-.basic-container{
-  padding: 0 !important;
-}
-.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 10px 10px;
-  position: initial;
-  height: inherit;
+  line-height: 20px !important;
+  height: auto;
+}*/
+.mat-menu-panel {
+  min-height: 10px !important;
+  height: 10px;
 }

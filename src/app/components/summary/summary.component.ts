@@ -3,7 +3,7 @@ import { ImgExternalUrlService } from '../../services/img-external-url.service';
 import { BannerComponent } from '@components/banner/banner.component';
 import { MatMenuTrigger } from '@angular/material';
 import { Router } from '@angular/router';
-
+import { TranslationEnFrService } from '../../services/translation-en-fr.service';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class SummaryComponent implements OnInit {
 
   constructor(public imgExternalUrlService: ImgExternalUrlService,
-    private router: Router) { }
+              private router: Router,
+              private translationEnFrService: TranslationEnFrService) { }
 
 
   tasksSummaryData = [

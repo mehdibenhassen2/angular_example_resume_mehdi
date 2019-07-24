@@ -13,22 +13,30 @@
             <div class="basic-container">
               <mat-nav-list>
                 <mat-list role="list" *ngFor=" let singleTask of tasksSummaryData; let i = index">
-                  <mat-list-item role="listitem" (click)="menuTrigger.openMenu()">
-                    <span class='sub-title_summary'>{{singleTask.task}}</span>
-                    <div class='three_dot' [ngClass]=" ((singleTask.src != '')? 'three_dot_active': 'three_dot_not_active')">
+                  <mat-list-item [ngClass]=" ((singleTask.src != '')? 'mat-list-item_active': 'mat-list-item_not_active')" role="listitem" (click)="menuTrigger.openMenu()">
+                    <!-- translate fr-en based on the service 'translationEnFrService' -->
+                    <span *ngIf="translationEnFrService.language=='en'"
+                      class='sub-title_summary'>{{singleTask.task}}</span>
+                    <span *ngIf="translationEnFrService.language=='fr'"
+                      class='sub-title_summary'>{{singleTask.task_fr}}</span>
+
+                    <div class='three_dot'
+                      [ngClass]=" ((singleTask.src != '')? 'three_dot_active': 'three_dot_not_active')">
                       <button mat-icon-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"
                         aria-label="Go to details">
                         <mat-icon>more_vert</mat-icon>
                       </button>
                     </div>
                   </mat-list-item>
-                  <mat-menu #menu="matMenu">
-                    <button  mat-menu-item class='menu_three_dots' (click)="viewDetails(i)">
+                  <div class='custom'>
+                  <mat-menu #menu="matMenu" class='custom'>
+                    <button mat-menu-item class='menu_three_dots' (click)="viewDetails(i)">
                       <mat-icon>description</mat-icon>
-                      <span>View Details</span>
+                      <span *ngIf="translationEnFrService.language=='en'">View Details</span>
+                      <span *ngIf="translationEnFrService.language=='fr'">Plus de Détails</span>
                     </button>
                   </mat-menu>
-
+                </div>
                 </mat-list>
               </mat-nav-list>
             </div>
