@@ -1,36 +1,98 @@
-<div class="total" *ngFor="let project of (projectList) let i = index">
-  <div class="container-fluid">
-    <div class="row role">
-      <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'en'">{{project.role}} </div>
-      <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'fr'">{{project.role_fr}} </div>
-
-
-
-
-      <div class="col-sm-4 col-md-4 col-lg-4 company_name">{{project.company }}</div>
-      <div class="col-sm-2 col-md-2 col-lg-2"><img class="logo" src="{{project.logo }}"></div>
-      <div class="col-sm-2 col-md-2 col-lg-2 alg-right  project_year">{{project.year}}</div>
-    </div>
-  </div>
-<div *ngIf="translationEnFrService.language == 'en'">
-  <div class="project_title" *ngFor="let task of (project.tasks); let j = index">
-    <div class="container-fluid line-height ">
-        <ul >
-          <li>{{task}}</li>
-        </ul>
-    </div>
-  </div>
+<!--options  -->
+<div class="right">
+  <mat-form-field>
+    <mat-label class="label_option">Display your data as </mat-label>
+    <select matNativeControl required (change)="onChangeEvent($event)">
+      <option value="table_bootstrap">Table: Bootstrap</option>
+      <option value="grid_angular">Grid: Angular material</option>
+      <option value="tree_angular">Tree: Angular material</option>
+    </select>
+  </mat-form-field>
 </div>
-<div *ngIf="translationEnFrService.language == 'fr'">
-  <div class="project_title" *ngFor="let task_fr of (project.tasks_fr); let j = index">
-    <div class="container-fluid line-height ">
-        <ul >
-          <li>{{task_fr}}</li>
-        </ul>
-    </div>
-  </div>
+<div *ngIf="designOption=='table_bootstrap'">
+  <ng-container *ngTemplateOutlet="table_bootstrap"></ng-container>
+</div>
+<div *ngIf="designOption=='grid_angular'">
+  <ng-container *ngTemplateOutlet="grid_angular"></ng-container>
+</div>
+<div *ngIf="designOption=='tree_angular'">
+  <ng-container *ngTemplateOutlet="tree_angular"></ng-container>
 </div>
 
+<!--tree_angular---------------start-------------------------->
+<ng-template #tree_angular>
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <button mat-icon-button disabled></button>
+      <span class="title_tree">- {{node.name}} </span>
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+      <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      <span class="title_tree"> {{node.name}} </span>
+      <img class="logo margin_logo_tree" src='{{node.logo}}'>
+    </mat-tree-node>
+  </mat-tree>
+</ng-template>
+<!--tree_angular---------------End-------------------------->
 
-</div>
 
+<!--grid_angular---------------start-------------------------->
+<ng-template #grid_angular>
+  <div class="basic-container">
+    <mat-grid-list cols="8" *ngFor="let project of (projectList) let i = index">
+      <mat-grid-tile class="grid_head" [colspan]=3 [rowspan]=1> {{project.role}}
+      </mat-grid-tile>
+      <mat-grid-tile class="grid_head" [colspan]=2 [rowspan]=1> {{project.company}}
+      </mat-grid-tile>
+      <mat-grid-tile class="grid_head" [colspan]=2 [rowspan]=1> <img class="logo" src="{{project.logo }}">
+      </mat-grid-tile>
+      <mat-grid-tile class="grid_head" [colspan]=1 [rowspan]=1> {{project.year}}</mat-grid-tile>
+      <mat-grid-tile [colspan]=8 *ngFor="let task of (project.tasks)" style="text-align: left;" class="video-title">
+        <span class="task_list" fxFlex fxLayoutAlign="start center">{{task.name}}</span>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</ng-template>
+<!--grid_angular---------------end-------------------------->
+
+<!--table_bootstrap---------------start-------------------------->
+<ng-template #table_bootstrap>
+  <div class="total" *ngFor="let project of (projectList) let i = index">
+    <div class="container-fluid">
+      <div class="row role">
+        <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'en'">{{project.role}} </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'fr'">{{project.role_fr}}
+        </div>
+       <div class="col-sm-4 col-md-4 col-lg-4 company_name">{{project.company }}</div>
+        <div class="col-sm-2 col-md-2 col-lg-2"><img class="logo" src="{{project.logo }}"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2 alg-right  project_year">{{project.year}}</div>
+      </div>
+    </div>
+    <div *ngIf="translationEnFrService.language == 'en'">
+      <div class="project_title" *ngFor="let task of (project.tasks); let j = index">
+        <div class="container-fluid line-height ">
+          <ul>
+            <li>{{task.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="translationEnFrService.language == 'fr'">
+      <div class="project_title" *ngFor="let task_fr of (project.tasks_fr); let j = index">
+        <div class="container-fluid line-height ">
+          <ul>
+            <li>{{task_fr.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!--table_bootstrap---------------end-------------------------->

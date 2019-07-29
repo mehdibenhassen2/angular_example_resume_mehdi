@@ -61,6 +61,10 @@ import { ExperienceChartComponent } from './components/experience-chart/experien
 import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
 import {MatListModule} from '@angular/material/list';
 
+// angular material
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTreeModule} from '@angular/material/tree';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,7 +113,14 @@ import {MatListModule} from '@angular/material/list';
     AngularFireStorageModule, // Only required for storage features
     ReactiveFormsModule,
     AngularFireDatabaseModule,
-    MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatListModule, MatMenuModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatTreeModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
@@ -125,7 +136,7 @@ import {MatListModule} from '@angular/material/list';
 
      MatFormFieldModule,
       MatButtonModule,
-      MatInputModule, MatListModule, MatMenuModule ],
+      MatInputModule, MatListModule, MatMenuModule, MatGridListModule ],
       
   providers: [WINDOW_PROVIDERS,
     { provide: MatDialogRef, useValue: {} },
