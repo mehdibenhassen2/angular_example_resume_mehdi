@@ -72,16 +72,17 @@
   }
 }
 .mat-figure::ng-deep {
-  line-height: 0px;
-  margin: 0;
-  padding: 0;
+
+  border-color: $background_title_details !important;
+
 }
 .video-title ::ng-deep figure {
   justify-content: flex-start !important;
   margin: 0;
   padding: 0;
   background-color: $background_title_details;
-  border-style: none !important;
+  border-color: $background_title_details !important;
+
 }
 
 .mat-grid-tile ::ng-deep span {
@@ -94,14 +95,4 @@
   background-color: $background_title;
   border-style: none !important;
   height: 20px !important;
-}
-
-// for tree
-.margin_logo_tree{
-
-margin-left: 20px;
-}
-.title_tree{
-  font-family: Georgia, Times, "Times New Roman", serif;
-
 }

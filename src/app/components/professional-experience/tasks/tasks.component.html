@@ -46,7 +46,7 @@
 <!--grid_angular---------------start-------------------------->
 <ng-template #grid_angular>
   <div class="basic-container">
-    <mat-grid-list cols="8" *ngFor="let project of (projectList) let i = index">
+    <mat-grid-list cols="8" *ngFor="let project of (projectList) let i = index" rowHeight="60px">
       <mat-grid-tile class="grid_head" [colspan]=3 [rowspan]=1> {{project.role}}
       </mat-grid-tile>
       <mat-grid-tile class="grid_head" [colspan]=2 [rowspan]=1> {{project.company}}
@@ -56,6 +56,9 @@
       <mat-grid-tile class="grid_head" [colspan]=1 [rowspan]=1> {{project.year}}</mat-grid-tile>
       <mat-grid-tile [colspan]=8 *ngFor="let task of (project.tasks)" style="text-align: left;" class="video-title">
         <span class="task_list" fxFlex fxLayoutAlign="start center">{{task.name}}</span>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=8 >
+        <span class="white_space" fxFlex fxLayoutAlign="start center"></span>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
