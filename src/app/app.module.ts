@@ -6,12 +6,11 @@ import { AppComponent } from './app.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { ProfessionalExperienceComponent } from './components/professional-experience/professional-experience.component';
 import { SoftwareSkillsComponent } from './components/software-skills/software-skills.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EducationComponent } from './components/education/education.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogComponent } from './components/blog/blog.component';
-import {MatTabsModule} from '@angular/material/tabs';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiplomaComponent } from './components/education/diploma/diploma.component';
 import { PublicationComponent } from './components/education/publication/publication.component';
 import { ConferenceComponent } from './components/education/conference/conference.component';
@@ -21,7 +20,6 @@ import { ListOfProjectsComponent } from './components/professional-experience/li
 import { TrainingComponent } from './components/professional-experience/training/training.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import {MatIconModule} from '@angular/material/icon';
 // tslint:disable-next-line:max-line-length
 import { UniversityOfCalgaryProject1Component } from './components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
 import { InsuredConnectProject1Component } from './components/professional-experience/list-of-projects/insured-connect-project1/insured-connect-project1.component';
@@ -31,7 +29,6 @@ import { GeomaticaProject1Component } from './components/professional-experience
 import { GeoenvironementProject1Component } from './components/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
 
 import { WINDOW_PROVIDERS } from './services/window-scroll.service';
-import { MatCardModule } from '@angular/material/card';
 import { CodeComponent } from './components/code/code.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeadPageComponent } from './components/head-page/head-page.component';
@@ -46,8 +43,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import { MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, } from '@angular/material';
-import {MatMenuModule} from '@angular/material/menu';
+import {   } from '@angular/material';
 
 // import interface
 import { DialogData } from './interfaces/dialog-data';
@@ -55,16 +51,13 @@ import { DialogComponent} from '@components/dialog/dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormBuilder } from '@angular/forms';
 // translation
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
 import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
-import {MatListModule} from '@angular/material/list';
 
 // angular material
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatTreeModule} from '@angular/material/tree';
-
+import { AngularMaterialModule } from './angular-material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,25 +95,15 @@ import {MatTreeModule} from '@angular/material/tree';
     HttpClientModule,
     NgbModule,
     FormsModule, // to add email form
-    MatTabsModule, //to add tab from material agular
-    BrowserAnimationsModule, //for animation tab
+    BrowserAnimationsModule, // for animation tab
     AngularFontAwesomeModule,
-    MatIconModule,
-    MatCardModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'resumeMehdiFE'),
     AngularFirestoreModule, // Only required for database features
     AngularFireAuthModule, // Only required for auth features,
     AngularFireStorageModule, // Only required for storage features
     ReactiveFormsModule,
     AngularFireDatabaseModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatGridListModule,
-    MatTreeModule,
+    AngularMaterialModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
@@ -128,19 +111,11 @@ import {MatTreeModule} from '@angular/material/tree';
           deps: [HttpClient]
       }
   }),
-    
-
   ],
-  exports:[
-    // tslint:disable-next-line:no-unused-expression
-
-     MatFormFieldModule,
-      MatButtonModule,
-      MatInputModule, MatListModule, MatMenuModule, MatGridListModule ],
-      
+  exports: [],
   providers: [WINDOW_PROVIDERS,
     { provide: MatDialogRef, useValue: {} },
-    { provide: MAT_DIALOG_DATA, useValue: [] },],
+    { provide: MAT_DIALOG_DATA, useValue: [] }],
 
   bootstrap: [AppComponent],
   entryComponents: [DialogComponent]

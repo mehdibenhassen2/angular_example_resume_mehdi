@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UniversityOfCalgaryProject1Component } from '../components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
 import { InsuredConnectProject1Component } from '../components/professional-experience/list-of-projects/insured-connect-project1/insured-connect-project1.component';
-// tslint:disable-next-line:max-line-length
 import { ScotiabankProject1Component } from '../components/professional-experience/list-of-projects/scotiabank-project1/scotiabank-project1.component';
 import { ScotiabankProject2Component } from '../components/professional-experience/list-of-projects/scotiabank-project2/scotiabank-project2.component';
 import { GeomaticaProject1Component } from '../components/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
@@ -12,19 +11,13 @@ import { GeoenvironementProject1Component } from '../components/professional-exp
   providedIn: 'root'
 })
 export class DataCompanyService {
-
-
-
   public flagArray = [];
-
   public projectList = [];
   public softwareList = [];
   public selectedIndex: number;
 
   constructor(private httpClient: HttpClient) {
-
     this.selectedIndex = -1;
-
     this.softwareList = [
       {
         domaine: 'Programming: ',
@@ -101,7 +94,6 @@ export class DataCompanyService {
             years: '1 ',
           }
         ]
-
       },
       {
         domaine: 'Design and Multimedia: ',
@@ -138,7 +130,6 @@ export class DataCompanyService {
             logo: '../../../assets/software/Adobe_Dreamweaver_logo.png',
             years: '1 ',
           }
-
         ]
       },
       {
@@ -161,51 +152,42 @@ export class DataCompanyService {
             logo: '../../../assets/software/windev.jpg',
             years: '1',
           }
-
         ]
       }];
 
-
-
-
-
-    
     this.projectList = [
-
-      // role 1
       {
         role: 'Front End developer',
         role_fr: 'Développeur Frontal',
-        company: 'Insured Connect ',
+        company: 'Insured Connect',
         year: '2018-2019',
         logo: '../../../assets/logo/insured connect.png',
         tasks: [
-          { name: 'Working with the Front-End team to build an Angular 7 web application'},
-          { name: 'Design, build and test web components based on high fidelity UI mockups'},
-          { name: 'Delivering a complete front end application in cooperation with the back-end development team'},
-          { name: 'Ensuring high performance on mobile and web app'},
-          { name: 'Utilize good design practices, code reuse, and write efficient and documented JavaScript, TypeScript, HTML and CSS code'},
-          { name: 'Communicate RESTful API requirements to the back-end team'},
-          { name: 'Communicating with external web services'},
-          { name: 'Write tested, idiomatic, and documented Angular, JavaScript, HTML and CSS'},
-          { name: 'Coordinate the workflows between the business side , graphic designer, data analyst and the back end team'},
-          { name: 'Communicate with external web services and outsourced front-end developers to the IC development team and architects to design and build the new software platform.'},
-          { name: 'Collaborate with other software developers, business sponsors, and software architects to plan, design, develop, test, and maintain the platform and web-based mobile applications.'},
+          { name: 'Working with the Front-End team to build an Angular 7 web application' },
+          { name: 'Design, build and test web components based on high fidelity UI mockups' },
+          { name: 'Delivering a complete front end application in cooperation with the back-end development team' },
+          { name: 'Ensuring high performance on mobile and web app' },
+          { name: 'Utilize good design practices, code reuse, and write efficient and documented JavaScript, TypeScript, HTML and CSS code' },
+          { name: 'Communicate RESTful API requirements to the back-end team' },
+          { name: 'Communicating with external web services' },
+          { name: 'Write tested, idiomatic, and documented Angular, JavaScript, HTML and CSS' },
+          { name: 'Coordinate the workflows between the business side , graphic designer, data analyst and the back end team' },
+          { name: 'Communicate with external web services and outsourced front-end developers to the IC development team and architects to design and build the new software platform.' },
+          { name: 'Collaborate with other software developers, business sponsors, and software architects to plan, design, develop, test, and maintain the platform and web-based mobile applications.' },
         ],
         tasks_fr: [
-          { name: 'Travailler avec l\'équipe Front-End pour créer une application Web Angular 7'},
-          { name: 'Concevoir, construire et tester des composants Web basés sur des maquettes d\'interface utilisateur haute fidélité'},
-          { name: 'Fournir une application frontale complète en coopération avec l\'équipe de développement back - end'},
-          { name: 'Assurer des performances élevées sur les applications mobiles et Web'},
-          { name: 'Utiliser les bonnes pratiques de conception, réutiliser le code et écrire du code JavaScript, TypeScript, HTML et CSS efficace et documenté'},
-          { name: 'Communiquer les exigences de l\'API RESTful à l\'équipe de back-end'},
-          { name: 'Communication avec des services Web externes'},
-          { name: 'Ecrire testé, idiomatique et documenté Angular, JavaScript, HTML et CSS'},
-          { name: 'Coordonner les flux de travail entre le côté commercial, le graphiste, l\'analyste de données et l\'équipe de back - end'},
-          { name: 'Communiquez avec les services Web externes et les développeurs front-outs externalisés avec l\'équipe de développement de circuits intégrés et les architectes pour concevoir et créer la nouvelle plate-forme logicielle.'},
-          { name: 'Collaborer avec d\'autres développeurs de logiciels, sponsors commerciaux et architectes de logiciels pour planifier, concevoir, développer, tester et gérer la plate-forme et les applications mobiles basées sur le Web.'},
+          { name: 'Travailler avec l\'équipe Front-End pour créer une application Web Angular 7' },
+          { name: 'Concevoir, construire et tester des composants Web basés sur des maquettes d\'interface utilisateur haute fidélité' },
+          { name: 'Fournir une application frontale complète en coopération avec l\'équipe de développement back - end' },
+          { name: 'Assurer des performances élevées sur les applications mobiles et Web' },
+          { name: 'Utiliser les bonnes pratiques de conception, réutiliser le code et écrire du code JavaScript, TypeScript, HTML et CSS efficace et documenté' },
+          { name: 'Communiquer les exigences de l\'API RESTful à l\'équipe de back-end' },
+          { name: 'Communication avec des services Web externes' },
+          { name: 'Ecrire testé, idiomatique et documenté Angular, JavaScript, HTML et CSS' },
+          { name: 'Coordonner les flux de travail entre le côté commercial, le graphiste, l\'analyste de données et l\'équipe de back - end' },
+          { name: 'Communiquez avec les services Web externes et les développeurs front-outs externalisés avec l\'équipe de développement de circuits intégrés et les architectes pour concevoir et créer la nouvelle plate-forme logicielle.' },
+          { name: 'Collaborer avec d\'autres développeurs de logiciels, sponsors commerciaux et architectes de logiciels pour planifier, concevoir, développer, tester et gérer la plate-forme et les applications mobiles basées sur le Web.' },
         ],
-
         projectCompany: [
           {
             projectIndex: '1',
@@ -216,12 +198,9 @@ export class DataCompanyService {
               data: InsuredConnectProject1Component,
               visible: false,
             },
-
           },
-
         ]
       },
-      // role 2
       {
         role: 'Front End developer',
         role_fr: 'Développeur Frontal',
@@ -229,35 +208,34 @@ export class DataCompanyService {
         year: '2016-2018',
         logo: '../../../assets/logo/scotia.png',
         tasks: [
-
-          { name: 'Develop / manage / maintain website for 12 countries (Mexico, Colombia, chile,…) to deliver the data ( using HTML5, JavaScript, Angular JS, jQuery, Node.JS, and CSS3)'},
-          { name: 'Taking an active role in structuring single page applications to make them easy to maintain (Angular JS 2)'},
-          { name: 'Maintain of applications with technologies such as JQuery/HTML5/Javascript/Angular /Bootstrap'},
-          { name: 'Develop mobile application “TabLauncher” for branches in twelve countries (Using JavaScript, HTML5, CSS3, NodeJS, Angular 2/4…)'},
-          { name: 'Develop and update user-facing features'},
-          { name: 'Develop, concept and design of the Website of Network Delivery Team using JavaScript, HTML5, CSS3, Angular JS.'},
-          { name: 'Processing of images and videos.'},
-          { name: 'Collaborate with the back-End developers, Marketing team, small business team'},
-          { name: 'Collaborate with QA team to define test cases and to resolve issues,'},
-          { name: 'Work with UI / UX designer'},
-          { name: 'Configuration and administration of cloud server'},
-          { name: 'Use Agile produces (Jira, Confluence, Bitbucket) to organize tasks in the team '},
-          { name: 'Build solid relationships with other departments to acquire pertinent datasets across the organization'},
+          { name: 'Develop / manage / maintain website for 12 countries (Mexico, Colombia, chile,…) to deliver the data ( using HTML5, JavaScript, Angular JS, jQuery, Node.JS, and CSS3)' },
+          { name: 'Taking an active role in structuring single page applications to make them easy to maintain (Angular JS 2)' },
+          { name: 'Maintain of applications with technologies such as JQuery/HTML5/Javascript/Angular /Bootstrap' },
+          { name: 'Develop mobile application “TabLauncher” for branches in twelve countries (Using JavaScript, HTML5, CSS3, NodeJS, Angular 2/4…)' },
+          { name: 'Develop and update user-facing features' },
+          { name: 'Develop, concept and design of the Website of Network Delivery Team using JavaScript, HTML5, CSS3, Angular JS.' },
+          { name: 'Processing of images and videos.' },
+          { name: 'Collaborate with the back-End developers, Marketing team, small business team' },
+          { name: 'Collaborate with QA team to define test cases and to resolve issues,' },
+          { name: 'Work with UI / UX designer' },
+          { name: 'Configuration and administration of cloud server' },
+          { name: 'Use Agile produces (Jira, Confluence, Bitbucket) to organize tasks in the team ' },
+          { name: 'Build solid relationships with other departments to acquire pertinent datasets across the organization' },
         ],
         tasks_fr: [
-          { name: 'Développer / gérer / maintenir le site Web de 12 pays (Mexique, Colombie, Chili,…) pour fournir les données (en utilisant HTML5, JavaScript, Angular JS, jQuery, Node.JS et CSS3)'},
-          { name: 'Jouer un rôle actif dans la structuration des applications d\'une page pour les rendre faciles à gérer (Angular JS 2)'},
-          { name: 'Maintenance d\'applications avec des technologies telles que JQuery / HTML5 / Javascript / Angular / Bootstrap'},
-          { name: 'Développer l’application mobile «TabLauncher» pour les filiales de douze pays (avec JavaScript, HTML5, CSS3, NodeJS, Angular 2/4…) '},
-          { name: 'Développer et mettre à jour des fonctionnalités destinées aux utilisateurs'},
-          { name: 'Développer, concevoir et concevoir le site Web de l\'équipe de distribution réseau en utilisant JavaScript, HTML5, CSS3, Angular JS.'},
-          { name: 'Traitement d\'images et de vidéos.'},
-          { name: 'Collaborer avec les développeurs back-end, l\'équipe marketing, l\'équipe de petites entreprises'},
-          { name: 'Collaborer avec l\'équipe d\'assurance qualité pour définir les scénarios de test et résoudre les problèmes'},
-          { name: 'Travailler avec UI / UX designer'},
-          { name: 'Configuration et administration du serveur cloud'},
-          { name: 'Utiliser Agile produit (Jira, Confluence, Bitbucket) pour organiser les tâches de l\'équipe'},
-          { name: 'Construire des relations solides avec d\'autres départements pour acquérir des ensembles de données pertinents dans l\'ensemble de l\'organisation'},
+          { name: 'Développer / gérer / maintenir le site Web de 12 pays (Mexique, Colombie, Chili,…) pour fournir les données (en utilisant HTML5, JavaScript, Angular JS, jQuery, Node.JS et CSS3)' },
+          { name: 'Jouer un rôle actif dans la structuration des applications d\'une page pour les rendre faciles à gérer (Angular JS 2)' },
+          { name: 'Maintenance d\'applications avec des technologies telles que JQuery / HTML5 / Javascript / Angular / Bootstrap' },
+          { name: 'Développer l’application mobile «TabLauncher» pour les filiales de douze pays (avec JavaScript, HTML5, CSS3, NodeJS, Angular 2/4…) ' },
+          { name: 'Développer et mettre à jour des fonctionnalités destinées aux utilisateurs' },
+          { name: 'Développer, concevoir et concevoir le site Web de l\'équipe de distribution réseau en utilisant JavaScript, HTML5, CSS3, Angular JS.' },
+          { name: 'Traitement d\'images et de vidéos.' },
+          { name: 'Collaborer avec les développeurs back-end, l\'équipe marketing, l\'équipe de petites entreprises' },
+          { name: 'Collaborer avec l\'équipe d\'assurance qualité pour définir les scénarios de test et résoudre les problèmes' },
+          { name: 'Travailler avec UI / UX designer' },
+          { name: 'Configuration et administration du serveur cloud' },
+          { name: 'Utiliser Agile produit (Jira, Confluence, Bitbucket) pour organiser les tâches de l\'équipe' },
+          { name: 'Construire des relations solides avec d\'autres départements pour acquérir des ensembles de données pertinents dans l\'ensemble de l\'organisation' },
         ],
         projectCompany: [
           {
@@ -269,7 +247,6 @@ export class DataCompanyService {
               data: ScotiabankProject1Component,
               visible: false,
             },
-
           },
           {
             projectIndex: '2',
@@ -283,7 +260,6 @@ export class DataCompanyService {
           }
         ]
       },
-      // role 3
       {
         role: 'Technology Lead',
         role_fr: 'Responsable technique',
@@ -291,28 +267,28 @@ export class DataCompanyService {
         year: '2015- 2016',
         logo: '../../../assets/logo/logo-cansel.png',
         tasks: [
-          { name: 'Develop and implementation of web solutions'},
-          { name: 'Build website using HTML5, CSS3, Javascript and AngularJS, Node.JS.'},
-          { name: 'Develop mobile application using JQuery and AngularJS.'},
-          { name: 'Develop and update user-facing features;'},
-          { name: 'Developing script and create new toolboxes for Geoprocessing and spatial analysis.'},
-          { name: 'Develop API application.'},
-          { name: 'Conduct product training in a classroom environment and/or online'},
-          { name: 'Develop customized solutions to customers.'},
-          { name: 'Assist in the development of product related instructional programs'},
-          { name: 'Assist in the development of technical support documentation'},
+          { name: 'Develop and implementation of web solutions' },
+          { name: 'Build website using HTML5, CSS3, Javascript and AngularJS, Node.JS.' },
+          { name: 'Develop mobile application using JQuery and AngularJS.' },
+          { name: 'Develop and update user-facing features;' },
+          { name: 'Developing script and create new toolboxes for Geoprocessing and spatial analysis.' },
+          { name: 'Develop API application.' },
+          { name: 'Conduct product training in a classroom environment and/or online' },
+          { name: 'Develop customized solutions to customers.' },
+          { name: 'Assist in the development of product related instructional programs' },
+          { name: 'Assist in the development of technical support documentation' },
         ],
         tasks_fr: [
-          { name: 'Développer et mettre en œuvre des solutions web'},
-          { name: 'Construire un site web en utilisant HTML5, CSS3, Javascript et AngularJS, Node.JS.'},
-          { name: 'Développer une application mobile en utilisant JQuery et AngularJS.'},
-          { name: 'Développer et mettre à jour des fonctionnalités destinées aux utilisateurs;'},
-          { name: 'Développement de scripts et création de nouvelles boîtes à outils pour le géotraitement et l\'analyse spatiale.'},
-          { name: 'Développer une application API.'},
-          { name: 'Organiser une formation sur les produits dans un environnement de classe et / ou en ligne'},
-          { name: 'Développer des solutions personnalisées pour les clients.'},
-          { name: 'Aider à l\'élaboration de programmes d\'instruction liés aux produits'},
-          { name: 'Aider à l\'élaboration de la documentation de support technique'},
+          { name: 'Développer et mettre en œuvre des solutions web' },
+          { name: 'Construire un site web en utilisant HTML5, CSS3, Javascript et AngularJS, Node.JS.' },
+          { name: 'Développer une application mobile en utilisant JQuery et AngularJS.' },
+          { name: 'Développer et mettre à jour des fonctionnalités destinées aux utilisateurs;' },
+          { name: 'Développement de scripts et création de nouvelles boîtes à outils pour le géotraitement et l\'analyse spatiale.' },
+          { name: 'Développer une application API.' },
+          { name: 'Organiser une formation sur les produits dans un environnement de classe et / ou en ligne' },
+          { name: 'Développer des solutions personnalisées pour les clients.' },
+          { name: 'Aider à l\'élaboration de programmes d\'instruction liés aux produits' },
+          { name: 'Aider à l\'élaboration de la documentation de support technique' },
         ],
         projectCompany: [
           {
@@ -324,10 +300,8 @@ export class DataCompanyService {
               visible: false,
             },
           },
-
         ]
       },
-      // role 4
       {
         role: 'Developer',
         role_fr: 'Développeur',
@@ -335,18 +309,18 @@ export class DataCompanyService {
         year: '2012-2014',
         logo: '../../../assets/logo/University-Of-Calgary-Logo.png',
         tasks: [
-          { name: 'Develop, concept and design of  an new Software for segmentation of laser scanner data and Close-range photogrammetry data (using C/C++, Java and python)'},
-          { name: 'Collection of 3D laser scanner data and Close-range photogrammetry data'},
-          { name: 'Registration of laser scanner data and Close-range photogrammetry data,'},
-          { name: 'Remove noise data,'},
-          { name: 'Write the user manual for this software.'},
+          { name: 'Develop, concept and design of  an new Software for segmentation of laser scanner data and Close-range photogrammetry data (using C/C++, Java and python)' },
+          { name: 'Collection of 3D laser scanner data and Close-range photogrammetry data' },
+          { name: 'Registration of laser scanner data and Close-range photogrammetry data,' },
+          { name: 'Remove noise data,' },
+          { name: 'Write the user manual for this software.' },
         ],
         tasks_fr: [
-          { name: 'Développer, concevoir et concevoir un nouveau logiciel pour la segmentation des données de scanner laser et de données de photogrammétrie à proximité (en utilisant C / C ++, Java et python)'},
-          { name: 'Collecte de données de scanner laser 3D et de données de photogrammétrie à courte portée'},
-          { name: 'Enregistrement des données du scanner laser et des données de photogrammétrie à courte portée'},
-          { name: 'Supprimer les données bruit'},
-          { name: 'Rédigez le manuel d\'utilisation de ce logiciel.'},
+          { name: 'Développer, concevoir et concevoir un nouveau logiciel pour la segmentation des données de scanner laser et de données de photogrammétrie à proximité (en utilisant C / C ++, Java et python)' },
+          { name: 'Collecte de données de scanner laser 3D et de données de photogrammétrie à courte portée' },
+          { name: 'Enregistrement des données du scanner laser et des données de photogrammétrie à courte portée' },
+          { name: 'Supprimer les données bruit' },
+          { name: 'Rédigez le manuel d\'utilisation de ce logiciel.' },
         ],
         projectCompany: [
           {
@@ -359,11 +333,8 @@ export class DataCompanyService {
               visible: false,
             },
           },
-
         ]
       },
-
-      // role 5
       {
         role: 'Front-End Developer',
         role_fr: 'Développeur Frontal',
@@ -371,20 +342,20 @@ export class DataCompanyService {
         year: '2010-2012',
         logo: '../../../assets/logo/logo-GEOMATICA.jpg',
         tasks: [
-          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS'},
-          { name: 'Design and implementation of web and mobile solutions.'},
-          { name: 'Conception of Database for many companies,'},
-          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.'},
-          { name: 'Configuration and maintenance of Oracle Applications and Database server '},
-          { name: 'Write the monitoring reports and technical reports.'},
+          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
+          { name: 'Design and implementation of web and mobile solutions.' },
+          { name: 'Conception of Database for many companies,' },
+          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
+          { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
+          { name: 'Write the monitoring reports and technical reports.' },
         ],
         tasks_fr: [
-          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS'},
-          { name: 'Conception et mise en œuvre de solutions web et mobiles.'},
-          { name: 'Conception de base de données pour de nombreuses entreprises'},
-          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.'},
-          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données'},
-          { name: 'Rédiger les rapports de suivi et les rapports techniques.'},
+          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
+          { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
+          { name: 'Conception de base de données pour de nombreuses entreprises' },
+          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
+          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
+          { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
         ],
         projectCompany: [
           {
@@ -407,7 +378,6 @@ export class DataCompanyService {
               visible: false,
             },
           },
-
           {
             projectIndex: '3',
             type: 'GIS app',
@@ -418,7 +388,6 @@ export class DataCompanyService {
               visible: false,
             },
           },
-
           {
             projectIndex: '4',
             type: 'GIS app',
@@ -429,11 +398,8 @@ export class DataCompanyService {
               visible: false,
             },
           },
-
         ]
       },
-      // role 6
-
       {
         role: 'Web Developer',
         role_fr: 'Développeur Web',
@@ -441,20 +407,20 @@ export class DataCompanyService {
         year: '2007-2010',
         logo: '../../../assets/logo/geo-environement.png',
         tasks: [
-          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS'},
-          { name: 'Design and implementation of web and mobile solutions.'},
-          { name: 'Conception of Database for many companies,'},
-          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.'},
-          { name: 'Configuration and maintenance of Oracle Applications and Database server '},
-          { name: 'Write the monitoring reports and technical reports.'},
+          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
+          { name: 'Design and implementation of web and mobile solutions.' },
+          { name: 'Conception of Database for many companies,' },
+          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
+          { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
+          { name: 'Write the monitoring reports and technical reports.' },
         ],
         tasks_fr: [
-          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS'},
-          { name: 'Conception et mise en œuvre de solutions web et mobiles.'},
-          { name: 'Conception de base de données pour de nombreuses entreprises'},
-          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.'},
-          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données'},
-          { name: 'Rédiger les rapports de suivi et les rapports techniques.'},
+          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
+          { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
+          { name: 'Conception de base de données pour de nombreuses entreprises' },
+          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
+          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
+          { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
         ],
         projectCompany: [
           {
@@ -466,7 +432,8 @@ export class DataCompanyService {
               data: '',
               visible: false,
             },
-          }, {
+          },
+          {
             projectIndex: '2',
             type: 'GIS app',
             projectName: 'Estimation of the cement deposit in J. Ressas (Tunisia).',
@@ -475,7 +442,8 @@ export class DataCompanyService {
               data: '',
               visible: false,
             },
-          }, {
+          },
+          {
             projectIndex: '3',
             type: 'GIS app',
             projectName: 'Study the Environmental impact assessment of the current licence to operate the gold mine of Kiniero (Guinea).',
@@ -499,7 +467,7 @@ export class DataCompanyService {
             projectIndex: '5',
             type: 'GIS app',
             projectName: 'Study of environmental impact assessment of quarrying limestone and marl for cement project projected in Zouarine, Delegation of Sers, Kef Governorate (Tunisia).',
-            projectName_fr: 'Etude d’impact sur l’environnement d’un projet d’extraction du ciment et de la pierre calcaire à Zouarine, Délégation de Sers, Gouvernorat du Kef (Tunisie).', 
+            projectName_fr: 'Etude d’impact sur l’environnement d’un projet d’extraction du ciment et de la pierre calcaire à Zouarine, Délégation de Sers, Gouvernorat du Kef (Tunisie).',
             projectdetails: {
               data: '',
               visible: false,
@@ -545,10 +513,8 @@ export class DataCompanyService {
               visible: false,
             },
           },
-
         ]
       },
-      // role 7
       {
         role: 'Web Developer',
         role_fr: 'Développeur Web',
@@ -556,20 +522,20 @@ export class DataCompanyService {
         year: '2005-2007',
         logo: '../../../assets/logo/geo-service.png',
         tasks: [
-          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS'},
-          { name: 'Design and implementation of web and mobile solutions.'},
-          { name: 'Conception of Database for many companies,'},
-          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.'},
-          { name: 'Configuration and maintenance of Oracle Applications and Database server '},
-          { name: 'Write the monitoring reports and technical reports.'},
+          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
+          { name: 'Design and implementation of web and mobile solutions.' },
+          { name: 'Conception of Database for many companies,' },
+          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
+          { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
+          { name: 'Write the monitoring reports and technical reports.' },
         ],
         tasks_fr: [
-          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS'},
-          { name: 'Conception et mise en œuvre de solutions web et mobiles.'},
-          { name: 'Conception de base de données pour de nombreuses entreprises'},
-          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.'},
-          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données'},
-          { name: 'Rédiger les rapports de suivi et les rapports techniques.'},
+          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
+          { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
+          { name: 'Conception de base de données pour de nombreuses entreprises' },
+          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
+          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
+          { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
         ],
         projectCompany: [
           {
@@ -581,7 +547,8 @@ export class DataCompanyService {
               data: '',
               visible: false,
             },
-          }, {
+          },
+          {
             projectIndex: '2',
             type: 'GIS app',
             projectName: 'Analysis of the coastal erosion of Kerkennah (Tunisia).',
@@ -590,8 +557,8 @@ export class DataCompanyService {
               data: '',
               visible: false,
             },
-
-          }, {
+          },
+          {
             projectIndex: '3',
             type: 'GIS app',
             projectName: 'Environmental impact assessment of the development of Gammarth marine (Tunisia).',
@@ -600,67 +567,41 @@ export class DataCompanyService {
               data: '',
               visible: false,
             },
-
           },
-
         ]
       }
-    ]
-
-
-    for (let i = 0; i < this.projectList.length; i++) {
-      for (let j = 0; j < this.projectList[i].projectCompany.length; j++) {
-        this.flagArray.push(false);
-      }
-    }
+    ];
   }
   public getData() {
     this.httpClient.get('../').subscribe(response => {
       console.log('response');
     }
-
-
     );
   }
   public iconChange(i: number, j: number) {
     this.projectList[i].projectCompany[j].projectdetails.visible = !this.projectList[i].projectCompany[j].projectdetails.visible;
-    //console.log(this.projectList[i].projectCompany[j].projectdetails.visible)
+    // console.log(this.projectList[i].projectCompany[j].projectdetails.visible)
 
 
   }
-
+  /**
+   * show all project details
+  * */
   public showAll() {
-    for (let i = 0; i < this.projectList.length; i++) {
-      for (let j = 0; j < this.projectList[i].projectCompany.length; j++) {
-        this.projectList[i].projectCompany[j].projectdetails.visible = true;
+    for (const oneProject of this.projectList) {
+      for (const oneCompany of oneProject.projectCompany) {
+        oneCompany.projectdetails.visible = true;
       }
-      // this.flagArray[i] = true;
     }
   }
-
+    /**
+     * hide all project details
+    * */
   public hideAll() {
-    for (let i = 0; i < this.projectList.length; i++) {
-      for (let j = 0; j < this.projectList[i].projectCompany.length; j++) {
-        this.projectList[i].projectCompany[j].projectdetails.visible = false;
+    for (const oneProject of this.projectList) {
+      for (const oneCompany of oneProject.projectCompany) {
+        oneCompany.projectdetails.visible = false;
       }
-      // this.flagArray[i] = true;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
