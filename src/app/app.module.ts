@@ -9,7 +9,6 @@ import { SoftwareSkillsComponent } from './components/software-skills/software-s
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EducationComponent } from './components/education/education.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiplomaComponent } from './components/education/diploma/diploma.component';
 import { PublicationComponent } from './components/education/publication/publication.component';
@@ -56,8 +55,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
 import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
 
-// angular material
+// import module angular material
 import { AngularMaterialModule } from './angular-material.module';
+// import module for blog
+import { BlogModule } from './components/blog/blog.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +67,6 @@ import { AngularMaterialModule } from './angular-material.module';
     SoftwareSkillsComponent,
     EducationComponent,
     ContactComponent,
-    BlogComponent,
     DiplomaComponent,
     PublicationComponent,
     ConferenceComponent,
@@ -103,6 +103,7 @@ import { AngularMaterialModule } from './angular-material.module';
     AngularFireStorageModule, // Only required for storage features
     ReactiveFormsModule,
     AngularFireDatabaseModule,
+    BlogModule,
     AngularMaterialModule,
     TranslateModule.forRoot({
       loader: {

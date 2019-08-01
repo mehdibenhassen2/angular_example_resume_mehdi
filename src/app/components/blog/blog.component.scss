@@ -1,48 +1,7 @@
-@import "colors";
-@import 'inheritance';
-.blog_title {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  line-height: 20px;
-  font-weight: bold;
-}
-.blog_date {
-  width: 400px;
-  font-size: 10px;
-  font-weight: 100;
-  margin: 0px 10px;
-  line-height: 10px;
-}
-.blog_place {
-  width: 400px;
+.data_bloc{
   font-size: 12px;
-  font-weight: 100;
-  margin-top: 5px;
-  line-height: 15px;
-  padding-left: 10px;
-}
-.blog_text {
-  padding-left: 10px;
-}
-.blog_img {
-  margin-right: 10px;
-  text-align: center;
-  display: block;
-  margin: 10px auto 10px auto;
-  width: 50%;
-}
-.btn_read_more {
-  @extend %btn_standard;
-  float: right;
-  margin: 10px;
-}
-.data_bloc {
-  border: solid 1px gray;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  padding-left: 10px;
-  background-color: $background_title_details;
+  margin-left: 15px;
+  padding-bottom: 5px;
 }
 .image_collapsed:hover {
   opacity: 1;
@@ -51,7 +10,6 @@
 .image_collapsed {
   text-align: center;
   opacity: 0.4;
-  border-radius: 50%;
   margin: auto;
   padding: 0px;
   width: auto;
@@ -64,11 +22,25 @@
   margin: 0 -10px 0 -10px;
   border-radius: 20px;
 }
-.image_extended {
-  max-height: 500px;
-  text-align: center;
-  display: block;
-  box-shadow: 2px 2px 3px;
-  width: 50%;
+
+
+
+// using flex layout
+.cardList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+/* Column Gap */
+.cardList > * {
+  box-sizing: border-box;
+}
+.cardList > *:not(:last-child) {
+  margin: 10px auto 10px auto;
+  width: 300px;
+}
+/* Item sizing */
+.cardListItem {
   margin: 10px auto 10px auto;
 }
