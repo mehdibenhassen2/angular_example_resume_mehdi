@@ -1,9 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-
+import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
+  animations: [
+    trigger('listStagger', [
+      transition('* <=> *', [
+        query(
+          ':enter',
+          [
+            style({ opacity: 0, transform: 'translateY(-15px)' }),
+            stagger(
+              '200ms',
+              animate(
+                '550ms ease-out',
+                style({ opacity: 1, transform: 'translateY(0px)' })
+              )
+            )
+          ],
+          { optional: true }
+        ),
+        query(':leave', animate('50ms', style({ opacity: 0 })), {
+          optional: true
+        })
+      ])
+    ])
+  ]
 })
 export class BlogComponent implements OnInit {
   blocData = [];
@@ -149,7 +172,19 @@ export class BlogComponent implements OnInit {
       },
     ];
   }
+  items = [];
 
+  showItems() {
+    this.items = [0, 1, 2, 3, 4];
+  }
+
+  hideItems() {
+    this.items = [];
+  }
+
+  toggle() {
+    this.items.length ? this.hideItems() : this.showItems();
+  }
   ngOnInit() {
 
   }

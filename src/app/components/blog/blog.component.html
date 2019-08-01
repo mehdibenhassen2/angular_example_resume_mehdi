@@ -3,7 +3,7 @@
 
 
 
-<div class="cardList">
+<div class="cardList" [@listStagger]="blocData.length">
   <ng-container *ngFor='let data of blocData; let i=index'>
     <app-blog-piece 
           title={{data.title}} 

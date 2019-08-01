@@ -9,7 +9,6 @@ import { MatButtonModule } from '@angular/material';
 import { MatDialog } from '@angular/material'; // service
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
 @NgModule({
   declarations: [BlogComponent, ModalBlogComponent, BlogPieceComponent],
   imports: [
@@ -17,7 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDialogModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [MatDialog],
   entryComponents: [ModalBlogComponent]
