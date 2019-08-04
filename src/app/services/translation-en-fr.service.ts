@@ -5,22 +5,26 @@ import {TranslateService} from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class TranslationEnFrService {
-  language = 'en';
+  public language = 'en';
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
    }
-   useLanguage(language: string) {
-    this.translate.use(language);
+   useLanguage() {
+    this.translate.use(this.language);
   }
   switch_lang() {
     if (this.language === 'en') {
     this.language = 'fr';
+    this.useLanguage();
     console.log(this.language);
   } else {
     this.language = 'en';
     console.log(this.language);
+    this.useLanguage();
     }
     return this.language;
+    
+
   }
 }

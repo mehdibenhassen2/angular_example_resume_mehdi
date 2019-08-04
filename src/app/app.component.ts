@@ -28,6 +28,5 @@ export class AppComponent implements OnInit {
     this.translate.use(language);
 }
   ngOnInit() {
-    this.openDialog();
   }
 }
