@@ -47,7 +47,7 @@
         </div>
 
         <div class='navbar-nav'>
-            <a class="nav-item nav-link " (click)="showDialog = !showDialog">
+            <a class="nav-item nav-link " (click)="showDialogFunc()">
                 <mat-icon class='icons_white_horizontal'>info</mat-icon>
             </a>
         </div>
@@ -110,4 +110,4 @@
 
 
 
-<app-dialog [(visible)]="!showDialog"> </app-dialog>
+<app-dialog [(visible)]="!showDialog" [(showDialog)]="showDialog"> </app-dialog>

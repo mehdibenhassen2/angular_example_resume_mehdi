@@ -26,7 +26,10 @@ export class NavBarComponent implements OnInit {
     return this.offset;
   }
 
-
+  showDialogFunc(){
+    this.showDialog = !this.showDialog;
+    console.log(this.showDialog);
+  }
   ngOnInit() {
 
 

@@ -26,6 +26,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class DialogComponent implements OnInit {
   @Input() closable = true;
   @Input() visible = false;
+  @Input() showDialog: boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   constructor(private dialogRef: MatDialogRef<DialogComponent>,
               @Inject(MAT_DIALOG_DATA) data) {
@@ -38,5 +39,9 @@ export class DialogComponent implements OnInit {
   close() {
     this.visible = false;
     this.visibleChange.emit(this.visible);
+    this.showDialog = !this.showDialog;
+    this.visibleChange.emit(this.showDialog);
+
+
   }
 }
