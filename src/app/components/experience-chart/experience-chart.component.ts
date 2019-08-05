@@ -10,22 +10,17 @@ import { DataCompanyService } from '../../services/data-company.service';
 export class ExperienceChartComponent implements OnInit {
   softwaresLabel = [];
   softwaresyears = [];
-  barColor = [];
+  // tslint:disable-next-line:max-line-length
+  barColor = ['#E8ADAA', '#ECC5C0', '#EDC9AF', '#FDD7E4', '#FCDFFF', '#FFDFDD','#FBBBB9', '#FAAFBE', '#FAAFBA', '#F9A7B0', '#E7A1B0', '#E799A3', '#E38AAE', '#F778A1', '#E56E94', '#F660AB'];
 
   BarChart = []; // This will hold our chart info
 
   softwareList: Array<any>;
   constructor(public dataCompanyService: DataCompanyService) { }
-  getRandomColor() {
-    for (let i = 0; i < 20; i++) {
-    var color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
-    this.barColor.push(color);
-  }
-    // console.log(this.barColor);
-  
-  }
+
+
   ngOnInit() {
-    this.getRandomColor() ;
+
     let options = {
       responsive: true,
       maintainAspectRatio: false,
@@ -33,12 +28,10 @@ export class ExperienceChartComponent implements OnInit {
       zoomEnabled: true,
       animationSteps: 120,
       exportEnabled: true,
-
-  
     };
     this.softwareList = this.dataCompanyService.softwareList;
 
-    //if you want desplay all softwares
+    // if you want desplay all softwares
     /*for (let i = 0; i < this.softwareList.length; i++) {
       for (let j = 0; j < (this.softwareList[i].Softwares).length; j++) {
         this.softwaresLabel.push(this.softwareList[i].Softwares[j].softwareName);
@@ -94,7 +87,7 @@ export class ExperienceChartComponent implements OnInit {
               labelString: "Languages",
               fontColor: "green",
               padding: 0,
-                            fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
               fontSize: 10,
 
 
@@ -113,7 +106,7 @@ export class ExperienceChartComponent implements OnInit {
             afterDataLimits: 10,
             gridLines: {
               display: false,
-  
+
             },
             scaleLabel: {
               display: true,
