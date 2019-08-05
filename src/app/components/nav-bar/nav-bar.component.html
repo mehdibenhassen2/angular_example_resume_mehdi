@@ -56,7 +56,8 @@
         <div class='navbar-nav'>
             <a class="nav-item nav-link "
                 (click)="translationEnFrService.useLanguage(); translationEnFrService.switch_lang()">
-                <span class='label_navbar2'>{{ translationEnFrService.language | uppercase }} </span>
+                <img class="lang_flag" *ngIf="translationEnFrService.language=='fr'" src='../../../assets/fr.png'>
+                <img class="lang_flag" *ngIf="translationEnFrService.language=='en'" src='../../../assets/en.png'>
             </a>
         </div>
 
