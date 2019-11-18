@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UniversityOfCalgaryProject1Component } from '../components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
-import { InsuredConnectProject1Component } from '../components/professional-experience/list-of-projects/insured-connect-project1/insured-connect-project1.component';
-import { ScotiabankProject1Component } from '../components/professional-experience/list-of-projects/scotiabank-project1/scotiabank-project1.component';
-import { ScotiabankProject2Component } from '../components/professional-experience/list-of-projects/scotiabank-project2/scotiabank-project2.component';
-import { GeomaticaProject1Component } from '../components/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
+import { UniversityOfCalgaryProject1Component } from '@components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
+import { InsuredConnectProject1Component } from '@components/professional-experience/list-of-projects/insured-connect-project1/insured-connect-project1.component';
+import { ScotiabankProject1Component } from '@components/professional-experience/list-of-projects/scotiabank-project1/scotiabank-project1.component';
+import { ScotiabankProject2Component } from '@components/professional-experience/list-of-projects/scotiabank-project2/scotiabank-project2.component';
+import { GeomaticaProject1Component } from '@components/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
 // tslint:disable-next-line:max-line-length
-import { GeoenvironementProject1Component } from '../components/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
+import { GeoenvironementProject1Component } from '@components/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -22,75 +22,75 @@ export class DataCompanyService {
       {
         domaine: 'Programming: ',
         domaine_fr: 'Programmation: ',
-        domaineLogo: '../../../assets/software/code.png',
+        domaineLogo: 'assets/software/code.png',
         Softwares: [
           {
             softwareName: 'Angular Js/ 2 -> 8',
-            logo: '../../../assets/software/angular-logo.jpg',
+            logo: 'assets/software/angular-logo.jpg',
             years: '6 ',
           },
           {
             softwareName: 'HTML5',
-            logo: '../../../assets/software/html.png',
+            logo: 'assets/software/html.png',
             years: '8 ',
           },
           {
             softwareName: 'CSS3',
-            logo: '../../../assets/software/css.png',
+            logo: 'assets/software/css.png',
             years: '8 ',
           },
           {
             softwareName: 'JavaScript',
-            logo: '../../../assets/software/javascript.jpeg',
+            logo: 'assets/software/javascript.jpeg',
             years: '7 ',
           },
           {
             softwareName: 'Java',
-            logo: '../../../assets/software/java-logo.png',
+            logo: 'assets/software/java-logo.png',
             years: '1 ',
           }, {
             softwareName: 'Node.JS',
-            logo: '../../../assets/software/node.jpg',
+            logo: 'assets/software/node.jpg',
             years: '1 ',
           },
           {
             softwareName: 'JQuery',
-            logo: '../../../assets/software/jquery-logo.jpg',
+            logo: 'assets/software/jquery-logo.jpg',
             years: '2 ',
           },
           {
             softwareName: 'Qt',
-            logo: '../../../assets/software/Qt.jpeg',
+            logo: 'assets/software/Qt.jpeg',
             years: '2 ',
           },
           {
             softwareName: 'Python',
-            logo: '../../../assets/software/python-logo.png',
+            logo: 'assets/software/python-logo.png',
             years: '2 ',
           },
           {
             softwareName: 'PHP',
-            logo: '../../../assets/software/php-logo.jpg',
+            logo: 'assets/software/php-logo.jpg',
             years: '1 ',
           },
           {
             softwareName: 'Visual Basic',
-            logo: '../../../assets/software/visual-studio-logo.jpg',
+            logo: 'assets/software/visual-studio-logo.jpg',
             years: '1 ',
           },
           {
             softwareName: 'C',
-            logo: '../../../assets/software/c.png',
+            logo: 'assets/software/c.png',
             years: '1 ',
           },
           {
             softwareName: 'C++',
-            logo: '../../../assets/software/C++.png',
+            logo: 'assets/software/C++.png',
             years: '3 ',
           },
           {
             softwareName: 'C#',
-            logo: '../../../assets/software/Csharp.png',
+            logo: 'assets/software/Csharp.png',
             years: '1 ',
           }
         ]
@@ -98,36 +98,36 @@ export class DataCompanyService {
       {
         domaine: 'Design and Multimedia: ',
         domaine_fr: 'Design et multimédia: ',
-        domaineLogo: '../../../assets/software/design.jpg',
+        domaineLogo: 'assets/software/design.jpg',
         Softwares: [
           {
             softwareName: 'Adobe Photoshop',
-            logo: '../../../assets/software/Adobe_Photoshop.png',
+            logo: 'assets/software/Adobe_Photoshop.png',
             years: '2 ',
           },
           {
             softwareName: 'Adobe Illustrator',
-            logo: '../../../assets/software/Adobe_Illustrator.png',
+            logo: 'assets/software/Adobe_Illustrator.png',
             years: '4 ',
           },
           {
             softwareName: 'Adobe Flash',
-            logo: '../../../assets/software/Adobe_Flash_Player.png',
+            logo: 'assets/software/Adobe_Flash_Player.png',
             years: '4 ',
           },
           {
             softwareName: 'Adobe Golive',
-            logo: '../../../assets/software/adobe_golive_logo.jpg',
+            logo: 'assets/software/adobe_golive_logo.jpg',
             years: '1 ',
           },
           {
             softwareName: 'Adobe Director',
-            logo: '../../../assets/software/Adobe_Director.jpg',
+            logo: 'assets/software/Adobe_Director.jpg',
             years: '2 ',
           },
           {
             softwareName: 'Dreamweaver',
-            logo: '../../../assets/software/Adobe_Dreamweaver_logo.png',
+            logo: 'assets/software/Adobe_Dreamweaver_logo.png',
             years: '1 ',
           }
         ]
@@ -135,21 +135,21 @@ export class DataCompanyService {
       {
         domaine: 'DataBase: ',
         domaine_fr: 'Base de Données',
-        domaineLogo: '../../../assets/software/db.png',
+        domaineLogo: 'assets/software/db.png',
         Softwares: [
           {
             softwareName: 'Oracle',
-            logo: '../../../assets/software/oracle.gif',
+            logo: 'assets/software/oracle.gif',
             years: '1 ',
           },
           {
             softwareName: 'Access',
-            logo: '../../../assets/software/f-access.jpg',
+            logo: 'assets/software/f-access.jpg',
             years: '3 ',
           },
           {
             softwareName: 'WinDEV',
-            logo: '../../../assets/software/windev.jpg',
+            logo: 'assets/software/windev.jpg',
             years: '1',
           }
         ]
@@ -159,9 +159,40 @@ export class DataCompanyService {
       {
         role: 'Front End developer',
         role_fr: 'Développeur Frontal',
+        company: 'Clickatell',
+        year: '2019- prensent',
+        logo: 'assets/logo/clickatell.png',
+        tasks: [
+          { name: 'Work with an team of engineers and product designers to implement the next generation of Clickatell products' },
+          { name: 'Be part of and actively contribute to a cross-functional Agile/Scrum team that works together to become a high-performing team in delivering world-class technology solutions' },
+          { name: 'Be responsible for creating responsive grid systems along with using clean code that will make web interface function properly on any platform they are being viewed from' },
+          { name: 'Use JavaScript, CSS, HTML, Angular 8 to build web applications' },
+          { name: 'Use Responsive Web Design (RWD) techniques in web development: review mocks, bring them to life on desktop and connected devices' },
+          { name: 'Develop interactive components using JavaScript and Angular; integrate with internal tools, frameworks and services as well as external APIs' },
+          { name: 'Collaborate with backend developers, editors, and external agencies' },
+          { name: 'Translate UI designs into well-organized and structured HTML/CSS compatible with modern browsers, and use open source tools & frameworks to improve the structure and maintainability of the front-end code where possible' },
+          { name: 'Design user interfaces with a modern and clean aesthetic which focus on delivering intuitive & enjoyable user experiences' },
+          { name: 'Create wireframes to illustrate high-level solutions to an application and feature requests' },
+        ],
+        tasks_fr: [
+          { name: ' Travailler avec une équipe d\'ingénieurs et de concepteurs de produits pour mettre en œuvre la nouvelle génération de produits Clickatell' },
+          { name: ' Faites partie d\'une équipe multidisciplinaire Agile / Scrum qui contribue activement à la création d\'une équipe hautement performante dans la fourniture de solutions technologiques de classe mondiale.' },
+          { name: ' Être responsable de la création de systèmes de grille réactifs et de l\'utilisation d\'un code propre qui permettra à l\'interface Web de fonctionner correctement sur la plate-forme sur laquelle elle est visualisée' },
+          { name: ' Utiliser JavaScript, CSS, HTML, Angular 8 pour créer des applications Web' },
+          { name: 'Utilisez les techniques de conception de site Web réactif (RWD) dans le développement Web: passez en revue les simulacres, donnez-les à la vie sur les ordinateurs de bureau et les périphériques connectés' },
+          { name: ' Développer des composants interactifs en utilisant JavaScript et Angular; intégrer avec des outils internes, des cadres et des services ainsi que des API externes' },
+          { name: 'Collaborer avec les développeurs, les éditeurs et les agences externes' },
+          { name: 'Traduire les conceptions d\'interface utilisateur en HTML / CSS bien organisés et structurés compatibles avec les navigateurs modernes, et utiliser des outils et des frameworks open source pour améliorer la structure et la maintenabilité du code frontal, dans la mesure du possible' },
+          { name: ' Concevez des interfaces utilisateur avec une esthétique moderne et épurée visant à offrir une expérience utilisateur intuitive et agréable' },
+          { name: ' Créer des wireframes pour illustrer les solutions de haut niveau d\'une application et les demandes de fonctionnalités' },
+        ],
+      },
+      {
+        role: 'Front End developer',
+        role_fr: 'Développeur Frontal',
         company: 'Insured Connect',
         year: '2018-2019',
-        logo: '../../../assets/logo/insured connect.png',
+        logo: 'assets/logo/insured connect.png',
         tasks: [
           { name: 'Working with the Front-End team to build an Angular 7 web application' },
           { name: 'Design, build and test web components based on high fidelity UI mockups' },
@@ -206,7 +237,7 @@ export class DataCompanyService {
         role_fr: 'Développeur Frontal',
         company: 'Scotiabank ',
         year: '2016-2018',
-        logo: '../../../assets/logo/scotia.png',
+        logo: 'assets/logo/scotia.png',
         tasks: [
           { name: 'Develop / manage / maintain website for 12 countries (Mexico, Colombia, chile,…) to deliver the data ( using HTML5, JavaScript, Angular JS, jQuery, Node.JS, and CSS3)' },
           { name: 'Taking an active role in structuring single page applications to make them easy to maintain (Angular JS 2)' },
@@ -265,7 +296,7 @@ export class DataCompanyService {
         role_fr: 'Responsable technique',
         company: 'Cansel Survey Equipment(Calgary) ',
         year: '2015- 2016',
-        logo: '../../../assets/logo/logo-cansel.png',
+        logo: 'assets/logo/logo-cansel.png',
         tasks: [
           { name: 'Develop and implementation of web solutions' },
           { name: 'Build website using HTML5, CSS3, Javascript and AngularJS, Node.JS.' },
@@ -307,7 +338,7 @@ export class DataCompanyService {
         role_fr: 'Développeur',
         company: 'University of Calgary ',
         year: '2012-2014',
-        logo: '../../../assets/logo/University-Of-Calgary-Logo.png',
+        logo: 'assets/logo/University-Of-Calgary-Logo.png',
         tasks: [
           { name: 'Develop, concept and design of  an new Software for segmentation of laser scanner data and Close-range photogrammetry data (using C/C++, Java and python)' },
           { name: 'Collection of 3D laser scanner data and Close-range photogrammetry data' },
@@ -340,7 +371,7 @@ export class DataCompanyService {
         role_fr: 'Développeur Frontal',
         company: 'Geomatica company ',
         year: '2010-2012',
-        logo: '../../../assets/logo/logo-GEOMATICA.jpg',
+        logo: 'assets/logo/logo-GEOMATICA.jpg',
         tasks: [
           { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
           { name: 'Design and implementation of web and mobile solutions.' },
@@ -405,7 +436,7 @@ export class DataCompanyService {
         role_fr: 'Développeur Web',
         company: 'Geo-Environnment company',
         year: '2007-2010',
-        logo: '../../../assets/logo/geo-environement.png',
+        logo: 'assets/logo/geo-environement.png',
         tasks: [
           { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
           { name: 'Design and implementation of web and mobile solutions.' },
@@ -520,7 +551,7 @@ export class DataCompanyService {
         role_fr: 'Développeur Web',
         company: 'Geo-Service company ',
         year: '2005-2007',
-        logo: '../../../assets/logo/geo-service.png',
+        logo: 'assets/logo/geo-service.png',
         tasks: [
           { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
           { name: 'Design and implementation of web and mobile solutions.' },
@@ -594,9 +625,9 @@ export class DataCompanyService {
       }
     }
   }
-    /**
-     * hide all project details
-    * */
+  /**
+   * hide all project details
+  * */
   public hideAll() {
     for (const oneProject of this.projectList) {
       for (const oneCompany of oneProject.projectCompany) {
