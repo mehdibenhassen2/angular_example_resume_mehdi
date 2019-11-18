@@ -1,0 +1,98 @@
+@import "colors";
+
+// option menu en the top
+.mat-form-field ::ng-deep {
+  font-size: 10px;
+    font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
+    text-align: right;
+
+}
+.right {
+  direction: rtl;
+  text-align: right;
+  margin: 10px 20px 0;
+  padding: 0;
+  font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
+
+}
+.label_option{
+  direction: rtl;
+  font-size: 10px;
+  color: $base_blue;
+  text-align: right;
+
+}
+// boostrap table
+.total {
+  background-color: $background_title_details;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.project_year {
+  font-size: 15px;
+  text-align: right;
+}
+.role {
+  font-size: 17px;
+  background-color: $background_title;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.company_name {
+  font-style: italic;
+  font-size: 12px;
+}
+.logo {
+  height: 30px;
+}
+
+.line-height {
+  line-height: 25px;
+}
+
+.project_title {
+  font-size: 12px;
+  padding-bottom: 5px;
+  margin: 5px 25px 5px 25px;
+}
+
+// for grid material
+.task_list {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: left !important;
+  align-items: left !important;
+  justify-content: flex-start !important;
+  &:before {
+    content: "- ";
+  }
+}
+.mat-figure::ng-deep {
+
+  border-color: $background_title_details !important;
+
+}
+.video-title ::ng-deep figure {
+  justify-content: flex-start !important;
+  margin: 0;
+  padding: 0;
+  background-color: $background_title_details;
+  border-color: $background_title_details !important;
+
+}
+
+.mat-grid-tile ::ng-deep span {
+  border-style: none !important;
+
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.grid_head ::ng-deep {
+  background-color: $background_title;
+  border-style: none !important;
+  height: 20px !important;
+}

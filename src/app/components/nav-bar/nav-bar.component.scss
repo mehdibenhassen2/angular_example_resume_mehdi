@@ -1,0 +1,143 @@
+@import "colors";
+// in this page, we used two navigation bar: one horizontal and one vertical.
+// the horizontal bar is displayed only when the user scroll down
+
+// 1- horizontal navigation bar-------------------------------------------
+
+.nav-bar-cust {
+  background-color: $base_blue;
+  padding: 0;
+  & a {
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+#navbarNavAltMarkup {
+  .navbar-nav {
+    border-bottom: none;
+    opacity: 0.9;
+    font-weight: normal;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    &.active {
+      opacity: 1;
+      font-weight: 900;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+    &.notactive {
+      border-bottom: none;
+      opacity: 0.9;
+      font-weight: normal;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
+.active {
+  opacity: 1;
+  font-weight: 900;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+  &:hover {
+    transform: scale(1);
+  }}
+.icons_white {
+  color: white;
+  &_horizontal{
+    padding-right: 10px;
+  }
+}
+
+.title_style {
+  font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  line-height: 23px;
+}
+.under-title {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
+}
+.collapse:not(.show) {
+  display: flex !important;
+}
+// only for the menu code in the nav bar
+.right_in_nav {
+  float: right;
+}
+// responsive : when the size is less then 900 (ipad), hide the title label in the nav bar
+
+@media (max-width: 900px) {
+  .label_navbar {
+    position: absolute;
+    overflow: hidden;
+    top: -1000px;
+  }
+  .icons_white {
+    display: flex;
+    height: 100vh;
+  }
+  .navbar-nav :hover {
+    transform: scale(1.3);
+  }
+  .active .icons_white_horizontal{
+    transform: scale(1.6); 
+
+  padding-right: 10%;
+
+
+}
+
+
+}
+.icons_white_horizontal{
+font-size: inherit;
+height: inherit;
+line-height: inherit;
+width: inherit;}
+
+// 2- vertical navigation bar-------------------------------------------
+
+.vertical-menu {
+  line-height: 20px;
+  position: fixed;
+  top: 25%;
+  left: 0;
+  &_displayed {
+    opacity: 1;
+  }
+  &_hiddeed {
+    opacity: 0;
+  }
+  & a {
+    background-color: $base_blue;
+    margin: 6px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &.activeVertical {
+      background-color: #912cee;
+    }
+  }
+}
+.activeVertical {
+  background-color: #912cee;
+}
+
+.lang_flag{
+height: 20px;
+}

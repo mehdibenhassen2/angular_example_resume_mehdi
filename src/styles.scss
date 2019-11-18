@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "colors";
+
+.container {
+  color: blue;
+}
+
+html {
+  background-color: #dcdcdc;
+  min-width: 400px;
+  min-height: 600px;
+}
+body {
+  min-height: 600px;
+  margin: 4% 4% 4% 4%;
+  background-color: white;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 5px 5px 5px 5px;
+  line-height: 40px;
+  color: #000 !important;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+}
+.container {
+  color: #080808;
+}
+.mat-tab-nav-bar-cust {
+  background-color: rgba(247, 234, 234, 0.533);
+}
+.mat-tab-link-cust {
+  line-height: 10px;
+  color: blue;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  vertical-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style-type: none;
+}
+li:before {
+  content: "-      ";
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+  overflow: hidden !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.mat-dialog-actions {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+// for home page
+.icons_param {
+  color: $base_blue;
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.title_summary {
+  color: $base_blue;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 20px;
+  padding-left: 0;
+  text-decoration: underline;
+}
+.Chart_box {
+  border: solid 1px rgba($base_blue, 0.5);
+  background-color: white;
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.3), inset 0 -2px 3px rgba(0, 0, 0, 0.3),
+    0 1px 1px rgba(255, 255, 255, 0.9);
+}
+.amcharts-chart-div a {
+  display: none !important;
+}
+
+//scrolle bar
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background_title_details;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $base_blue;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

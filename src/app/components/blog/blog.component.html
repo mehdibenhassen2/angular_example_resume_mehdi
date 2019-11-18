@@ -1,0 +1,17 @@
+
+
+
+
+
+<div class="cardList" [@listStagger]="blocData.length">
+  <ng-container *ngFor='let data of blocData; let i=index'>
+    <app-blog-piece 
+          title={{data.title}} 
+          place={{data.place}} 
+          date= {{data.date}} 
+          text={{data.text}} 
+          see= {{data.see}}
+          image={{data.imageSet}}>
+        </app-blog-piece>
+  </ng-container>
+</div>

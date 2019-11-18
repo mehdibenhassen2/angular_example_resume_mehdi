@@ -1,0 +1,61 @@
+@import 'colors';
+
+.total {
+  background-color: $background_title_details;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.role {
+  font-size: 17px;
+  background-color: $background_title;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title_row {
+  margin-left: 10px;
+}
+
+.projectTitle {
+  font-size: 12px;
+  margin-left: 15px;
+  padding-bottom: 5px;
+}
+
+.box_for_image {
+  width: 200px;
+  height: 300px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.alg-right {
+  text-align: right;
+}
+
+.example-card {
+  max-width: 400px;
+  margin: 10px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+.image_avatar {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.title_soft {
+  line-height: 14px;
+  font-size: 14px;
+  margin-left: -10px;
+}
+
+.mat-card-avatar {
+  margin-left: 0px;
+  width: 30px;
+}

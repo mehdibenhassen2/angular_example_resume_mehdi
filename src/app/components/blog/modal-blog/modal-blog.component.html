@@ -1,0 +1,32 @@
+<div class='content'>
+  <div class='row'>
+    <div md-dialog-title class='col-sm-12 col-md-12 col-lg-12 title_content'>
+      <div class='blog_title'>{{data.dg_title}}</div>
+      <div class='blog_place'>{{data.dg_place}}</div>
+      <div class='blog_date'>{{data.dg_date}}</div>
+
+    </div>
+
+  </div>
+  <div class='row'>
+    <mat-dialog-content class='col-sm-12 col-md-12 col-lg-12 main_content'>
+
+
+      <div class='blog_text'>{{data.dg_text}}</div>
+      <!--<div class='blog_text'>{{data.dg_see}}</div>-->
+
+      <div *ngFor='let image of (data.dg_image)'>
+        <img class='image_extended' src="{{image}}">
+      </div>
+
+    </mat-dialog-content>
+  </div>
+  <div class='row'>
+    <mat-dialog-actions class='col-sm-12 col-md-12 col-lg-12 food_content'>
+      <div class="bloc_btn">
+        <!--<button class='btn_read_more' (click)="markAsRead()"><i class="material-icons">star_rate</i></button>-->
+        <button class='btn_read_more' (click)="onClose()">Close</button>
+      </div>
+    </mat-dialog-actions>
+  </div>
+</div>

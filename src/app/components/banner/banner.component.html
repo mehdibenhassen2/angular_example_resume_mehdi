@@ -1,0 +1,38 @@
+<div class='content'>
+  <div class='row'>
+    <div class='col-sm-12 col-md-8 col-lg-8 image_list'>
+      <ngb-carousel *ngIf="images" (slide)="onSlide($event)">
+        <ng-template *ngFor='let slide of images; let i=index' ngbSlide [id]="'slideId_' + i">
+          <img class='image_size' [src]='slide.srcPath'>
+          <div *ngIf="slide.title" class="carousel-caption">
+            <span *ngIf="translationEnFrService.language == 'en'">{{slide.title}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{slide.title_fr}}</span>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class='col-sm-12 col-md-4 col-lg-4 image_discription_list'>
+        <div >
+            <mat-icon [inline]="true" class='icons_param'>notifications_active</mat-icon>
+            <span class='title_summary'>{{ 'summary.News' | translate }}</span>
+          </div>
+      <div *ngFor='let slide of images; let i=index' class="discription_bloc">
+        <div *ngIf="slide.title" id="title{{i}}">
+          <div [ngClass]=" ((currentImageId == i)? 'title_active': 'title_not_active')">
+
+            <span *ngIf="translationEnFrService.language == 'en'">{{slide.title}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{slide.title_fr}}</span>
+          </div>
+
+          <div [ngClass]=" ((currentImageId == i)? 'sub_title_active': 'sub_title_not_active')">
+            <span *ngIf="translationEnFrService.language == 'en'">{{slide.discription}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{slide.discription_fr}}</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,36 @@
+
+
+
+<div class="total" *ngFor="let software of softwareList; let i = index">
+  <div class="container role">
+    <div class="row title_row">
+      <span *ngIf="(translationEnFrService.language == 'en')">{{software.domaine}}</span>
+      <span *ngIf="(translationEnFrService.language == 'fr')">{{software.domaine_fr}}</span>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class=" projectTitle" *ngFor="let specificSoftware of (software.Softwares)">
+      <mat-card class="example-card">
+        <div class=" box_for_image">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"> <img class=' image_avatar'mat-card-image src="{{software.domaineLogo}}" >
+            </div>
+            <mat-card-title class=title_soft>{{specificSoftware .softwareName}}</mat-card-title>
+            <mat-card-subtitle>{{specificSoftware.years}} {{ 'software.years' | translate }}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{specificSoftware .logo}}" alt="{{specificSoftware .softwareName}}">
+
+        </div>
+      </mat-card>
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+</div>

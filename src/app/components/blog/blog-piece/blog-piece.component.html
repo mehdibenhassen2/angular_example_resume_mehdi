@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-content>
+    <div class='blog_img'><img class='image_img' src="{{imagesByBloc[0]}}"></div>
+    <div class='blog_title'>{{title}}</div>
+    <div class='blog_place'> {{place}}</div>
+    <div class='blog_date'> {{date}}</div>
+    <div class='blog_text'> {{text}}</div>
+    <!--<div> {{see}} </div>
+    <strong>Result: {{dialogResult}}</strong>
+-->
+  </mat-card-content>
+  <div class='btn_group'>
+  <button class='btn_read_more' (click)="openDialog()">Read More</button>
+  </div>
+</mat-card>

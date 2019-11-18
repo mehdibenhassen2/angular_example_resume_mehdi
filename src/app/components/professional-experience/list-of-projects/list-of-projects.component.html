@@ -1,0 +1,69 @@
+<div class='content'>
+  <div class='row'>
+    <div class='col-sm-12 col-md-8 col-lg-8 information'>
+      <i class="fas fa-info-circle information_icon"></i> &nbsp; {{'project_Details.information1' | translate}} &nbsp; <i
+        class="fas fa-angle-up information_icon"></i> &nbsp; {{'project_Details.information2' | translate}} &nbsp; <i
+        class="fas fa-angle-down information_icon"></i> &nbsp; {{'project_Details.information3' | translate}}.
+
+    </div>
+    <div class='col-sm-12 col-md-4 col-lg-4'>
+
+      <div class="button_set">
+        <button class="button"
+          (click)="dataCompanyService.showAll()">{{ 'project_Details.Expand_All' | translate }}</button>
+        <button class="button"
+          (click)="dataCompanyService.hideAll()">{{ 'project_Details.Collapse_All' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="total" *ngFor="let project of (projectList); let i = index">
+  <div class="full ">
+    <div class="role ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'en'">{{project.role}}
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'fr'">{{project.role_fr}}
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 company_name">{{project.company }}</div>
+          <div class="col-sm-2 col-md-2 col-lg-2"><img class="logo" src="{{project.logo }}"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2 project_year">{{project.year}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="project_title"
+      [ngClass]=" ((projectList[i].projectCompany[j].projectdetails.visible == true) && (projectList[i].projectCompany[j].projectdetails.data!=''))? 'with_border':'without_border' "
+      *ngFor="let projectC of (project.projectCompany); let j = index">
+      <div class="container-fluid line-height ">
+        <div class="row" [ngClass]=" (projectC.projectdetails.data !='')? 'not_cursor':'for_cursor' "
+          (click)="dataCompanyService.iconChange(i,j)">
+          <div class="col-sm-11 col-md-11 col-lg-11">
+            <strong>{{projectC.projectIndex}} - {{projectC.type}}: </strong>
+            <span *ngIf="translationEnFrService.language == 'en'">{{projectC.projectName}}</span>
+            <span *ngIf="translationEnFrService.language == 'fr'">{{projectC.projectName_fr}}</span>
+
+          </div>
+          <div class="col-sm-1 col-md-1 col-lg-1">
+            <div *ngIf="projectC.projectdetails.data !=''">
+              <i *ngIf="projectList[i].projectCompany[j].projectdetails.visible == true" class="fas fa-angle-up"></i>
+              <i *ngIf="projectList[i].projectCompany[j].projectdetails.visible == false" class="fas fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details"
+        *ngIf="(projectList[i].projectCompany[j].projectdetails.visible == true)  && (projectC.projectdetails.data !='') ">
+        <ng-container *ngComponentOutlet="projectC.projectdetails.data"></ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button_set">
+  <button class="button" (click)="dataCompanyService.showAll()">{{ 'project_Details.Expand_All' | translate }}</button>
+  <button class="button" (click)="dataCompanyService.hideAll()">
+    {{ 'project_Details.Collapse_All' | translate }}</button>
+
+</div>
+<!--filter here web mobile software GIS web map-->

@@ -1,0 +1,89 @@
+@import "colors";
+@import "inheritance";
+
+.total {
+  background-color: $background_title_details;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.role {
+  font-size: 17px;
+  background-color: $background_title;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.logo {
+  height: 30px;
+}
+
+.line-height {
+  line-height: 25px;
+}
+.with_border {
+  border-left: 1px solid rgb(88, 87, 87);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.without_border {
+  border-left: none;
+  box-shadow: none;
+}
+
+.project_title {
+  font-size: 12px;
+  margin: 5px 25px 5px 25px;
+  padding-bottom: 5px;
+}
+
+.details {
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 5px 15px 5px 15px;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+.full {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.button_set {
+  position: sticky;
+  margin: 5px 5px;
+  bottom: 20px;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.button {
+  @extend %btn_standard;
+}
+
+.for_cursor {
+  cursor: hand;
+}
+
+.not_cursor {
+  cursor: pointer;
+}
+.information {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12px;
+  color: gray;
+  &_icon {
+    color: #912cee;
+  }
+}
+
+.company_name {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.project_year {
+  text-align: right;
+}
