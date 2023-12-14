@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "resumeMehdiWebFE"
+  "defaultProject": "resumeMehdiWebFE",
+  "cli": {
+    "analytics": "0ae15c4c-c747-492e-ba78-53bbbcb10eb6"
+  }
 }
