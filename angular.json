@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "resumeMehdiWebFE:build"
+            "buildTarget": "resumeMehdiWebFE:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "resumeMehdiWebFE:build:production"
+              "buildTarget": "resumeMehdiWebFE:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "resumeMehdiWebFE:build"
+            "buildTarget": "resumeMehdiWebFE:build"
           }
         },
         "test": {
