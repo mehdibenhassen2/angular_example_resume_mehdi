@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Component, OnInit, Inject } from '@angular/core/';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialogData } from './interfaces/dialog-data';
 import { DialogComponent } from './components/dialog/dialog.component';
-import { MatDialogConfig } from '@angular/material';
-import {TranslateService} from '@ngx-translate/core';
+import { MatDialogConfig } from '@angular/material/dialog';
+import {TranslateService} from '@ngx-translate/core/dist';
 
 @Component({
   selector: 'app-root',

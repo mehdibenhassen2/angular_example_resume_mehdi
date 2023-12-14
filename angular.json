@@ -49,7 +49,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -129,8 +128,10 @@
       }
     }
   },
-  "defaultProject": "resumeMehdiWebFE",
   "cli": {
+    "cache": {
+      "enabled": false
+    },
     "analytics": "0ae15c4c-c747-492e-ba78-53bbbcb10eb6"
   }
 }
