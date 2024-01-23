@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogConfig } from '@angular/material/dialog';
-import {TranslateService} from '@ngx-translate/core/dist';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',

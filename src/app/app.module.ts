@@ -52,8 +52,8 @@ import { DialogComponent} from '@components/dialog/dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
 // translation
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core/dist';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader/dist';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
 import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
 import { CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
