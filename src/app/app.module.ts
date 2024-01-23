@@ -50,17 +50,20 @@ import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@
 import { DialogData } from './interfaces/dialog-data';
 import { DialogComponent} from '@components/dialog/dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { FormBuilder } from '@angular/forms/';
+import { FormBuilder } from '@angular/forms';
 // translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core/dist';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader/dist';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
 import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
+import { CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
+import {MatDialogModule } from '@angular/material/dialog';
 
 // import module angular material
 import { AngularMaterialModule } from './angular-material.module';
 // import module for blog
 import { BlogModule } from './components/blog/blog.module';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,9 +89,9 @@ import { BlogModule } from './components/blog/blog.module';
     NavBarComponent,
     HeadPageComponent,
     BannerComponent,
-    DialogComponent,
-    ExperienceChartComponent,
+     ExperienceChartComponent,
     ChartTasksComponent,
+    
 
   ],
   imports: [
@@ -96,9 +99,10 @@ import { BlogModule } from './components/blog/blog.module';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    MatDialogModule,
     FormsModule, // to add email form
     BrowserAnimationsModule, // for animation tab
-
+    MatIconModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'resumeMehdiFE'),
     AngularFirestoreModule, // Only required for database features
     AngularFireAuthModule, // Only required for auth features,
@@ -120,6 +124,7 @@ import { BlogModule } from './components/blog/blog.module';
     { provide: MAT_DIALOG_DATA, useValue: [] }],
 
   bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
   // entryComponents: [DialogComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Input, Output, OnChanges, EventEmitter  } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 

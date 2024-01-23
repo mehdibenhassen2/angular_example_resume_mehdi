@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart } from 'chart.js';
+import Chart from 'chart.js/auto';
 import { DataCompanyService } from '../../services/data-company.service';
 
 @Component({
@@ -48,79 +48,79 @@ export class ExperienceChartComponent implements OnInit {
 
 
     // Bar chart:
-    this.BarChart = new Chart('barChart', {
-      type: 'bar',
-      data: {
-        labels: this.softwaresLabel,
-        datasets: [{
-          label: '# of Years',
-          data: this.softwaresyears,
-          backgroundColor: this.barColor,
-          borderColor: [
-            'none',
-          ],
-          borderWidth: 0
-        }]
-      },
-      options: {
-        legend: {
-          display: false,
-        },
-        title: {
-          text: 'Experience',
-          display: false,
-        },
-        scales: {
-          xAxes: [{
-            ticks: {
-              beginAtZero: true,
-              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-              fontSize: 10,
-              fontColor: 'blue',
-            },
-            gridLines: {
-              display: false,
-              color: "black"
-            },
-            scaleLabel: {
-              display: false,
-              labelString: "Languages",
-              fontColor: "green",
-              padding: 0,
-              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-              fontSize: 10,
+    // this.BarChart = new Chart('barChart', {
+    //   type: 'bar',
+    //   data: {
+    //     labels: this.softwaresLabel,
+    //     datasets: [{
+    //       label: '# of Years',
+    //       data: this.softwaresyears,
+    //       backgroundColor: this.barColor,
+    //       borderColor: [
+    //         'none',
+    //       ],
+    //       borderWidth: 0
+    //     }]
+    //   },
+    //   options: {
+    //     legend: {
+    //       display: false,
+    //     },
+    //     title: {
+    //       text: 'Experience',
+    //       display: false,
+    //     },
+    //     scales: {
+    //       xAxes: [{
+    //         ticks: {
+    //           beginAtZero: true,
+    //           fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+    //           fontSize: 10,
+    //           fontColor: 'blue',
+    //         },
+    //         gridLines: {
+    //           display: false,
+    //           color: "black"
+    //         },
+    //         scaleLabel: {
+    //           display: false,
+    //           labelString: "Languages",
+    //           fontColor: "green",
+    //           padding: 0,
+    //           fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+    //           fontSize: 10,
 
 
 
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              beginAtZero: true,
-              min: 0,
-              max: 9,
-              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-              fontSize: 9,
-              fontColor: 'blue',
-            },
-            afterDataLimits: 10,
-            gridLines: {
-              display: false,
+    //         }
+    //       }],
+    //       yAxes: [{
+    //         ticks: {
+    //           beginAtZero: true,
+    //           min: 0,
+    //           max: 9,
+    //           fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+    //           fontSize: 9,
+    //           fontColor: 'blue',
+    //         },
+    //         afterDataLimits: 10,
+    //         gridLines: {
+    //           display: false,
 
-            },
-            scaleLabel: {
-              display: true,
-              labelString: "Number of years",
-              fontColor: "green",
-              padding: 0,
-              fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-              fontSize: 10,
+    //         },
+    //         scaleLabel: {
+    //           display: true,
+    //           labelString: "Number of years",
+    //           fontColor: "green",
+    //           padding: 0,
+    //           fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+    //           fontSize: 10,
 
-            }
-          }]
-        },
-      }
-    });
+    //         }
+    //       }]
+    //     },
+    //   }
+    // });
 
   }
 }
