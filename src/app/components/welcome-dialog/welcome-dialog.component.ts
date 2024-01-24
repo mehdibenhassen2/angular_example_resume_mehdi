@@ -4,9 +4,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss'],
+  selector: 'app-welcome-dialog',
+  templateUrl: './welcome-dialog.component.html',
+  styleUrls: ['./welcome-dialog.component.scss'],
   animations: [
     trigger('dialog', [
       transition('void => *', [
@@ -23,12 +23,21 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 
 })
-export class DialogComponent implements OnInit {
+
+
+
+
+
+
+
+
+
+
+export class WelcomeDialogComponent implements OnInit {
   @Input() closable = true;
   @Input() visible = false;
-  @Input() showDialog: boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-  constructor(private dialogRef: MatDialogRef<DialogComponent>,
+  constructor(private dialogRef: MatDialogRef<WelcomeDialogComponent>,
               @Inject(MAT_DIALOG_DATA) data) {
   }
 
@@ -38,9 +47,6 @@ export class DialogComponent implements OnInit {
 
   close() {
     this.visible = false;
-    this.visibleChange.emit(this.visible);
-    this.showDialog = !this.showDialog;
-    this.visibleChange.emit(this.showDialog);
 
 
   }

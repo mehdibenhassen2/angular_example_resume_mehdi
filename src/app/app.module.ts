@@ -49,7 +49,6 @@ import { MatMenuModule } from '@angular/material/menu';
 
 // import interface
 import { DialogData } from './interfaces/dialog-data';
-import { DialogComponent } from '@components/dialog/dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
 // translation
@@ -127,7 +126,7 @@ import { MatIconModule } from '@angular/material/icon';
 
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
-  // entryComponents: [DialogComponent]
+  // entryComponents: [WelcomeDialogComponent]
 })
 export class AppModule { }
 // required for AOT compilation
