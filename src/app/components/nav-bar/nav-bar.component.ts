@@ -18,7 +18,7 @@ export class NavBarComponent implements OnInit {
   ) { }
   offset = 0;
   display = true;
-  showDialog = true;
+  showDialog = false;
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.offset = this.window.pageYOffset;

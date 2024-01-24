@@ -64,6 +64,7 @@ import { AngularMaterialModule } from './angular-material.module';
 // import module for blog
 import { BlogModule } from './components/blog/blog.module';
 import { MatIconModule } from '@angular/material/icon';
+import { WelcomeDialogComponent } from '@components/welcome-dialog/welcome-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +92,7 @@ import { MatIconModule } from '@angular/material/icon';
     BannerComponent,
     ExperienceChartComponent,
     ChartTasksComponent,
-
+    WelcomeDialogComponent,
 
   ],
   imports: [
