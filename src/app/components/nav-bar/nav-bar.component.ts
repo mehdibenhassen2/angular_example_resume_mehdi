@@ -22,7 +22,6 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.offset = this.window.pageYOffset;
-    //if (offset > 250){console.log(offset); } else {console.log('mehdi'); }
     return this.offset;
   }
 

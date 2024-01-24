@@ -25,24 +25,24 @@ export class DataCompanyService {
         domaineLogo: 'assets/software/code.png',
         Softwares: [
           {
-            softwareName: 'Angular Js/ 2 -> 8',
+            softwareName: 'Angular Js/ 2 -> 17',
             logo: 'assets/software/angular-logo.jpg',
-            years: '6 ',
+            years: '8',
           },
           {
             softwareName: 'HTML5',
             logo: 'assets/software/html.png',
-            years: '8 ',
+            years: '12 ',
           },
           {
             softwareName: 'CSS3',
             logo: 'assets/software/css.png',
-            years: '8 ',
+            years: '12 ',
           },
           {
             softwareName: 'JavaScript',
             logo: 'assets/software/javascript.jpeg',
-            years: '7 ',
+            years: '8',
           },
           {
             softwareName: 'Java',
@@ -605,7 +605,6 @@ export class DataCompanyService {
   }
   public getData() {
     this.httpClient.get('../').subscribe(response => {
-      console.log('response');
     }
     );
   }

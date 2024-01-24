@@ -45,19 +45,20 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@angular/fire/compat/database';
+import { MatMenuModule } from '@angular/material/menu';
 
 // import interface
 import { DialogData } from './interfaces/dialog-data';
-import { DialogComponent} from '@components/dialog/dialog.component';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DialogComponent } from '@components/dialog/dialog.component';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
 // translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
-import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
-import { CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
-import {MatDialogModule } from '@angular/material/dialog';
+import { ChartTasksComponent } from './components/chart_tasks/chart_tasks.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // import module angular material
 import { AngularMaterialModule } from './angular-material.module';
@@ -89,9 +90,9 @@ import { MatIconModule } from '@angular/material/icon';
     NavBarComponent,
     HeadPageComponent,
     BannerComponent,
-     ExperienceChartComponent,
+    ExperienceChartComponent,
     ChartTasksComponent,
-    
+
 
   ],
   imports: [
@@ -110,13 +111,14 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     AngularFireDatabaseModule,
     BlogModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
-  }),
+    }),
   ],
   exports: [],
   providers: [WINDOW_PROVIDERS,
@@ -124,7 +126,7 @@ import { MatIconModule } from '@angular/material/icon';
     { provide: MAT_DIALOG_DATA, useValue: [] }],
 
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
   // entryComponents: [DialogComponent]
 })
 export class AppModule { }

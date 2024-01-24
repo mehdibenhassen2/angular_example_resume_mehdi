@@ -77,8 +77,6 @@ export class TasksComponent implements OnInit {
       this.TREE_DATA.push({ name: this.projectList[i].company, logo: this.projectList[i].logo,   children: this.projectList[i].tasks });
 
     }
-    console.log(this.TREE_DATA);
-
     return this.TREE_DATA;
   }
   ngOnInit() {
