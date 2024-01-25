@@ -7,6 +7,7 @@ import { ScotiabankProject2Component } from '@components/professional-experience
 import { GeomaticaProject1Component } from '@components/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
 // tslint:disable-next-line:max-line-length
 import { GeoenvironementProject1Component } from '@components/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
+import { ClickatellProject1Component } from '@components/professional-experience/list-of-projects/clickatell-project1/clickatell-project1.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -157,11 +158,11 @@ export class DataCompanyService {
 
     this.projectList = [
       {
-        role: 'Front End developer',
-        role_fr: 'Développeur Frontal',
+        role: 'Senior Front End developer',
+        role_fr: 'Développeur Frontal Sénior',
         company: 'Clickatell',
         year: '2019- prensent',
-        logo: 'assets/logo/clickatell.png',
+        logo: 'assets/logo/clickatell-logo-vector.png',
         tasks: [
           { name: 'Work with an team of engineers and product designers to implement the next generation of Clickatell products' },
           { name: 'Be part of and actively contribute to a cross-functional Agile/Scrum team that works together to become a high-performing team in delivering world-class technology solutions' },
@@ -186,10 +187,22 @@ export class DataCompanyService {
           { name: ' Concevez des interfaces utilisateur avec une esthétique moderne et épurée visant à offrir une expérience utilisateur intuitive et agréable' },
           { name: ' Créer des wireframes pour illustrer les solutions de haut niveau d\'une application et les demandes de fonctionnalités' },
         ],
+        projectCompany: [
+          {
+            projectIndex: '1',
+            type: 'Web App',
+            projectName: ' Build the next generation of Clickatell products using Angular, html, CSS, JavaScript',
+            projectName_fr: 'Construire une nouvell version des produits  clickatell en utilisant Angular, HTML, CSS, JavaScript',
+            projectdetails: {
+              data: ClickatellProject1Component,
+              visible: false,
+            },
+          },
+        ]
       },
       {
-        role: 'Front End developer',
-        role_fr: 'Développeur Frontal',
+        role: 'Senior Front End developer',
+        role_fr: 'Développeur Frontal Sénior',
         company: 'Insured Connect',
         year: '2018-2019',
         logo: 'assets/logo/insured connect.png',
@@ -233,8 +246,8 @@ export class DataCompanyService {
         ]
       },
       {
-        role: 'Front End developer',
-        role_fr: 'Développeur Frontal',
+        role: 'Front End developer/Manager',
+        role_fr: 'Développeur/Manager Frontal',
         company: 'Scotiabank ',
         year: '2016-2018',
         logo: 'assets/logo/scotia.png',

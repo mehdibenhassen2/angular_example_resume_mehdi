@@ -97,7 +97,8 @@ li:nth-child(even) {
   font-size: 14px;
 }
 .three_dot {
-  position: absolute;
+  float:right;
+  display: inline;
   right: 0;
   &_active {
     opacity: 1;

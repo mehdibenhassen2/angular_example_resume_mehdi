@@ -17,10 +17,11 @@
                     [ngClass]=" ((singleTask.src != '')? 'mat-list-item_active': 'mat-list-item_not_active')"
                     role="listitem" (click)="menuTrigger.openMenu()">
                     <!-- translate fr-en based on the service 'translationEnFrService' -->
+ 
                     <span *ngIf="translationEnFrService.language=='en'"
-                      class='sub-title_summary'>{{singleTask.task}}</span>
+                      class='sub-title_summary'>- {{singleTask.task}}</span>
                     <span *ngIf="translationEnFrService.language=='fr'"
-                      class='sub-title_summary'>{{singleTask.task_fr}}</span>
+                      class='sub-title_summary'>- {{singleTask.task_fr}}</span>
 
                     <div class='three_dot'
                       [ngClass]=" ((singleTask.src != '')? 'three_dot_active': 'three_dot_not_active')">
@@ -29,6 +30,7 @@
                         <mat-icon>more_vert</mat-icon>
                       </button>
                     </div>
+
                   </mat-list-item>
                   <div class='custom'>
                     <mat-menu #menu="matMenu" class='custom'>
