@@ -23,7 +23,7 @@ import { ScotiabankProject2Component } from '@listOfProjects/scotiabank-project2
 import { ContactComponent } from '@components/contact/contact.component';
 import { GeomaticaProject1Component } from '@listOfProjects/geomatica-project1/geomatica-project1.component';
 import { GeoenvironementProject1Component } from '@listOfProjects/geoenvironement-project1/geoenvironement-project1.component';
-import {CodeComponent} from '@components/code/code.component'
+import { CodeComponent } from '@components/code/code.component'
 import { ClickatellProject1Component } from '@components/professional-experience/list-of-projects/clickatell-project1/clickatell-project1.component';
 const routes: Routes = [
   { path: '', redirectTo: 'Summary', pathMatch: 'full' },
@@ -33,7 +33,7 @@ const routes: Routes = [
     path: 'ProfessionalExperience', component: ProfessionalExperienceComponent,
 
     children: [
-      { path: '', redirectTo:'Tasks', pathMatch: 'full'},
+      { path: '', redirectTo: 'Tasks', pathMatch: 'full' },
       { path: 'Tasks', component: TasksComponent },
       { path: 'ListOfProject', component: ListOfProjectsComponent },
       { path: 'training', component: TrainingComponent },
@@ -56,9 +56,13 @@ const routes: Routes = [
       { path: 'Conference', component: ConferenceComponent },
     ]
   },
-  { path: 'Blog', component: BlogComponent },
+  {
+    path: 'Blog',
+    loadChildren: () => import('./components/blog/blog.module').then(m => m.BlogModule),
+    pathMatch: 'full'
+  },
   { path: 'Contact', component: ContactComponent },
-
+  //{ path: 'Code', loadComponent: () => import('./components/code/code.component').then(m => m.CodeComponent) },
   { path: 'Code', component: CodeComponent },
 
 ];
