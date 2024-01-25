@@ -20,7 +20,9 @@
             "outputPath": "dist/resumeMehdiWebFE",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -28,7 +30,6 @@
               ]
             },
             "assets": [
-              
               "src/favicon.ico",
               "src/assets"
             ],
@@ -79,26 +80,6 @@
             }
           },
           "defaultConfiguration": "production"
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -111,10 +92,9 @@
             },
             "development": {
               "buildTarget": "resumeMehdiWebFE:build:development"
-          }
+            }
           },
           "defaultConfiguration": "development"
-
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -125,7 +105,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
