@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataCompanyService } from '../../../services/data-company.service'
 import { TranslationEnFrService} from '../../../services/translation-en-fr.service';
-
+import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-list-of-projects',
   templateUrl: './list-of-projects.component.html',

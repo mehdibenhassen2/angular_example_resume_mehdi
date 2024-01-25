@@ -13,6 +13,7 @@ import { TranslationEnFrService} from '../../services/translation-en-fr.service'
 export class BannerComponent implements OnInit {
   dataEvent: string;
   public currentImageId = 0; // init of first image id in the slide
+
   images = [
     {
       srcPath: '../../../assets/bannier/ban1.png',

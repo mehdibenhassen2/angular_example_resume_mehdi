@@ -17,10 +17,9 @@ export class TranslationEnFrService {
     if (this.language === 'en') {
     this.language = 'fr';
     this.useLanguage();
-    console.log(this.language);
+
   } else {
     this.language = 'en';
-    console.log(this.language);
     this.useLanguage();
     }
     return this.language;

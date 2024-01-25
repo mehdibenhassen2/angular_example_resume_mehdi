@@ -17,7 +17,7 @@ import { CanselMapComponent } from './components/professional-experience/cansel-
 import { TasksComponent } from './components/professional-experience/tasks/tasks.component';
 import { ListOfProjectsComponent } from './components/professional-experience/list-of-projects/list-of-projects.component';
 import { TrainingComponent } from './components/professional-experience/training/training.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/dist';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 // tslint:disable-next-line:max-line-length
 import { UniversityOfCalgaryProject1Component } from './components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
@@ -33,33 +33,38 @@ import { CodeComponent } from './components/code/code.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeadPageComponent } from './components/head-page/head-page.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { FormGroup } from '@angular/forms';
 
 // Firebase
-import { AngularFireModule } from '@angular/fire';
+
 import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import {   } from '@angular/material';
+import { AngularFireDatabaseModule, AngularFireList, AngularFireObject } from '@angular/fire/compat/database';
+import { MatMenuModule } from '@angular/material/menu';
 
 // import interface
 import { DialogData } from './interfaces/dialog-data';
-import { DialogComponent} from '@components/dialog/dialog.component';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
 // translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ExperienceChartComponent } from './components/experience-chart/experience-chart.component';
-import { ChartTasksComponent} from './components/chart_tasks/chart_tasks.component';
+import { ChartTasksComponent } from './components/chart_tasks/chart_tasks.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // import module angular material
 import { AngularMaterialModule } from './angular-material.module';
 // import module for blog
 import { BlogModule } from './components/blog/blog.module';
+import { MatIconModule } from '@angular/material/icon';
+import { WelcomeDialogComponent } from '@components/welcome-dialog/welcome-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,9 +90,9 @@ import { BlogModule } from './components/blog/blog.module';
     NavBarComponent,
     HeadPageComponent,
     BannerComponent,
-    DialogComponent,
     ExperienceChartComponent,
     ChartTasksComponent,
+    WelcomeDialogComponent,
 
   ],
   imports: [
@@ -95,9 +100,10 @@ import { BlogModule } from './components/blog/blog.module';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    MatDialogModule,
     FormsModule, // to add email form
     BrowserAnimationsModule, // for animation tab
-    AngularFontAwesomeModule,
+    MatIconModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'resumeMehdiFE'),
     AngularFirestoreModule, // Only required for database features
     AngularFireAuthModule, // Only required for auth features,
@@ -105,14 +111,14 @@ import { BlogModule } from './components/blog/blog.module';
     ReactiveFormsModule,
     AngularFireDatabaseModule,
     BlogModule,
-    AngularMaterialModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
-  }),
+    }),
   ],
   exports: [],
   providers: [WINDOW_PROVIDERS,
@@ -120,7 +126,8 @@ import { BlogModule } from './components/blog/blog.module';
     { provide: MAT_DIALOG_DATA, useValue: [] }],
 
   bootstrap: [AppComponent],
-  entryComponents: [DialogComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  // entryComponents: [WelcomeDialogComponent]
 })
 export class AppModule { }
 // required for AOT compilation
