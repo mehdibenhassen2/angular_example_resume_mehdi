@@ -24,6 +24,7 @@ import { ContactComponent } from '@components/contact/contact.component';
 import { GeomaticaProject1Component } from '@listOfProjects/geomatica-project1/geomatica-project1.component';
 import { GeoenvironementProject1Component } from '@listOfProjects/geoenvironement-project1/geoenvironement-project1.component';
 import {CodeComponent} from '@components/code/code.component'
+import { ClickatellProject1Component } from '@components/professional-experience/list-of-projects/clickatell-project1/clickatell-project1.component';
 const routes: Routes = [
   { path: '', redirectTo: 'Summary', pathMatch: 'full' },
   { path: 'Summary', component: SummaryComponent },
@@ -37,7 +38,7 @@ const routes: Routes = [
       { path: 'ListOfProject', component: ListOfProjectsComponent },
       { path: 'training', component: TrainingComponent },
       { path: 'UniversityOfCalgaryProject1', component: UniversityOfCalgaryProject1Component },
-      { path: 'InsuredConnectProject1', component: InsuredConnectProject1Component },
+      { path: 'ClickatellProject1Component', component: ClickatellProject1Component },
       { path: 'ScotiabankProject1', component: ScotiabankProject1Component },
       { path: 'ScotiabankProject2', component: ScotiabankProject2Component },
       { path: 'GeomaticaProject1', component: GeomaticaProject1Component },

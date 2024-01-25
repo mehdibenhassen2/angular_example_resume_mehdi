@@ -6,19 +6,22 @@
       <div class="col-lg-6 col-sm-12 col-md-12 box_size'">
         <div class="col-lg-12 col-sm-12 col-md-12 Chart_box box_size ">
           <div>
-            <mat-icon [inline]="true" class='icons_param'>assignment_ind</mat-icon>
+            <mat-icon class='icons_param'>assignment_ind</mat-icon>
             <span class='title_summary'>{{ 'summary.about_me' | translate }}</span>
           </div>
           <div class='list_summary'>
             <div class="basic-container">
               <mat-nav-list>
                 <mat-list role="list" *ngFor=" let singleTask of tasksSummaryData; let i = index">
-                  <mat-list-item [ngClass]=" ((singleTask.src != '')? 'mat-list-item_active': 'mat-list-item_not_active')" role="listitem" (click)="menuTrigger.openMenu()">
+                  <mat-list-item
+                    [ngClass]=" ((singleTask.src != '')? 'mat-list-item_active': 'mat-list-item_not_active')"
+                    role="listitem" (click)="menuTrigger.openMenu()">
                     <!-- translate fr-en based on the service 'translationEnFrService' -->
+ 
                     <span *ngIf="translationEnFrService.language=='en'"
-                      class='sub-title_summary'>{{singleTask.task}}</span>
+                      class='sub-title_summary'>- {{singleTask.task}}</span>
                     <span *ngIf="translationEnFrService.language=='fr'"
-                      class='sub-title_summary'>{{singleTask.task_fr}}</span>
+                      class='sub-title_summary'>- {{singleTask.task_fr}}</span>
 
                     <div class='three_dot'
                       [ngClass]=" ((singleTask.src != '')? 'three_dot_active': 'three_dot_not_active')">
@@ -27,16 +30,17 @@
                         <mat-icon>more_vert</mat-icon>
                       </button>
                     </div>
+
                   </mat-list-item>
                   <div class='custom'>
-                  <mat-menu #menu="matMenu" class='custom'>
-                    <button mat-menu-item class='menu_three_dots' (click)="viewDetails(i)">
-                      <mat-icon>description</mat-icon>
-                      <span *ngIf="translationEnFrService.language=='en'">View Details</span>
-                      <span *ngIf="translationEnFrService.language=='fr'">Plus de Détails</span>
-                    </button>
-                  </mat-menu>
-                </div>
+                    <mat-menu #menu="matMenu" class='custom'>
+                      <button mat-menu-item class='menu_three_dots' (click)="viewDetails(i)">
+                        <mat-icon>description</mat-icon>
+                        <span *ngIf="translationEnFrService.language=='en'">View Details</span>
+                        <span *ngIf="translationEnFrService.language=='fr'">Plus de Détails</span>
+                      </button>
+                    </mat-menu>
+                  </div>
                 </mat-list>
               </mat-nav-list>
             </div>

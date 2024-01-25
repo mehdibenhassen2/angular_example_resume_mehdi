@@ -46,6 +46,7 @@ body {
   font-variant: normal;
   margin: 0px;
   padding: 0px;
+  margin-left: 20px;
 }
 ul {
   list-style-type: none;
@@ -72,6 +73,7 @@ li:before {
   padding: 0;
   margin-right: 5px;
   font-size: 10px;
+  display: inline !important;
 }
 .title_summary {
   color: $base_blue;

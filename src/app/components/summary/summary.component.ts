@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImgExternalUrlService } from '../../services/img-external-url.service';
 import { BannerComponent } from '@components/banner/banner.component';
-import { MatMenuTrigger } from '@angular/material';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { TranslationEnFrService } from '../../services/translation-en-fr.service';
 @Component({
@@ -19,14 +19,14 @@ export class SummaryComponent implements OnInit {
   tasksSummaryData = [
     {
       id: 1,
-      task: '7 years of experience working as Front End developer.',
-      task_fr: '7 années d\'expérience en tant que développeur frontal.',
+      task: '12 years of experience working as Front End developer/manager/Team lead.',
+      task_fr: '12 années d\'expérience en tant que développeur/ Manager/Chef d\'équipe frontal.',
       src: '/ProfessionalExperience',
     },
     {
       id: 2,
-      task: '6 years experience working with Angular Js and Angular 2/4/5/6/7/8.',
-      task_fr: '6 ans d\'expérience avec Angular Js et Angular 2/4/5/6/7/8.',
+      task: '8 years experience working with Angular Js and Angular 2/4/6/7/8/9/10/14',
+      task_fr: '8 ans d\'expérience avec Angular Js et Angular 2/4/6/7/8/9/10/14',
       src: '/ProfessionalExperience/ListOfProject',
     },
     {

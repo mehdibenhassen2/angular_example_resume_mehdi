@@ -112,3 +112,6 @@ $background_title_details: beige;
   background: #555;
 }
 
+.mat-mdc-button:not(:disabled) {
+  color: white !important;
+}

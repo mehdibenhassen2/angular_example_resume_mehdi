@@ -20,7 +20,7 @@
             "outputPath": "dist/resumeMehdiWebFE",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -46,10 +46,16 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -68,25 +74,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "resumeMehdiWebFE:build"
+            "buildTarget": "resumeMehdiWebFE:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "resumeMehdiWebFE:build:production"
+              "buildTarget": "resumeMehdiWebFE:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "resumeMehdiWebFE:build"
+            "buildTarget": "resumeMehdiWebFE:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
@@ -129,5 +134,10 @@
       }
     }
   },
-  "defaultProject": "resumeMehdiWebFE"
+  "cli": {
+    "cache": {
+      "enabled": false
+    },
+    "analytics": "0ae15c4c-c747-492e-ba78-53bbbcb10eb6"
+  }
 }
