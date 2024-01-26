@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImgExternalUrlService } from '../../services/img-external-url.service';
-import { BannerComponent } from '@components/banner/banner.component';
+import { BannerComponent } from 'src/app/Modules/banner/banner.component';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { TranslationEnFrService } from '../../services/translation-en-fr.service';

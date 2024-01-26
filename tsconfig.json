@@ -23,10 +23,10 @@
         "../../../src/assets/*"
       ],
       "@components/*": [
-        "src/app/components/*"
+        "src/app/Modules/*"
       ],
       "@listOfProjects/*": [
-        "src/app/components/professional-experience/list-of-projects/*"
+        "src/app/Modules/professional-experience/list-of-projects/*"
       ]
     }
   }
