@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UniversityOfCalgaryProject1Component } from '@components/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
-import { InsuredConnectProject1Component } from '@components/professional-experience/list-of-projects/insured-connect-project1/insured-connect-project1.component';
-import { ScotiabankProject1Component } from '@components/professional-experience/list-of-projects/scotiabank-project1/scotiabank-project1.component';
-import { ScotiabankProject2Component } from '@components/professional-experience/list-of-projects/scotiabank-project2/scotiabank-project2.component';
-import { GeomaticaProject1Component } from '@components/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
+import { UniversityOfCalgaryProject1Component } from 'src/app/Modules/professional-experience/list-of-projects/university-of-calgary-project1/university-of-calgary-project1.component';
+import { InsuredConnectProject1Component } from 'src/app/Modules/professional-experience/list-of-projects/insured-connect-project1/insured-connect-project1.component';
+import { ScotiabankProject1Component } from 'src/app/Modules/professional-experience/list-of-projects/scotiabank-project1/scotiabank-project1.component';
+import { ScotiabankProject2Component } from 'src/app/Modules/professional-experience/list-of-projects/scotiabank-project2/scotiabank-project2.component';
+import { GeomaticaProject1Component } from 'src/app/Modules/professional-experience/list-of-projects/geomatica-project1/geomatica-project1.component';
 // tslint:disable-next-line:max-line-length
-import { GeoenvironementProject1Component } from '@components/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
-import { ClickatellProject1Component } from '@components/professional-experience/list-of-projects/clickatell-project1/clickatell-project1.component';
+import { GeoenvironementProject1Component } from 'src/app/Modules/professional-experience/list-of-projects/geoenvironement-project1/geoenvironement-project1.component';
+import { ClickatellProject1Component } from 'src/app/Modules/professional-experience/list-of-projects/clickatell-project1/clickatell-project1.component';
 @Injectable({
   providedIn: 'root'
 })

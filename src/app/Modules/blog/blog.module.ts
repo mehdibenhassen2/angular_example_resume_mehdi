@@ -8,10 +8,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog'; // service
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BlogRoutingModule } from './blog-routing.module';
 
 @NgModule({
   declarations: [BlogComponent,BlogPieceComponent, ModalBlogComponent],
   imports: [
+    BlogRoutingModule,
     CommonModule,
     MatDialogModule,
     MatCardModule,

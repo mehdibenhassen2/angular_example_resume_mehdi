@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogConfig } from '@angular/material/dialog';
 import {TranslateService} from '@ngx-translate/core';
-import { WelcomeDialogComponent } from '@components/welcome-dialog/welcome-dialog.component';
+import { WelcomeDialogComponent } from 'src/app/Modules/welcome-dialog/welcome-dialog.component';
 
 @Component({
   selector: 'app-root',
