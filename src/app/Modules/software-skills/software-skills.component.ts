@@ -4,7 +4,7 @@ import { TranslationEnFrService} from '../../services/translation-en-fr.service'
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import { AngularMaterialModule } from 'src/app/angular-material.module';
+import { AngularMaterialModule } from '../../angular-material.module';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

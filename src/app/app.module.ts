@@ -62,7 +62,11 @@ import { AngularMaterialModule } from './angular-material.module';
 // import module for blog
 import { BlogModule } from './Modules/blog/blog.module';
 import { MatIconModule } from '@angular/material/icon';
-import { WelcomeDialogComponent } from 'src/app/Modules/welcome-dialog/welcome-dialog.component';
+import { WelcomeDialogComponent } from './Modules/welcome-dialog/welcome-dialog.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,6 +112,9 @@ import { WelcomeDialogComponent } from 'src/app/Modules/welcome-dialog/welcome-d
     AngularFireDatabaseModule,
     BlogModule,
     MatMenuModule,
+    MatTabsModule,
+    MatTreeModule,
+    MatGridListModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
