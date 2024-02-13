@@ -60,18 +60,6 @@
                 <img class="lang_flag" *ngIf="translationEnFrService.language=='en'" src='../../../assets/en.png'>
             </a>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </nav>
 
@@ -104,11 +92,9 @@
         </a>
         <a class="nav-item nav-link vertical_btn" routerLink="/Contact"
             [ngClass]="(router.url=='/Contact')? 'activeVertical':''">
-            <mat-icon [inline]="true" class='icons_white'> email</mat-icon>
+            <mat-icon inline="true" class='icons_white'> email</mat-icon>
         </a>
     </div>
 </div>
-
-
 
 <app-welcome-dialog [(visible)]="!showDialog" [(showDialog)]="showDialog"> </app-welcome-dialog>

@@ -33,6 +33,34 @@ export class BlogComponent implements OnInit {
   constructor() {
     this.blocData = [
       {
+        id: 6,
+        title: 'Clickatell:  Boat tour',
+        date: '04/08/2021',
+        place: 'Downtown Toronto - ON - Canada',
+        text: 'Boat tour with clickatell team to descover ontario Lake.',
+        see: false,
+        imageSet: [
+          '../../../assets/blog/clickatell1/1.jpeg',
+          '../../../assets/blog/clickatell1/2.jpeg',
+          '../../../assets/blog/clickatell1/3.jpeg',
+          '../../../assets/blog/clickatell1/4.jpeg',
+        ]
+      },
+      {
+        id: 5,
+        title: 'Clickatell:  Party',
+        date: '02/03/2019',
+        place: 'Downtown Toronto - ON - Canada',
+        text: 'Share a great moments with clickatell team',
+        see: false,
+        imageSet: [
+          '../../../assets/blog/clickatell2/1.jpeg',
+          '../../../assets/blog/clickatell2/2.jpeg',
+          '../../../assets/blog/clickatell2/3.jpeg',
+          '../../../assets/blog/clickatell2/4.jpeg',
+        ]
+      },
+      {
         id: 1,
         title: 'Insured connect: Good environement to work',
         date: '04/04/2019',

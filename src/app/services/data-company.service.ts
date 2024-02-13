@@ -21,8 +21,8 @@ export class DataCompanyService {
     this.selectedIndex = -1;
     this.softwareList = [
       {
-        domaine: 'Programming: ',
-        domaine_fr: 'Programmation: ',
+        domaine: 'Framework: ',
+        domaine_fr: 'Framework: ',
         domaineLogo: 'assets/software/code.png',
         Softwares: [
           {
@@ -30,6 +30,18 @@ export class DataCompanyService {
             logo: 'assets/software/angular-logo.jpg',
             years: '8',
           },
+          {
+            softwareName: 'JQuery',
+            logo: 'assets/software/jquery-logo.jpg',
+            years: '1 ',
+          },
+        ]
+      },
+      {
+        domaine: 'Programming: ',
+        domaine_fr: 'Programmation: ',
+        domaineLogo: 'assets/software/code.png',
+        Softwares: [
           {
             softwareName: 'HTML5',
             logo: 'assets/software/html.png',
@@ -53,16 +65,6 @@ export class DataCompanyService {
             softwareName: 'Node.JS',
             logo: 'assets/software/node.jpg',
             years: '1 ',
-          },
-          {
-            softwareName: 'JQuery',
-            logo: 'assets/software/jquery-logo.jpg',
-            years: '2 ',
-          },
-          {
-            softwareName: 'Qt',
-            logo: 'assets/software/Qt.jpeg',
-            years: '2 ',
           },
           {
             softwareName: 'Python',
@@ -97,8 +99,41 @@ export class DataCompanyService {
         ]
       },
       {
-        domaine: 'Design and Multimedia: ',
-        domaine_fr: 'Design et multimédia: ',
+        domaine: 'Design: ',
+        domaine_fr: 'Conception: ',
+        domaineLogo: 'assets/software/design.jpg',
+        Softwares: [
+          {
+            softwareName: 'Figma',
+            logo: 'assets/software/Figma.png',
+            years: '2 ',
+          },
+          {
+            softwareName: 'Zeplin',
+            logo: 'assets/software/Zeplin.png',
+            years: '4 ',
+          }
+        ]
+      },
+      {
+        domaine: 'Content Management System (CMS): ',
+        domaine_fr: 'Système de Gestion de Contenu (CMS): ',
+        domaineLogo: 'assets/software/design.jpg',
+        Softwares: [
+          {
+            softwareName: 'Contentful',
+            logo: 'assets/software/Contentful.png',
+            years: '4',
+          }, {
+            softwareName: 'WordPress',
+            logo: 'assets/software/WordPress.png',
+            years: '1 ',
+          }
+        ]
+      },
+      {
+        domaine: 'Multimedia: ',
+        domaine_fr: 'Multimédia: ',
         domaineLogo: 'assets/software/design.jpg',
         Softwares: [
           {
@@ -139,6 +174,11 @@ export class DataCompanyService {
         domaineLogo: 'assets/software/db.png',
         Softwares: [
           {
+            softwareName: 'MySQL',
+            logo: 'assets/software/MySQL.png',
+            years: '1 ',
+          },
+          {
             softwareName: 'Oracle',
             logo: 'assets/software/oracle.gif',
             years: '1 ',
@@ -161,13 +201,14 @@ export class DataCompanyService {
         role: 'Senior Front End developer',
         role_fr: 'Développeur Frontal Sénior',
         company: 'Clickatell',
-        year: '2019- prensent',
+        year: '2019- 2023',
         logo: 'assets/logo/clickatell-logo-vector.png',
         tasks: [
           { name: 'Work with an team of engineers and product designers to implement the next generation of Clickatell products' },
+          { name: 'Improve performance (use of microfrontend architecture, standalone components, lazy loading, etc.).' },
           { name: 'Be part of and actively contribute to a cross-functional Agile/Scrum team that works together to become a high-performing team in delivering world-class technology solutions' },
           { name: 'Be responsible for creating responsive grid systems along with using clean code that will make web interface function properly on any platform they are being viewed from' },
-          { name: 'Use JavaScript, CSS, HTML, Angular 8 to build web applications' },
+          { name: 'Use JavaScript, CSS, HTML, Angular (8- 16) to build the web applications: write a new code (new stories) and update the old code.' },
           { name: 'Use Responsive Web Design (RWD) techniques in web development: review mocks, bring them to life on desktop and connected devices' },
           { name: 'Develop interactive components using JavaScript and Angular; integrate with internal tools, frameworks and services as well as external APIs' },
           { name: 'Collaborate with backend developers, editors, and external agencies' },
@@ -177,9 +218,10 @@ export class DataCompanyService {
         ],
         tasks_fr: [
           { name: ' Travailler avec une équipe d\'ingénieurs et de concepteurs de produits pour mettre en œuvre la nouvelle génération de produits Clickatell' },
+          { name: 'Améliorer les performances (utilisation d\'une architecture micro-frontend, de composants autonomes, chargement différé, etc.).' },
           { name: ' Faites partie d\'une équipe multidisciplinaire Agile / Scrum qui contribue activement à la création d\'une équipe hautement performante dans la fourniture de solutions technologiques de classe mondiale.' },
           { name: ' Être responsable de la création de systèmes de grille réactifs et de l\'utilisation d\'un code propre qui permettra à l\'interface Web de fonctionner correctement sur la plate-forme sur laquelle elle est visualisée' },
-          { name: ' Utiliser JavaScript, CSS, HTML, Angular 8 pour créer des applications Web' },
+          { name: ' Utiliser JavaScript, CSS, HTML, Angular (8-16) pour créer des applications Web' },
           { name: 'Utilisez les techniques de conception de site Web réactif (RWD) dans le développement Web: passez en revue les simulacres, donnez-les à la vie sur les ordinateurs de bureau et les périphériques connectés' },
           { name: ' Développer des composants interactifs en utilisant JavaScript et Angular; intégrer avec des outils internes, des cadres et des services ainsi que des API externes' },
           { name: 'Collaborer avec les développeurs, les éditeurs et les agences externes' },
@@ -379,241 +421,241 @@ export class DataCompanyService {
           },
         ]
       },
-      {
-        role: 'Front-End Developer',
-        role_fr: 'Développeur Frontal',
-        company: 'Geomatica company ',
-        year: '2010-2012',
-        logo: 'assets/logo/logo-GEOMATICA.jpg',
-        tasks: [
-          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
-          { name: 'Design and implementation of web and mobile solutions.' },
-          { name: 'Conception of Database for many companies,' },
-          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
-          { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
-          { name: 'Write the monitoring reports and technical reports.' },
-        ],
-        tasks_fr: [
-          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
-          { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
-          { name: 'Conception de base de données pour de nombreuses entreprises' },
-          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
-          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
-          { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
-        ],
-        projectCompany: [
-          {
-            projectIndex: '1',
-            type: 'GIS app',
-            projectName: 'Mapping of the marble stones of Tataouine (south Tunisia).',
-            projectName_fr: 'Cartographie des pierres de marbre de Tataouine (sud tunisien).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '2',
-            type: 'GIS app',
-            projectName: '  Environmental impact assessment of the sand quarry SISE Henchir MOUROUJ EL - EL MOUADEN Imada, Sejnane delegation, Governorate of Bizerte (Tunisia).',
-            projectName_fr: 'Etude d\'impact sur l\'environnement de la carrière de sable SISE Henchir MOUROUJ EL-EL MOUADEN Imada, délégation de Sejnane, gouvernorat de Bizerte (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '3',
-            type: 'GIS app',
-            projectName: 'Technical and social studies of three small lakes and their integrated management of watersheds in the governorate of Sidi Bouzid. Thmed (delegation of Sidi Bouzid Est), El Magroun (Delegation Jelma) and Faidh Lahchim (Delegation Cebbala).',
-            projectName_fr: 'Etudes techniques et sociales sur trois petits lacs et leur gestion intégrée des bassins versants dans le gouvernorat de Sidi Bouzid. Thmed (délégation de Sidi Bouzid Est), El Magroun (Délégation Jelma) et Faidh Lahchim (Délégation Cebbala).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '4',
-            type: 'GIS app',
-            projectName: '  Implementation of Urban GIS in Kerkena (Tunisia)',
-            projectName_fr: 'Mise en place de SIG urbain à Kerkena (Tunisie)',
-            projectdetails: {
-              data: GeomaticaProject1Component,
-              visible: false,
-            },
-          },
-        ]
-      },
-      {
-        role: 'Web Developer',
-        role_fr: 'Développeur Web',
-        company: 'Geo-Environnment company',
-        year: '2007-2010',
-        logo: 'assets/logo/geo-environement.png',
-        tasks: [
-          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
-          { name: 'Design and implementation of web and mobile solutions.' },
-          { name: 'Conception of Database for many companies,' },
-          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
-          { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
-          { name: 'Write the monitoring reports and technical reports.' },
-        ],
-        tasks_fr: [
-          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
-          { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
-          { name: 'Conception de base de données pour de nombreuses entreprises' },
-          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
-          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
-          { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
-        ],
-        projectCompany: [
-          {
-            projectIndex: '1',
-            type: 'GIS app',
-            projectName: ' Estimation of the Gypsum deposits of three licenses in sabkha NDGHAMCHA north of the city of Nouakchott (Mauritania).',
-            projectName_fr: 'Estimation des gisements de gypse de trois permis à sabkha NDGHAMCHA au nord de la ville de Nouakchott (Mauritanie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '2',
-            type: 'GIS app',
-            projectName: 'Estimation of the cement deposit in J. Ressas (Tunisia).',
-            projectName_fr: 'Estimation du gisement de ciment à J. Ressas (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '3',
-            type: 'GIS app',
-            projectName: 'Study the Environmental impact assessment of the current licence to operate the gold mine of Kiniero (Guinea).',
-            projectName_fr: 'Etudier l\'évaluation de l\'impact sur l\'environnement de la licence actuelle d\'exploitation de la mine d\'or de Kiniero (Guinée).',
-            projectdetails: {
-              data: GeoenvironementProject1Component,
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '4',
-            type: 'GIS app',
-            projectName: ' Study of environmental impact assessment of the extension of the gold mine in Western Kinièro Balan (Guinea).',
-            projectName_fr: 'Étude d’évaluation de l’impact sur l’environnement de l’extension de la mine d’or de Kinièro Balan occidental (Guinée).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '5',
-            type: 'GIS app',
-            projectName: 'Study of environmental impact assessment of quarrying limestone and marl for cement project projected in Zouarine, Delegation of Sers, Kef Governorate (Tunisia).',
-            projectName_fr: 'Etude d’impact sur l’environnement d’un projet d’extraction du ciment et de la pierre calcaire à Zouarine, Délégation de Sers, Gouvernorat du Kef (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '6',
-            type: 'GIS app',
-            projectName: '  Study of environmental impact of marble quarry, projected in BENI Hazem, Delegation of Makthar Seliana Governorate (Tunisia).',
-            projectName_fr: 'Étude d\'impact sur l\'environnement de la carrière de marbre, projeté à BENI Hazem, délégation du gouvernorat de Maktar Siliana (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '7',
-            type: 'GIS app',
-            projectName: 'Environmental impact assessment of the clay pit in Sidi Jedidi, Governorate of Nabeul (Tunisia).',
-            projectName_fr: 'Etude d\'impact sur l\'environnement de la carrière d\'argile à Sidi Jedidi, Gouvernorat de Nabeul (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '8',
-            type: 'GIS app',
-            projectName: 'Environmental impact assessment the quarrying of aggregate on the slick in J.OUST (Tunisia).',
-            projectName_fr: 'Etude d\'impact sur l\'environnement de l\'extraction d\'agrégats sur la nappe à J.OUST (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '9',
-            type: 'GIS app',
-            projectName: 'Environmental impact assessment of the quarry aggregate SISE AIN EL Babouch, Zriba delegation, Governorate zaghouan (Tunisia).',
-            projectName_fr: 'Etude d\'impact sur l\'environnement des granulats de carrière SISE AIN EL Babouch, délégation de Zriba, gouvernorat de zaghouan (Tunisie)',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-        ]
-      },
-      {
-        role: 'Web Developer',
-        role_fr: 'Développeur Web',
-        company: 'Geo-Service company ',
-        year: '2005-2007',
-        logo: 'assets/logo/geo-service.png',
-        tasks: [
-          { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
-          { name: 'Design and implementation of web and mobile solutions.' },
-          { name: 'Conception of Database for many companies,' },
-          { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
-          { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
-          { name: 'Write the monitoring reports and technical reports.' },
-        ],
-        tasks_fr: [
-          { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
-          { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
-          { name: 'Conception de base de données pour de nombreuses entreprises' },
-          { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
-          { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
-          { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
-        ],
-        projectCompany: [
-          {
-            projectIndex: '1',
-            type: 'GIS app',
-            projectName: 'Analysis of the evolution of the coastline north of Sousse (Tunisia).',
-            projectName_fr: 'Analyse de l\'évolution du littoral au nord de Sousse (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '2',
-            type: 'GIS app',
-            projectName: 'Analysis of the coastal erosion of Kerkennah (Tunisia).',
-            projectName_fr: 'Analyse de l\'érosion côtière de Kerkennah (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-          {
-            projectIndex: '3',
-            type: 'GIS app',
-            projectName: 'Environmental impact assessment of the development of Gammarth marine (Tunisia).',
-            projectName_fr: 'Etude d\'impact sur l\'environnement du développement de Gammarth marine (Tunisie).',
-            projectdetails: {
-              data: '',
-              visible: false,
-            },
-          },
-        ]
-      }
+      // {
+      //   role: 'Front-End Developer',
+      //   role_fr: 'Développeur Frontal',
+      //   company: 'Geomatica company ',
+      //   year: '2010-2012',
+      //   logo: 'assets/logo/logo-GEOMATICA.jpg',
+      //   tasks: [
+      //     { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
+      //     { name: 'Design and implementation of web and mobile solutions.' },
+      //     { name: 'Conception of Database for many companies,' },
+      //     { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
+      //     { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
+      //     { name: 'Write the monitoring reports and technical reports.' },
+      //   ],
+      //   tasks_fr: [
+      //     { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
+      //     { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
+      //     { name: 'Conception de base de données pour de nombreuses entreprises' },
+      //     { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
+      //     { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
+      //     { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
+      //   ],
+      //   projectCompany: [
+      //     {
+      //       projectIndex: '1',
+      //       type: 'GIS app',
+      //       projectName: 'Mapping of the marble stones of Tataouine (south Tunisia).',
+      //       projectName_fr: 'Cartographie des pierres de marbre de Tataouine (sud tunisien).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '2',
+      //       type: 'GIS app',
+      //       projectName: '  Environmental impact assessment of the sand quarry SISE Henchir MOUROUJ EL - EL MOUADEN Imada, Sejnane delegation, Governorate of Bizerte (Tunisia).',
+      //       projectName_fr: 'Etude d\'impact sur l\'environnement de la carrière de sable SISE Henchir MOUROUJ EL-EL MOUADEN Imada, délégation de Sejnane, gouvernorat de Bizerte (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '3',
+      //       type: 'GIS app',
+      //       projectName: 'Technical and social studies of three small lakes and their integrated management of watersheds in the governorate of Sidi Bouzid. Thmed (delegation of Sidi Bouzid Est), El Magroun (Delegation Jelma) and Faidh Lahchim (Delegation Cebbala).',
+      //       projectName_fr: 'Etudes techniques et sociales sur trois petits lacs et leur gestion intégrée des bassins versants dans le gouvernorat de Sidi Bouzid. Thmed (délégation de Sidi Bouzid Est), El Magroun (Délégation Jelma) et Faidh Lahchim (Délégation Cebbala).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '4',
+      //       type: 'GIS app',
+      //       projectName: '  Implementation of Urban GIS in Kerkena (Tunisia)',
+      //       projectName_fr: 'Mise en place de SIG urbain à Kerkena (Tunisie)',
+      //       projectdetails: {
+      //         data: GeomaticaProject1Component,
+      //         visible: false,
+      //       },
+      //     },
+      //   ]
+      // },
+      // {
+      //   role: 'Web Developer',
+      //   role_fr: 'Développeur Web',
+      //   company: 'Geo-Environnment company',
+      //   year: '2007-2010',
+      //   logo: 'assets/logo/geo-environement.png',
+      //   tasks: [
+      //     { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
+      //     { name: 'Design and implementation of web and mobile solutions.' },
+      //     { name: 'Conception of Database for many companies,' },
+      //     { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
+      //     { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
+      //     { name: 'Write the monitoring reports and technical reports.' },
+      //   ],
+      //   tasks_fr: [
+      //     { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
+      //     { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
+      //     { name: 'Conception de base de données pour de nombreuses entreprises' },
+      //     { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
+      //     { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
+      //     { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
+      //   ],
+      //   projectCompany: [
+      //     {
+      //       projectIndex: '1',
+      //       type: 'GIS app',
+      //       projectName: ' Estimation of the Gypsum deposits of three licenses in sabkha NDGHAMCHA north of the city of Nouakchott (Mauritania).',
+      //       projectName_fr: 'Estimation des gisements de gypse de trois permis à sabkha NDGHAMCHA au nord de la ville de Nouakchott (Mauritanie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '2',
+      //       type: 'GIS app',
+      //       projectName: 'Estimation of the cement deposit in J. Ressas (Tunisia).',
+      //       projectName_fr: 'Estimation du gisement de ciment à J. Ressas (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '3',
+      //       type: 'GIS app',
+      //       projectName: 'Study the Environmental impact assessment of the current licence to operate the gold mine of Kiniero (Guinea).',
+      //       projectName_fr: 'Etudier l\'évaluation de l\'impact sur l\'environnement de la licence actuelle d\'exploitation de la mine d\'or de Kiniero (Guinée).',
+      //       projectdetails: {
+      //         data: GeoenvironementProject1Component,
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '4',
+      //       type: 'GIS app',
+      //       projectName: ' Study of environmental impact assessment of the extension of the gold mine in Western Kinièro Balan (Guinea).',
+      //       projectName_fr: 'Étude d’évaluation de l’impact sur l’environnement de l’extension de la mine d’or de Kinièro Balan occidental (Guinée).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '5',
+      //       type: 'GIS app',
+      //       projectName: 'Study of environmental impact assessment of quarrying limestone and marl for cement project projected in Zouarine, Delegation of Sers, Kef Governorate (Tunisia).',
+      //       projectName_fr: 'Etude d’impact sur l’environnement d’un projet d’extraction du ciment et de la pierre calcaire à Zouarine, Délégation de Sers, Gouvernorat du Kef (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '6',
+      //       type: 'GIS app',
+      //       projectName: '  Study of environmental impact of marble quarry, projected in BENI Hazem, Delegation of Makthar Seliana Governorate (Tunisia).',
+      //       projectName_fr: 'Étude d\'impact sur l\'environnement de la carrière de marbre, projeté à BENI Hazem, délégation du gouvernorat de Maktar Siliana (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '7',
+      //       type: 'GIS app',
+      //       projectName: 'Environmental impact assessment of the clay pit in Sidi Jedidi, Governorate of Nabeul (Tunisia).',
+      //       projectName_fr: 'Etude d\'impact sur l\'environnement de la carrière d\'argile à Sidi Jedidi, Gouvernorat de Nabeul (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '8',
+      //       type: 'GIS app',
+      //       projectName: 'Environmental impact assessment the quarrying of aggregate on the slick in J.OUST (Tunisia).',
+      //       projectName_fr: 'Etude d\'impact sur l\'environnement de l\'extraction d\'agrégats sur la nappe à J.OUST (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '9',
+      //       type: 'GIS app',
+      //       projectName: 'Environmental impact assessment of the quarry aggregate SISE AIN EL Babouch, Zriba delegation, Governorate zaghouan (Tunisia).',
+      //       projectName_fr: 'Etude d\'impact sur l\'environnement des granulats de carrière SISE AIN EL Babouch, délégation de Zriba, gouvernorat de zaghouan (Tunisie)',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //   ]
+      // },
+      // {
+      //   role: 'Web Developer',
+      //   role_fr: 'Développeur Web',
+      //   company: 'Geo-Service company ',
+      //   year: '2005-2007',
+      //   logo: 'assets/logo/geo-service.png',
+      //   tasks: [
+      //     { name: 'Build websites using HTML5, CSS3, Javascript, Node.JS' },
+      //     { name: 'Design and implementation of web and mobile solutions.' },
+      //     { name: 'Conception of Database for many companies,' },
+      //     { name: 'Developing mobile web application using GeoCortex and Html5, JQuery and AngularJS.' },
+      //     { name: 'Configuration and maintenance of Oracle Applications and Database server ' },
+      //     { name: 'Write the monitoring reports and technical reports.' },
+      //   ],
+      //   tasks_fr: [
+      //     { name: 'Construire des sites web en utilisant HTML5, CSS3, Javascript, Node.JS' },
+      //     { name: 'Conception et mise en œuvre de solutions web et mobiles.' },
+      //     { name: 'Conception de base de données pour de nombreuses entreprises' },
+      //     { name: 'Développer une application Web mobile utilisant GeoCortex et Html5, JQuery et AngularJS.' },
+      //     { name: 'Configuration et maintenance des applications Oracle et du serveur de base de données' },
+      //     { name: 'Rédiger les rapports de suivi et les rapports techniques.' },
+      //   ],
+      //   projectCompany: [
+      //     {
+      //       projectIndex: '1',
+      //       type: 'GIS app',
+      //       projectName: 'Analysis of the evolution of the coastline north of Sousse (Tunisia).',
+      //       projectName_fr: 'Analyse de l\'évolution du littoral au nord de Sousse (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '2',
+      //       type: 'GIS app',
+      //       projectName: 'Analysis of the coastal erosion of Kerkennah (Tunisia).',
+      //       projectName_fr: 'Analyse de l\'érosion côtière de Kerkennah (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //     {
+      //       projectIndex: '3',
+      //       type: 'GIS app',
+      //       projectName: 'Environmental impact assessment of the development of Gammarth marine (Tunisia).',
+      //       projectName_fr: 'Etude d\'impact sur l\'environnement du développement de Gammarth marine (Tunisie).',
+      //       projectdetails: {
+      //         data: '',
+      //         visible: false,
+      //       },
+      //     },
+      //   ]
+      // }
     ];
   }
   public getData() {
