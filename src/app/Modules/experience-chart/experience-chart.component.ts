@@ -37,10 +37,13 @@ export class ExperienceChartComponent implements OnInit {
         this.softwaresLabel.push(this.softwareList[i].Softwares[j].softwareName);
         this.softwaresyears.push(this.softwareList[i].Softwares[j].years);
       }*/
-
     for (let j = 0; j < (this.softwareList[0].Softwares).length; j++) {
       this.softwaresLabel.push(this.softwareList[0].Softwares[j].softwareName);
       this.softwaresyears.push(this.softwareList[0].Softwares[j].years);
+    }
+    for (let j = 0; j < (this.softwareList[1].Softwares).length; j++) {
+      this.softwaresLabel.push(this.softwareList[1].Softwares[j].softwareName);
+      this.softwaresyears.push(this.softwareList[1].Softwares[j].years);
     }
 
     // Bar chart:
