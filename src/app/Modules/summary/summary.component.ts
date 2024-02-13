@@ -19,20 +19,20 @@ export class SummaryComponent implements OnInit {
   tasksSummaryData = [
     {
       id: 1,
-      task: '12 years of experience working as Front End developer/manager/Team lead.',
+      task: '12 years of experience working as Front End developer/ Manager/Team lead.',
       task_fr: '12 années d\'expérience en tant que développeur/ Manager/Chef d\'équipe frontal.',
       src: '/ProfessionalExperience',
     },
     {
       id: 2,
-      task: '8 years experience working with Angular Js and Angular 2/4/6/7/8/9/10/14',
-      task_fr: '8 ans d\'expérience avec Angular Js et Angular 2/4/6/7/8/9/10/14',
+      task: '8 years experience working with Angular Js and Angular 2/4/6/7/8/9/10/14/16/17',
+      task_fr: '8 ans d\'expérience avec Angular Js et Angular 2/4/6/7/8/9/10/14/16/17',
       src: '/ProfessionalExperience/ListOfProject',
     },
     {
       id: 3,
-      task: 'Familiar with the following languages: Node.JS, JQuery, JavaScript, HTML/HTML5, CSS/CSS3, SQL, Python, C, C++, C#, Java,',
-      task_fr: 'Maîtrise des languages suivantes:  Node.JS, JQuery, JavaScript, HTML / HTML5, CSS / CSS3, SQL, Python, C, C ++, C #, Java',
+      task: 'Familiar with the following languages: Node.JS, TypeScript, JavaScript, HTML/HTM5, CSS/CSS3, Python, C, C++, C#, Java',
+      task_fr: 'Maîtrise des languages suivantes:  Node.JS, TypeScript, JavaScript, HTML/HTM5, CSS/CSS3, Python, C, C++, C#, Java',
       src: '/SoftwareSkills',
     },
     {

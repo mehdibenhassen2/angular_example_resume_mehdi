@@ -165,9 +165,10 @@ export class DataCompanyService {
         logo: 'assets/logo/clickatell-logo-vector.png',
         tasks: [
           { name: 'Work with an team of engineers and product designers to implement the next generation of Clickatell products' },
+          { name: 'Improve performance (use of microfrontend architecture, standalone components, lazy loading, etc.).'},
           { name: 'Be part of and actively contribute to a cross-functional Agile/Scrum team that works together to become a high-performing team in delivering world-class technology solutions' },
           { name: 'Be responsible for creating responsive grid systems along with using clean code that will make web interface function properly on any platform they are being viewed from' },
-          { name: 'Use JavaScript, CSS, HTML, Angular 8 to build web applications' },
+          { name: 'Use JavaScript, CSS, HTML, Angular (8- 16) to build the web applications: write a new code (new stories) and update the old code.' },
           { name: 'Use Responsive Web Design (RWD) techniques in web development: review mocks, bring them to life on desktop and connected devices' },
           { name: 'Develop interactive components using JavaScript and Angular; integrate with internal tools, frameworks and services as well as external APIs' },
           { name: 'Collaborate with backend developers, editors, and external agencies' },
@@ -177,9 +178,10 @@ export class DataCompanyService {
         ],
         tasks_fr: [
           { name: ' Travailler avec une équipe d\'ingénieurs et de concepteurs de produits pour mettre en œuvre la nouvelle génération de produits Clickatell' },
+          { name: 'Améliorer les performances (utilisation d\'une architecture micro-frontend, de composants autonomes, chargement différé, etc.).'},
           { name: ' Faites partie d\'une équipe multidisciplinaire Agile / Scrum qui contribue activement à la création d\'une équipe hautement performante dans la fourniture de solutions technologiques de classe mondiale.' },
           { name: ' Être responsable de la création de systèmes de grille réactifs et de l\'utilisation d\'un code propre qui permettra à l\'interface Web de fonctionner correctement sur la plate-forme sur laquelle elle est visualisée' },
-          { name: ' Utiliser JavaScript, CSS, HTML, Angular 8 pour créer des applications Web' },
+          { name: ' Utiliser JavaScript, CSS, HTML, Angular (8-16) pour créer des applications Web' },
           { name: 'Utilisez les techniques de conception de site Web réactif (RWD) dans le développement Web: passez en revue les simulacres, donnez-les à la vie sur les ordinateurs de bureau et les périphériques connectés' },
           { name: ' Développer des composants interactifs en utilisant JavaScript et Angular; intégrer avec des outils internes, des cadres et des services ainsi que des API externes' },
           { name: 'Collaborer avec les développeurs, les éditeurs et les agences externes' },
