@@ -107,7 +107,7 @@
   }
 
   .navbar-nav :hover {
-    transform: scale(1.3);
+    transform: scale(1.9);
   }
 
   .active .icons_white_horizontal {
@@ -127,7 +127,9 @@
   width: inherit;
   display: inline;
 }
-
+.nav-link{
+  padding-right: 10px;
+}
 // 2- vertical navigation bar-------------------------------------------
 
 .vertical-menu {
