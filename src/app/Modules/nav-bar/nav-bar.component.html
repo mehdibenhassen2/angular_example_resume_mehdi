@@ -1,3 +1,5 @@
+
+<!--#region horizental menu bar  -->
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm nav-bar-cust">
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div [ngClass]="(router.url=='/Summary')? 'active':'navbar-nav'">
@@ -63,7 +65,9 @@
     </div>
 </nav>
 
-<!--vertical menu bar-->
+<!-- #endregion -->
+
+<!--#region vertical menu bar  -->
 
 <div [ngClass]=" ((offset > 200)? 'vertical-menu_displayed': 'vertical-menu_hiddeed')">
     <div class="vertical-menu" id='navbarVertical'>
@@ -96,5 +100,5 @@
         </a>
     </div>
 </div>
-
+<!-- #endregion -->
 <app-welcome-dialog [(visible)]="!showDialog" [(showDialog)]="showDialog"> </app-welcome-dialog>
