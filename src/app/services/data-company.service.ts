@@ -32,7 +32,7 @@ export class DataCompanyService {
           },
           {
             softwareName: 'ReactJS',
-            logo: 'assets/software/react_logo.png',
+            logo: 'assets/software/React_Logo.png',
             years: '1',
           },
           {
@@ -117,6 +117,23 @@ export class DataCompanyService {
             softwareName: 'Zeplin',
             logo: 'assets/software/Zeplin.png',
             years: '4 ',
+          }
+        ]
+      },
+      {
+        domaine: 'Project Management: ',
+        domaine_fr: 'Gestion des Projets: ',
+        domaineLogo: 'assets/software/design.jpg',
+        Softwares: [
+          {
+            softwareName: 'Jira',
+            logo: 'assets/software/jira.png',
+            years: '8 ',
+          },
+          {
+            softwareName: 'ClickUp',
+            logo: 'assets/software/clickup.png',
+            years: '1 ',
           }
         ]
       },
