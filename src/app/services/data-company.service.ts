@@ -31,6 +31,11 @@ export class DataCompanyService {
             years: '8',
           },
           {
+            softwareName: 'ReactJS',
+            logo: 'assets/software/react_logo.png',
+            years: '1',
+          },
+          {
             softwareName: 'JQuery',
             logo: 'assets/software/jquery-logo.jpg',
             years: '1 ',
@@ -212,6 +217,7 @@ export class DataCompanyService {
           { name: 'Use Responsive Web Design (RWD) techniques in web development: review mocks, bring them to life on desktop and connected devices' },
           { name: 'Develop interactive components using JavaScript and Angular; integrate with internal tools, frameworks and services as well as external APIs' },
           { name: 'Collaborate with backend developers, editors, and external agencies' },
+          { name: 'Fix bugs of two old projects using ReactJS and Typescript.'},
           { name: 'Translate UI designs into well-organized and structured HTML/CSS compatible with modern browsers, and use open source tools & frameworks to improve the structure and maintainability of the front-end code where possible' },
           { name: 'Design user interfaces with a modern and clean aesthetic which focus on delivering intuitive & enjoyable user experiences' },
           { name: 'Create wireframes to illustrate high-level solutions to an application and feature requests' },
@@ -225,6 +231,7 @@ export class DataCompanyService {
           { name: 'Utilisez les techniques de conception de site Web réactif (RWD) dans le développement Web: passez en revue les simulacres, donnez-les à la vie sur les ordinateurs de bureau et les périphériques connectés' },
           { name: ' Développer des composants interactifs en utilisant JavaScript et Angular; intégrer avec des outils internes, des cadres et des services ainsi que des API externes' },
           { name: 'Collaborer avec les développeurs, les éditeurs et les agences externes' },
+          { name: 'Resoudre des bugs de deux anciens projects en Utilisant ReactJS et Typescript.'},
           { name: 'Traduire les conceptions d\'interface utilisateur en HTML / CSS bien organisés et structurés compatibles avec les navigateurs modernes, et utiliser des outils et des frameworks open source pour améliorer la structure et la maintenabilité du code frontal, dans la mesure du possible' },
           { name: ' Concevez des interfaces utilisateur avec une esthétique moderne et épurée visant à offrir une expérience utilisateur intuitive et agréable' },
           { name: ' Créer des wireframes pour illustrer les solutions de haut niveau d\'une application et les demandes de fonctionnalités' },
