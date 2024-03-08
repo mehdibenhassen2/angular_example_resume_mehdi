@@ -25,8 +25,8 @@ export class SummaryComponent implements OnInit {
     },
     {
       id: 2,
-      task: '8 years experience working with Angular Js and Angular 2/4/6/7/8/9/10/14/16/17',
-      task_fr: '8 ans d\'expérience avec Angular Js et Angular 2/4/6/7/8/9/10/14/16/17',
+      task: '8 years experience working with Angular Js, Angular 2/4/6/7/8/9/10/14/16/17 and ReactJS',
+      task_fr: '8 ans d\'expérience avec Angular Js, Angular 2/4/6/7/8/9/10/14/16/17 et ReactJS',
       src: '/ProfessionalExperience/ListOfProject',
     },
     {

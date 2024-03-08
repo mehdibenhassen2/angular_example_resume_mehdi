@@ -10,6 +10,9 @@
 .ali-right {
   text-align: right;
 }
+.ali-center{
+  text-align: center;
+}
 .icons_param {
   color: $base_blue;
   margin: 0;
@@ -74,4 +77,12 @@
 .lang_not_active{
   background-color: #b08ffd;
 
+}
+
+.logo_photo{
+  object-fit: cover;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  margin: 5px;
 }
