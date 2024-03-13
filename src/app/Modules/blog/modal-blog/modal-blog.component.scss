@@ -1,8 +1,8 @@
 @import "colors";
 @import 'inheritance';
 
-$background_title:burlywood;
-$background_title_details: beige;
+$background_title:rgb(221, 219, 216);
+$background_title_details: rgb(255, 255, 255);
 .title_content{
   background-color: $background_title;
   box-shadow: 1px 1px 2px;

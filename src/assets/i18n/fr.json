@@ -23,14 +23,22 @@
         "Success": "Succès!",
         "Thanks": "Merci pour votre Email.",
         "Error": "Erreur, ",
-        "please_try_again.": "Veuillez réessayer.",
+        "please_try_again": "Veuillez réessayer.",
         "Your_Name": "Votre nom",
         "Your_company": "Votre entreprise",
         "Your_Email": "Votre Email",
         "Your_phone": "Votre Téléphone",
         "Subject": "Sujet",
         "Your_message": "Votre message",
-        "Submit": "Soumettre"
+        "Submit": "Soumettre",
+        
+
+        "error_Your_Name": "Votre nom est obligatoir",
+        "error_Your_company": "Votre entreprise est obligatoir",
+        "error_Your_Email": "Votre Email est obligatoir",
+        "error_Your_phone": "Votre Téléphone est obligatoir",
+        "error_Subject": "Sujet est obligatoir",
+        "error_Your_message": "Votre message est obligatoir"
     },
     "software": {
         "years": "ans"

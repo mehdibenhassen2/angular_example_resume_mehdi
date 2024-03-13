@@ -1,86 +1,185 @@
 <section class="section">
   <div class="container">
-      <div> <strong>{{ 'contact-me.Email_me' | translate }}</strong></div>
-      <div *ngIf='messageSent===true'>
-        <ng-container *ngTemplateOutlet="responseMessageSent"></ng-container>
+    <div>
+      <strong>{{ "contact-me.Email_me" | translate }}</strong>
+    </div>
+    <div *ngIf="messageSent === 1">
+      <ng-container *ngTemplateOutlet="responseMessageSent"></ng-container>
+    </div>
+    <div *ngIf="messageSent === 2">
+      <ng-container *ngTemplateOutlet="responseMessageError"></ng-container>
+    </div>
+
+    <ng-template #responseMessageError>
+      <div class="alert alert-danger">
+        <span class="error-icon">
+          <i class="fas fa-times" style="color: 'red'"></i
+        ></span>
+        <strong>&nbsp; {{ "contact-me.Error" | translate }}</strong>
+        {{ "contact-me.please_try_again" | translate }}
       </div>
-      <div *ngIf='messageSent===false'>
-        <ng-container *ngTemplateOutlet="responseMessageError"></ng-container>
+    </ng-template>
+
+    <ng-template #responseMessageSent>
+      <div class="alert alert-success">
+        <span class="ok-icon">
+          <i class="fas fa-thumbs-up"> </i>
+        </span>
+        <strong>&nbsp;{{ "contact-me.Success" | translate }}</strong>
+        {{ "contact-me.Thanks" | translate }}
       </div>
-
-      <ng-template #responseMessageError>
-        <div class="alert alert-danger">
-          <span class='error-icon'>
-            <i class="fas fa-times" style="color:'red'"></i></span>
-          <strong>&nbsp;  {{ 'contact-me.Error' | translate }}</strong> {{ 'contact-me.please try again.' | translate }}
-        </div>
-      </ng-template>
-
-      <ng-template #responseMessageSent>
-        <div class="alert alert-success">
-          <span class='ok-icon'>
-            <i class="fas fa-thumbs-up"> </i>
-          </span>
-          <strong>&nbsp;{{ 'contact-me.Success' | translate }}</strong> {{ 'contact-me.Thanks' | translate }}
-
-        </div>
-      </ng-template>
-    <form  [formGroup]="contactForm">
-      
-
+    </ng-template>
+    <form [formGroup]="contactForm">
       <div class="row">
         <!-- name -->
-        <div class="field col-sm-12 col-md-6 col-lg-6 ">
-          <input class='line-data' type="text" id="contactFormName" name="name" class="input" placeholder="{{ 'contact-me.Your_Name' | translate }}"
-            formControlName="contactFormName"  mdbInputDirective [(ngModel)]="yourName">
+        <div class="field col-sm-12 col-md-6 col-lg-6">
+          <input
+            class="line-data"
+            type="text"
+            id="contactFormName"
+            name="name"
+            class="input"
+            placeholder="{{ 'contact-me.Your_Name' | translate }}"
+            formControlName="contactFormName"
+            mdbInputDirective
+           
+          />
+          <span
+            class="error_message"
+            *ngIf="
+              contactForm.get('contactFormName').invalid &&
+              contactForm.get('contactFormName').touched
+            "
+            >{{ "contact-me.error_Your_Name" | translate }}</span
+          >
         </div>
 
         <!--company-->
         <div class="field col-sm-12 col-md-6 col-lg-6">
-          <input class='line-data' type="text" name="comapny" class="input" placeholder="{{ 'contact-me.Your_company' | translate }}" id="contactFormEmail" formControlName="ContactFormCompany"
-            [(ngModel)]="yourCompnay">
+          <input
+            class="line-data"
+            type="text"
+            name="comapny"
+            class="input"
+            placeholder="{{ 'contact-me.Your_company' | translate }}"
+            id="contactFormEmail"
+            formControlName="ContactFormCompany"
+
+          />
+          <span
+            class="error_message"
+            *ngIf="
+              contactForm.get('ContactFormCompany').invalid &&
+              contactForm.get('ContactFormCompany').touched
+            "
+            >{{ "contact-me.error_Your_company" | translate }}</span
+          >
         </div>
       </div>
 
       <div class="row">
         <!-- email -->
         <div class="field col-sm-12 col-md-6 col-lg-6">
-          <input class='line-data' type="email" name="email" class="input" placeholder="{{ 'contact-me.Your_Email' | translate }} "
-            id="contactFormEmail" formControlName="contactFormEmail"  mdbInputDirective
-            [(ngModel)]="yourEmail">
+          <input
+            class="line-data"
+            type="email"
+            name="email"
+            class="input"
+            placeholder="{{ 'contact-me.Your_Email' | translate }} "
+            id="contactFormEmail"
+            formControlName="contactFormEmail"
+            mdbInputDirective
 
+          />
 
+          <span
+            class="error_message"
+            *ngIf="
+              contactForm.get('contactFormEmail').invalid &&
+              contactForm.get('contactFormEmail').touched
+            "
+            >{{ "contact-me.error_Your_Email" | translate }}</span
+          >
         </div>
 
         <!--phone number-->
         <div class="field col-sm-12 col-md-6 col-lg-6 file-path-wrapper">
-          <input class='line-data' type="text" name="phone" class="input" placeholder="{{ 'contact-me.Your_phone' | translate }}" formControlName="ContactFormPhone"
-            [(ngModel)]="yourPhone">
+          <input
+            class="line-data"
+            type="text"
+            name="phone"
+            class="input"
+            placeholder="{{ 'contact-me.Your_phone' | translate }}"
+            formControlName="ContactFormPhone"
+          />
+          <span
+            class="error_message"
+            *ngIf="
+              contactForm.get('ContactFormPhone').invalid &&
+              contactForm.get('ContactFormPhone').touched
+            "
+            >{{ "contact-me.error_Your_phone" | translate }}</span
+          >
         </div>
       </div>
       <!-- subject -->
       <div class="row">
-        <div class="field  col-sm-12 col-md-12 col-lg-12">
-          <input class="line-data" type="text" name="message" placeholder="{{ 'contact-me.Subject' | translate }}" id="contactFormSubject"
-            formControlName="contactFormSubject" mdbInputDirective [(ngModel)]="yourSubject">
+        <div class="field col-sm-12 col-md-12 col-lg-12">
+          <input
+            class="line-data"
+            type="text"
+            name="message"
+            placeholder="{{ 'contact-me.Subject' | translate }}"
+            id="contactFormSubject"
+            formControlName="contactFormSubject"
+            mdbInputDirective
+          />
+          <span
+            class="error_message"
+            *ngIf="
+              contactForm.get('contactFormSubject').invalid &&
+              contactForm.get('contactFormSubject').touched
+            "
+            >{{ "contact-me.error_Subject" | translate }}</span
+          >
         </div>
       </div>
       <!-- message -->
       <div class="row">
-        <div class="field  col-sm-12 col-md-12 col-lg-12">
-          <textarea class=" textarea" name="message" placeholder="{{ 'contact-me.Your_message' | translate }}" id="contactFormMessage"
-            formControlName="contactFormMessage"   mdbInputDirective
-            [(ngModel)]="yourMessage">
+        <div class="field col-sm-12 col-md-12 col-lg-12">
+          <textarea
+            class="textarea"
+            name="message"
+            placeholder="{{ 'contact-me.Your_message' | translate }}"
+            id="contactFormMessage"
+            formControlName="contactFormMessage"
+            mdbInputDirective
+          >
           </textarea>
+          <span
+            class="error_message"
+            *ngIf="
+              contactForm.get('contactFormMessage').invalid &&
+              contactForm.get('contactFormMessage').touched
+            "
+            >{{ "contact-me.error_Your_message" | translate }}</span
+          >
         </div>
       </div>
       <div class="row">
-        <div class="  col-sm-12 col-md-12 col-lg-12">
-          <button type=" submit" class=" btn_submit" [disabled]="contactForm.invalid" (click)="sendEmail()"
-            (click)="clearForm()" mdbWavesEffect>{{ 'contact-me.Submit' | translate }}</button>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <button
+            type=" submit"
+            class="btn_submit"
+            [disabled]="contactForm.invalid"
+            (click)="sendEmail(contactForm.value)"
+            (click)="clearForm()"
+            mdbWavesEffect
+          >
+            {{ "contact-me.Submit" | translate }}
+          </button>
         </div>
       </div>
     </form>
-
   </div>
 </section>

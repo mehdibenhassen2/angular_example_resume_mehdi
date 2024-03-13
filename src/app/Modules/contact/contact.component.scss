@@ -15,12 +15,17 @@
   width: 100%;
   margin: auto 20px 10px auto;
   padding: 10px 30px 10px 30px;
+  &:disabled{
+    background-color: rgb(210, 164, 164);
+    border: none;
+  }
 }
 
 input[type="text"],
 select {
   width: 100%;
   padding-left: 10px;
+  border: none;
   margin: 8px 0;
   display: inline-block;
   border-radius: 4px;
@@ -36,6 +41,7 @@ select {
   margin: 8px 0;
   display: inline-block;
   border-radius: 4px;
+  border: none;
   box-sizing: border-box;
   line-height: 20px;
   background-color: $background_title_details;
@@ -77,4 +83,24 @@ input[type="submit"]:hover {
   line-height: 13px;
   text-align: center;
   color: white;
+}
+.error_message{
+  text-align: right;
+    color: red;
+  font-size: 10px;
+  line-height: 0px;
+  line-height: 0px !important;
+  display: block;
+
+}
+.line-data {
+  line-height: 0px !important;
+}
+
+
+::placeholder {
+  font-weight: italic;
+  opacity: 0.3;
+  color: red;
+  font-size: 9px;
 }

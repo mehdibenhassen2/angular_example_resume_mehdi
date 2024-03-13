@@ -23,14 +23,20 @@
         "Success":"Success!",
         "Thanks" : "Thanks for your Email.",
         "Error":"Error, ",
-        "please_try_again.":"please try again.",
+        "please_try_again":"please try again.",
         "Your_Name": "Your Name",
         "Your_company": "Your company",
         "Your_Email": "Your Email",
         "Your_phone": "Your phone",
         "Subject": "Subject",
         "Your_message" :"Your message",
-        "Submit":"Submit"
+        "Submit":"Submit",
+        "error_Your_Name": "Your Name is required",
+        "error_Your_company": "Your company is required",
+        "error_Your_Email": "Your Email is required",
+        "error_Your_phone": "Your phone is required",
+        "error_Subject": "Subject is required",
+        "error_Your_message": "Your message is required"
     },
     "software":{
         "all":"oui",
