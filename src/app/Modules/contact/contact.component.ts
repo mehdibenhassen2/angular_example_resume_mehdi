@@ -21,17 +21,10 @@ import {
 })
 export class ContactComponent implements OnInit {
   messageSent = 0;
-
+  public now: Date = new Date();
   private myForm: AngularFirestoreCollection<any>;
 
   // Adding variables
-  yourName: string;
-  yourCompnay: string;
-  yourPhone: string;
-  yourEmail: string;
-  yourSubject: string;
-  yourMessage: string;
-  items: Observable<any[]>;
   contactForm: FormGroup;
 
   // Setting the database
@@ -41,7 +34,7 @@ export class ContactComponent implements OnInit {
     private firestore: AngularFirestore
   ) {
     // Passing in MD_Bootstrap form validation
-
+    this.now = new Date();
     this.contactForm = fb.group({
       contactFormName: ["", Validators.required],
       contactFormEmail: ["", [Validators.required, Validators.email]],
@@ -49,17 +42,18 @@ export class ContactComponent implements OnInit {
       contactFormMessage: ["", Validators.required],
       ContactFormPhone: ["", Validators.required],
       ContactFormCompany: ["", Validators.required],
+      contactFormSubmittedTime: [this.now],
     });
   }
   // Pushing the contact-form to the firebase data base
 
   sendEmail(value: any) {
+    this.now = new Date();
     this.myForm
       .add(value)
       .then((res) => {
         this.messageSent = 1;
         // Popup message
-
         setTimeout(() => {
           this.messageSent = 0;
         }, 2000);
@@ -72,6 +66,6 @@ export class ContactComponent implements OnInit {
     this.contactForm.reset();
   }
   ngOnInit() {
-    this.myForm = this.firestore.collection("enguiry");
+    this.myForm = this.firestore.collection("sent messages:");
   }
 }
