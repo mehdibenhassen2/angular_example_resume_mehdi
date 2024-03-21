@@ -66,6 +66,7 @@ import { WelcomeDialogComponent } from './Modules/welcome-dialog/welcome-dialog.
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -122,6 +123,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
         deps: [HttpClient]
       }
     }),
+    StoreModule.forRoot({}, {}),
   ],
   exports: [],
   providers: [WINDOW_PROVIDERS,
