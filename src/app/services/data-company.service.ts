@@ -218,6 +218,7 @@ export class DataCompanyService {
         ]
       }];
 
+      
     this.projectList = [
       {
         role: 'Senior Front End developer',
