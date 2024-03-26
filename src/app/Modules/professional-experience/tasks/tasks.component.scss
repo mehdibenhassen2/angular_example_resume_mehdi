@@ -7,19 +7,18 @@
     text-align: right;
 
 }
-.right {
-  direction: rtl;
-  text-align: right;
-  margin: 10px 20px 0;
+.left {
+  text-align: left;
+  margin: 10px 20px 0 0;
   padding: 0;
-  font-family: "Garamond Nova Soft", "Helvetica Neue", sans-serif;
+  font-family: "Times New Roman", "Garamond Nova Soft", "Helvetica Neue", sans-serif;
 
 }
 .label_option{
-  direction: rtl;
-  font-size: 10px;
+  font-size: 12px;
   color: $base_blue;
-  text-align: right;
+  text-align: left;
+  margin-right: 10px;
 
 }
 // boostrap table
@@ -46,7 +45,16 @@
   font-size: 12px;
 }
 .logo {
-  height: 30px;
+  width: 100px;
+  height: auto;
+  margin-left:20px;
+  display: inline;
+}
+.logo_tree{
+  width: 100px;
+  height: auto;
+  margin-left:20px;
+  display: inline;
 }
 
 .line-height {
@@ -60,16 +68,15 @@
 }
 
 // for grid material
+.option_list{
+  text-align: left;
+}
 .task_list {
-  line-height: 20px;
   margin: 0;
   padding: 0;
   text-align: left !important;
   align-items: left !important;
-  justify-content: flex-start !important;
-  &:before {
-    content: "- ";
-  }
+  
 }
 .mat-figure::ng-deep {
 
@@ -85,14 +92,17 @@
 
 }
 
-.mat-grid-tile ::ng-deep span {
-  border-style: none !important;
-
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+.information {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12px;
+  color: gray;
+  &_icon {
+    color: #912cee;
+  }
 }
-.grid_head ::ng-deep {
-  background-color: $background_title;
-  border-style: none !important;
-  height: 20px !important;
+
+.image_tile{
+  width:100%;
+  height: auto;
 }

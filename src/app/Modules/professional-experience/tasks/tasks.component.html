@@ -1,27 +1,21 @@
-
 <!--#region opttions---------------start-------------------------->
-<div class="right">
-  <mat-form-field>
-    <mat-label class="label_option">Display your data as </mat-label>
+<div class="left">
+  <mat-form-field class="option_list">
+    <mat-label class="information">
+      <i class="fas fa-info-circle information_icon"></i> &nbsp;
+      {{ "tasks_information.information" | translate }}
+    </mat-label>
     <select matNativeControl required (change)="onChangeEvent($event)">
       <option value="table_bootstrap">Table: Bootstrap</option>
-      <option value="grid_angular">Grid: Angular material</option>
       <option value="tree_angular">Tree: Angular material</option>
-      <option value="table_containtful_bootstrap">Table: Bootstrap + contentful</option>
     </select>
   </mat-form-field>
-</div>
-<div *ngIf="designOption == 'table_bootstrap'">
-  <ng-container *ngTemplateOutlet="table_bootstrap"></ng-container>
-</div>
-<div *ngIf="designOption == 'grid_angular'">
-  <ng-container *ngTemplateOutlet="grid_angular"></ng-container>
 </div>
 <div *ngIf="designOption == 'tree_angular'">
   <ng-container *ngTemplateOutlet="tree_angular"></ng-container>
 </div>
-<div *ngIf="designOption == 'table_containtful_bootstrap'">
-  <ng-container *ngTemplateOutlet="table_containtful_bootstrap"></ng-container>
+<div *ngIf="designOption == 'table_bootstrap'">
+  <ng-container *ngTemplateOutlet="table_bootstrap"></ng-container>
 </div>
 
 <!--#endregion options---------------End-------------------------->
@@ -34,6 +28,8 @@
       <!-- use a disabled button to provide padding for tree leaf -->
       <button mat-icon-button disabled></button>
       <span class="title_tree">- {{ node.name }} </span>
+
+      <img class="logo_tree" src="{{ node.logo }}" />
     </mat-tree-node>
     <!-- This is the tree node template for expandable nodes -->
     <mat-tree-node
@@ -56,155 +52,66 @@
 </ng-template>
 <!--#endregion tree_angular---------------End-------------------------->
 
-<!--#region grid_angular---------------start-------------------------->
-<ng-template #grid_angular>
-  <div class="basic-container">
-    <mat-grid-list
-      cols="8"
-      *ngFor="let project of projectList; let i = index"
-      rowHeight="60px"
-    >
-      <mat-grid-tile class="grid_head" [colspan]="3" [rowspan]="1">
-        {{ project.role }}
-      </mat-grid-tile>
-      <mat-grid-tile class="grid_head" [colspan]="2" [rowspan]="1">
-        {{ project.company }}
-      </mat-grid-tile>
-      <mat-grid-tile class="grid_head" [colspan]="2" [rowspan]="1">
-        <img class="logo" src="{{ project.logo }}" />
-      </mat-grid-tile>
-      <mat-grid-tile class="grid_head" [colspan]="1" [rowspan]="1">
-        {{ project.year }}</mat-grid-tile
-      >
-      <mat-grid-tile
-        [colspan]="8"
-        *ngFor="let task of project.tasks"
-        style="text-align: left"
-        class="video-title"
-      >
-        <span class="task_list" fxFlex fxLayoutAlign="start center">{{
-          task.name
-        }}</span>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="8">
-        <span class="white_space" fxFlex fxLayoutAlign="start center"></span>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
-</ng-template>
-<!--#endregion grid_angular---------------end-------------------------->
-
 <!--#region table_bootstrap---------------start-------------------------->
 <ng-template #table_bootstrap>
-  <div class="total" *ngFor="let project of projectList; let i = index">
-    <div class="container-fluid">
-      <div class="row role">
-        <div
-          class="col-sm-4 col-md-4 col-lg-4"
-          *ngIf="translationEnFrService.language == 'en'"
-        >
-          {{ project.role }}
-        </div>
-        <div
-          class="col-sm-4 col-md-4 col-lg-4"
-          *ngIf="translationEnFrService.language == 'fr'"
-        >
-          {{ project.role_fr }}
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 company_name">
-          {{ project.company }}
-        </div>
-        <div class="col-sm-2 col-md-2 col-lg-2">
-          <img class="logo" src="{{ project.logo }}" />
-        </div>
-        <div class="col-sm-2 col-md-2 col-lg-2 alg-right project_year">
-          {{ project.year }}
-        </div>
-      </div>
-    </div>
-    <div *ngIf="translationEnFrService.language == 'en'">
-      <div
-        class="project_title"
-        *ngFor="let task of project.tasks; let j = index"
-      >
-        <div class="container-fluid line-height">
-          <ul>
-            <li>{{ task.name }}</li>
-          </ul>
+  <div *ngIf="projectListContentful">
+    <div
+      class="total"
+      *ngFor="let project of projectListContentful; let i = index"
+    >
+      <div class="container-fluid">
+        <div class="row role">
+          <div
+            class="col-sm-4 col-md-4 col-lg-4"
+            *ngIf="translationEnFrService.language == 'en'"
+          >
+            {{ project.fields.role }}
+          </div>
+          <div
+            class="col-sm-4 col-md-4 col-lg-4"
+            *ngIf="translationEnFrService.language == 'fr'"
+          >
+            {{ project.fields.roleFr }}
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 company_name">
+            {{ project.fields.company }} - {{ project.fields.city }}
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2">
+            <img
+              class="logo image_tile"
+              src="{{ project.fields.logo.fields.file.url }}"
+            />
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 alg-right project_year">
+            {{ project.fields.year }}
+          </div>
         </div>
       </div>
-    </div>
-    <div *ngIf="translationEnFrService.language == 'fr'">
-      <div
-        class="project_title"
-        *ngFor="let task_fr of project.tasks_fr; let j = index"
-      >
-        <div class="container-fluid line-height">
-          <ul>
-            <li>{{ task_fr.name }}</li>
-          </ul>
+      <div *ngIf="translationEnFrService.language == 'en'">
+        <div
+          class="project_title"
+          *ngFor="let taskNameEn of project.fields.tasksListEn; let j = index"
+        >
+          <div class="container-fluid line-height">
+            <ul>
+              <li>{{ taskNameEn.name }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="translationEnFrService.language == 'fr'">
+        <div
+          class="project_title"
+          *ngFor="let taskNameFr of project.fields.taskListFr; let j = index"
+        >
+          <div class="container-fluid line-height">
+            <ul>
+              <li>{{ taskNameFr.name }}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </ng-template>
 <!--#endregion table_bootstrap---------------end-------------------------->
-
-
-<!--#region table_containtful_bootstrap---------------start-------------------------->
-<ng-template #table_containtful_bootstrap>
-<div *ngIf="projectListContentful">
-  <div class="total" *ngFor="let task of projectListContentful let i = index">
-    <div class="container-fluid">
-      <div class="row role">
-        <div
-          class="col-sm-4 col-md-4 col-lg-4"
-          *ngIf="translationEnFrService.language == 'en'"
-        >
-        {{ task.fields.role }}
-        </div>
-        <div
-          class="col-sm-4 col-md-4 col-lg-4"
-          *ngIf="translationEnFrService.language == 'fr'"
-        >
-        {{ task.fields.roleFr }}
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 company_name">
-          {{ task.fields.company }} - {{task.fields.city}}
-        </div>
-        <div class="col-sm-2 col-md-2 col-lg-2">
-          <img class="logo" src="{{ task.fields.logo.fields.file.url }}" />
-        </div>
-        <div class="col-sm-2 col-md-2 col-lg-2 alg-right project_year">
-          {{ task.fields.year }}
-        </div>
-      </div>
-    </div>
-    <div *ngIf="translationEnFrService.language == 'en'">
-      <div
-        class="project_title"
-        *ngFor="let taskName of task.fields.tasksListEn; let j = index"
-      >
-        <div class="container-fluid line-height">
-          <ul>
-            <li>{{ taskName }}</li>
-          </ul>
-        </div>
-      </div>
-    </div> 
- <div *ngIf="translationEnFrService.language == 'fr'">
-      <div
-        class="project_title"
-        *ngFor="let taskNameFr of task.fields.tasksListFr; let j = index"
-      >
-        <div class="container-fluid line-height">
-          <ul>
-            <li>{{ taskNameFr }}</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</ng-template>
-<!--#endregion table_containtful_bootstrap---------------end-------------------------->
