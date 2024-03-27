@@ -1,52 +1,138 @@
-<div class='content'>
-  <div class='row'>
-    <div class='col-sm-12 col-md-8 col-lg-8 information'>
-      <i class="fas fa-info-circle information_icon"></i> &nbsp; {{'project_Details.information1' | translate}} &nbsp; <i
-        class="fas fa-angle-up information_icon"></i> &nbsp; {{'project_Details.information2' | translate}} &nbsp; <i
-        class="fas fa-angle-down information_icon"></i> &nbsp; {{'project_Details.information3' | translate}}.
-
+<div class="content">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-8 information">
+      <i class="fas fa-info-circle information_icon"></i> &nbsp;
+      {{ "project_Details.information1" | translate }} &nbsp;
+      <i class="fas fa-angle-up information_icon"></i> &nbsp;
+      {{ "project_Details.information2" | translate }} &nbsp;
+      <i class="fas fa-angle-down information_icon"></i> &nbsp;
+      {{ "project_Details.information3" | translate }}.
     </div>
-    <div class='col-sm-12 col-md-4 col-lg-4'>
-
+    <div class="col-sm-12 col-md-4 col-lg-4">
       <div class="button_set">
-        <button class="button"
-          (click)="dataCompanyService.showAll()">{{ 'project_Details.Expand_All' | translate }}</button>
-        <button class="button"
-          (click)="dataCompanyService.hideAll()">{{ 'project_Details.Collapse_All' | translate }}</button>
+        <button class="button" (click)="dataCompanyService.showAll()">
+          {{ "project_Details.Expand_All" | translate }}
+        </button>
+        <button class="button" (click)="dataCompanyService.hideAll()">
+          {{ "project_Details.Collapse_All" | translate }}
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="total" *ngFor="let project of (projectListContentful); let i = index">
-  <div class="full ">
-    <div class="role ">
+<div class="total" *ngFor="let project of projectListContentful; let i = index">
+  <div class="full">
+    <div class="role">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'en'">{{project.fields.role}}
+          <div
+            class="col-sm-4 col-md-4 col-lg-4"
+            *ngIf="translationEnFrService.language == 'en'"
+          >
+            {{ project.fields.role }}
           </div>
-          <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="translationEnFrService.language == 'fr'">{{project.fields.role_fr}}
+          <div
+            class="col-sm-4 col-md-4 col-lg-4"
+            *ngIf="translationEnFrService.language == 'fr'"
+          >
+            {{ project.fields.role_fr }}
           </div>
 
           <div class="col-sm-4 col-md-4 col-lg-4 company_name">
             {{ project.fields.company }} - {{ project.fields.city }}
           </div>
-          <div class="col-sm-2 col-md-2 col-lg-2"><img class="logo image_tile" src="{{project.fields.logo.fields.file.url }}"></div>
-          <div class="col-sm-2 col-md-2 col-lg-2 project_year">{{project.fields.year}}</div>
+          <div class="col-sm-2 col-md-2 col-lg-2">
+            <img
+              class="logo image_tile"
+              src="{{ project.fields.logo.fields.file.url }}"
+            />
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 project_year">
+            {{ project.fields.year }}
+          </div>
         </div>
       </div>
     </div>
-    <div class="project_title"
-      *ngFor="let project of (project.fields.projects); let j = index">
-      <div class="container-fluid line-height ">
+    <div
+      class="project_title"
+      *ngFor="let project of project.fields.projects; let j = index"
+    >
+      <div class="container-fluid line-height">
         <!-- <div class="row" [ngClass]=" (project.projectdetails.data !='')? 'not_cursor':'for_cursor' "
           (click)="dataCompanyService.iconChange(i,j)"> -->
-          <div class="col-sm-11 col-md-11 col-lg-11">
-            <strong> {{project.projectNameCompany}}: </strong>
-            <!-- <span *ngIf="translationEnFrService.language == 'en'">{{projectC.projectName}}</span>
-            <span *ngIf="translationEnFrService.language == 'fr'">{{projectC.projectName_fr}}</span> -->
+        <div class="col-sm-11 col-md-11 col-lg-11">
+          <strong> {{ project.fields.projectIndex }}: </strong>
+          <span *ngIf="translationEnFrService.language == 'en'">{{
+            project.fields.projectNameEn
+          }}</span>
+          <span *ngIf="translationEnFrService.language == 'fr'">{{
+            project.fields.projectNameFr
+          }}</span>
+        </div>
 
+        <div
+          class="section"
+          *ngFor="let section of project.fields.projectsections"
+        >
+          <span *ngIf="translationEnFrService.language == 'en'">
+            <span
+              *ngFor="
+                let ligne of section.fields.projectDescriptionEn.content[0]
+                  .content
+              "
+            >
+              <span
+                *ngIf="ligne.nodeType == 'text'"
+                class="section_paragraph"
+                >{{ ligne.value }}</span
+              >
+              <span
+                *ngIf="ligne.nodeType == 'hyperlink'"
+                class="section_paragraph"
+              >
+                <a href="{{ ligne.data.uri }}" target="_blank">
+                  <span>{{ ligne.content[0].value }} </span>
+                </a>
+              </span>
+            </span>
+          </span>
+          <!-- #region langue francaise-->
+          <span *ngIf="translationEnFrService.language == 'fr'">
+            <span
+              *ngFor="
+                let ligne of section.fields.projectDescriptionFr.content[0]
+                  .content
+              "
+            >
+              <span
+                *ngIf="ligne.nodeType == 'text'"
+                class="section_paragraph"
+                >{{ ligne.value }}</span
+              >
+              <span
+                *ngIf="ligne.nodeType == 'hyperlink'"
+                class="section_paragraph"
+              >
+                <a href="{{ ligne.data.uri }}" target="_blank">
+                  <span>{{ ligne.content[0].value }} </span>
+                </a>
+              </span>
+            </span>
+          </span>
+          <!--#endregion langue francaise -->
+          <div
+            class="img_section_container"
+            *ngFor="let picture of section.fields.picture"
+          >
+            <img
+              class="img_section"
+              src="            {{ picture.fields.file.url }}
+"
+            />
           </div>
-          <!-- <div class="col-sm-1 col-md-1 col-lg-1">
+        </div>
+
+        <!-- <div class="col-sm-1 col-md-1 col-lg-1">
             <div *ngIf="projectC.projectdetails.data !=''">
               <i *ngIf="projectList[i].projectCompany[j].projectdetails.visible == true" class="fas fa-angle-up"></i>
               <i *ngIf="projectList[i].projectCompany[j].projectdetails.visible == false" class="fas fa-angle-down"></i>
@@ -54,17 +140,26 @@
           </div> -->
         <!-- </div> -->
       </div>
-      <div class="details"
-        *ngIf="(projectList[i].projectCompany[j].projectdetails.visible == true)  && (projectC.projectdetails.data !='') ">
-        <ng-container *ngComponentOutlet="projectC.projectdetails.data"></ng-container>
+      <div
+        class="details"
+        *ngIf="
+          projectList[i].projectCompany[j].projectdetails.visible == true &&
+          projectC.projectdetails.data != ''
+        "
+      >
+        <ng-container
+          *ngComponentOutlet="projectC.projectdetails.data"
+        ></ng-container>
       </div>
     </div>
   </div>
 </div>
 <div class="button_set">
-  <button class="button" (click)="dataCompanyService.showAll()">{{ 'project_Details.Expand_All' | translate }}</button>
+  <button class="button" (click)="dataCompanyService.showAll()">
+    {{ "project_Details.Expand_All" | translate }}
+  </button>
   <button class="button" (click)="dataCompanyService.hideAll()">
-    {{ 'project_Details.Collapse_All' | translate }}</button>
-
+    {{ "project_Details.Collapse_All" | translate }}
+  </button>
 </div>
 <!--filter here web mobile software GIS web map-->

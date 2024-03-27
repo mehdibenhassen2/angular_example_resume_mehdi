@@ -87,7 +87,21 @@
 .project_year {
   text-align: right;
 }
-.image_tile{
-  width:100%;
+.image_tile {
+  width: 100%;
   height: auto;
+}
+.section_paragraph {
+  display: inline !important;
+}
+
+.img_section {
+  width: 80%;
+  min-width: 200px;
+  height: auto;
+  margin: 10px;
+  text-align: center;
+  &_ container {
+    margin-top: 30px;
+  }
 }

@@ -28,36 +28,23 @@ export class ListOfProjectsComponent implements OnInit {
     this.contentfulDataService
       .getAllContaintfulTaskData(contenID)
       .subscribe((res) => {
-        console.log(res);
-        this.projectListContentfulObject = res.fields.tasksByRole;
+        this.projectListContentfulObject = res.items[0].fields.tasksByRole;
         for (let i in this.projectListContentfulObject) {
-          for (let j in this.projectListContentfulObject[i].fields.projects)
-         { 
-          this.contentfulDataService.getAllContaintfulTaskData(this.projectListContentfulObject[i].fields.projects[j].sys.id).subscribe((res) => {
-          this.projectListContentfulObject[i].fields.projects[j] = res;
-        console.log('projet');
-        console.log(res);
-        })
+          
            
           this.projectListContentful.push(this.projectListContentfulObject[i]);
         }
+        console.log('data:');
         console.log(this.projectListContentful);
        
-        // for (let i = 0; i < this.projectListContentful.length; i++) {
-        //   TREE_DATA.push({
-        //     name: (this.usedLanguage == 'en' )? this.projectListContentful[i].fields.role : this.projectListContentful[i].fields.roleFr,
-        //     logo: this.projectListContentful[i].fields.logo.fields.file.url,
-        //     children: (this.usedLanguage == 'en' )? this.projectListContentful[i].fields.tasksListEn: this.projectListContentful[i].fields.taskListFr,
-        //   });
-        // }
-        // this.dataSource.data = TREE_DATA;
-  }});
+
+  });
   }
 ngOnInit() {
+  this.projectList = this.dataCompanyService.projectList;
 
 
 
-    this.projectList = this.dataCompanyService.projectList;
     
 }
 

@@ -84,7 +84,8 @@ export class TasksComponent implements OnInit {
       .getAllContaintfulTaskData(contenID)
       .subscribe((res) => {
         console.log(res);
-        this.projectListContentfulObject = res.fields.tasksByRole;
+        this.projectListContentfulObject = res.items[0].fields.tasksByRole;
+        console.log('this.projectListContentfulObject');
         console.log(this.projectListContentfulObject);
         for (let i in this.projectListContentfulObject) {
           //Pay attention to the 'in'

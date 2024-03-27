@@ -17,7 +17,7 @@ export class ContentfulDataService {
    
   })
   getAllContaintfulTaskData(contentId) {
-    const promise= this.clients.getEntry(contentId)
+    const promise= this.clients.getEntries({'sys.id':contentId, include: 3})
     return   this.taskListObservable=from(promise) //to convert promise to observable
 }
 }
