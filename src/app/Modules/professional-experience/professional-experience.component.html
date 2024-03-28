@@ -1,7 +1,17 @@
-<nav mat-tab-nav-bar class='mat-tab-nav-bar-cust'>
-    <a mat-tab-link class="mat-tab-link-cust" *ngFor="let link of navLinks " [routerLink]="link.link" routerLinkActive
-      #rla="routerLinkActive" [active]="rla.isActive">
-      {{link.label}}
-    </a>
+<nav mat-tab-nav-bar class="mat-tab-nav-bar-cust" [tabPanel]="displayExperence">
+  <a
+    mat-tab-link
+    class="mat-tab-link-cust"
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+    {{ link.label }}
+  </a>
 </nav>
-<router-outlet></router-outlet>
+<mat-tab-nav-panel #displayExperence>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>
+
