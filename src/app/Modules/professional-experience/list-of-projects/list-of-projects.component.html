@@ -1,3 +1,4 @@
+<!--#region information on the top of page -->
 <div class="content">
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-8 information">
@@ -10,18 +11,23 @@
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4">
       <div class="button_set">
-        <button class="button" (click)="dataCompanyService.showAll()">
+        <button class="button" (click)="extendOrCollaspAll(true)">
           {{ "project_Details.Expand_All" | translate }}
         </button>
-        <button class="button" (click)="dataCompanyService.hideAll()">
+        <button class="button" (click)="extendOrCollaspAll(false)">
           {{ "project_Details.Collapse_All" | translate }}
         </button>
       </div>
     </div>
   </div>
 </div>
+<!--#endregion information on the top of page -->
+
+<!--#region projects-->
 <div class="total" *ngFor="let project of projectListContentful; let i = index">
   <div class="full">
+    <!--#region header of projects-->
+
     <div class="role">
       <div class="container-fluid">
         <div class="row">
@@ -35,7 +41,7 @@
             class="col-sm-4 col-md-4 col-lg-4"
             *ngIf="translationEnFrService.language == 'fr'"
           >
-            {{ project.fields.role_fr }}
+            {{ project.fields.roleFr }}
           </div>
 
           <div class="col-sm-4 col-md-4 col-lg-4 company_name">
@@ -53,113 +59,117 @@
         </div>
       </div>
     </div>
+    <!--#endregion header of projects-->
+
+    <!--#region details of projects-->
     <div
       class="project_title"
       *ngFor="let project of project.fields.projects; let j = index"
     >
       <div class="container-fluid line-height">
-        <!-- <div class="row" [ngClass]=" (project.projectdetails.data !='')? 'not_cursor':'for_cursor' "
-          (click)="dataCompanyService.iconChange(i,j)"> -->
         <div class="col-sm-11 col-md-11 col-lg-11">
-          <strong> {{ project.fields.projectIndex }}: </strong>
-          <span *ngIf="translationEnFrService.language == 'en'">{{
-            project.fields.projectNameEn
-          }}</span>
-          <span *ngIf="translationEnFrService.language == 'fr'">{{
-            project.fields.projectNameFr
-          }}</span>
-        </div>
-
-        <div
-          class="section"
-          *ngFor="let section of project.fields.projectsections"
-        >
-          <span *ngIf="translationEnFrService.language == 'en'">
-            <span
-              *ngFor="
-                let ligne of section.fields.projectDescriptionEn.content[0]
-                  .content
-              "
-            >
-              <span
-                *ngIf="ligne.nodeType == 'text'"
-                class="section_paragraph"
-                >{{ ligne.value }}</span
-              >
-              <span
-                *ngIf="ligne.nodeType == 'hyperlink'"
-                class="section_paragraph"
-              >
-                <a href="{{ ligne.data.uri }}" target="_blank">
-                  <span>{{ ligne.content[0].value }} </span>
-                </a>
-              </span>
-            </span>
-          </span>
-          <!-- #region langue francaise-->
-          <span *ngIf="translationEnFrService.language == 'fr'">
-            <span
-              *ngFor="
-                let ligne of section.fields.projectDescriptionFr.content[0]
-                  .content
-              "
-            >
-              <span
-                *ngIf="ligne.nodeType == 'text'"
-                class="section_paragraph"
-                >{{ ligne.value }}</span
-              >
-              <span
-                *ngIf="ligne.nodeType == 'hyperlink'"
-                class="section_paragraph"
-              >
-                <a href="{{ ligne.data.uri }}" target="_blank">
-                  <span>{{ ligne.content[0].value }} </span>
-                </a>
-              </span>
-            </span>
-          </span>
-          <!--#endregion langue francaise -->
-          <div
-            class="img_section_container"
-            *ngFor="let picture of section.fields.picture"
+          <strong> Project {{ project.fields.projectIndex }}: </strong>
+          <span
+            class="project_name"
+            *ngIf="translationEnFrService.language == 'en'"
+            (click)="hideDisplayProject(i, j)"
+            >{{ project.fields.projectNameEn }}</span
           >
-            <img
-              class="img_section"
-              src="            {{ picture.fields.file.url }}
+          <span
+            class="project_name"
+            *ngIf="translationEnFrService.language == 'fr'"
+            (click)="hideDisplayProject(i, j)"
+            >{{ project.fields.projectNameFr }}</span
+          >
+          <i
+            *ngIf="projectListContentful[i].fields.projects[j].visibility"
+            class="fas fa-angle-up icons_Collapse_extend"
+            (click)="hideDisplayProject(i, j)"
+          ></i>
+          <i
+            *ngIf="!projectListContentful[i].fields.projects[j].visibility"
+            class="fas fa-angle-down icons_Collapse_extend"
+            (click)="hideDisplayProject(i, j)"
+          ></i>
+        </div>
+        <div *ngIf="projectListContentful[i].fields.projects[j].visibility">
+          <div
+            class="section"
+            *ngFor="let section of project.fields.projectsections"
+          >
+            <span *ngIf="translationEnFrService.language == 'en'">
+              <span
+                *ngFor="
+                  let ligne of section.fields.projectDescriptionEn.content[0]
+                    .content
+                "
+              >
+                <span
+                  *ngIf="ligne.nodeType == 'text'"
+                  class="section_paragraph"
+                  >{{ ligne.value }}</span
+                >
+                <span
+                  *ngIf="ligne.nodeType == 'hyperlink'"
+                  class="section_paragraph"
+                >
+                  <a href="{{ ligne.data.uri }}" target="_blank">
+                    <span>{{ ligne.content[0].value }} </span>
+                  </a>
+                </span>
+              </span>
+            </span>
+            <!-- #region langue francaise-->
+            <span *ngIf="translationEnFrService.language == 'fr'">
+              <span
+                *ngFor="
+                  let ligne of section.fields.projectDescriptionFr.content[0]
+                    .content
+                "
+              >
+                <span
+                  *ngIf="ligne.nodeType == 'text'"
+                  class="section_paragraph"
+                  >{{ ligne.value }}</span
+                >
+                <span
+                  *ngIf="ligne.nodeType == 'hyperlink'"
+                  class="section_paragraph"
+                >
+                  <a href="{{ ligne.data.uri }}" target="_blank">
+                    <span>{{ ligne.content[0].value }} </span>
+                  </a>
+                </span>
+              </span>
+            </span>
+            <!--#endregion langue francaise -->
+            <div
+              class="img_section_container"
+              *ngFor="let picture of section.fields.picture"
+            >
+              <img
+                class="img_section"
+                src="            {{ picture.fields.file.url }}
 "
-            />
+              />
+            </div>
           </div>
         </div>
 
-        <!-- <div class="col-sm-1 col-md-1 col-lg-1">
-            <div *ngIf="projectC.projectdetails.data !=''">
-              <i *ngIf="projectList[i].projectCompany[j].projectdetails.visible == true" class="fas fa-angle-up"></i>
-              <i *ngIf="projectList[i].projectCompany[j].projectdetails.visible == false" class="fas fa-angle-down"></i>
-            </div>
-          </div> -->
-        <!-- </div> -->
-      </div>
-      <div
-        class="details"
-        *ngIf="
-          projectList[i].projectCompany[j].projectdetails.visible == true &&
-          projectC.projectdetails.data != ''
-        "
-      >
-        <ng-container
-          *ngComponentOutlet="projectC.projectdetails.data"
-        ></ng-container>
+        <!--#endregion details of projects-->
       </div>
     </div>
   </div>
 </div>
+<!--#endregion projects-->
+
+<!--#region buttons to collapse and extend all projects-->
 <div class="button_set">
-  <button class="button" (click)="dataCompanyService.showAll()">
+  <button class="button" (click)="extendOrCollaspAll(true)">
     {{ "project_Details.Expand_All" | translate }}
   </button>
-  <button class="button" (click)="dataCompanyService.hideAll()">
+  <button class="button" (click)="extendOrCollaspAll(false)">
     {{ "project_Details.Collapse_All" | translate }}
   </button>
 </div>
-<!--filter here web mobile software GIS web map-->
+<!--#endregion buttons to collapse and extend all projects-->
