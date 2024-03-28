@@ -1,16 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { DataCompanyService } from '../../../services/data-company.service'
-import { TranslationEnFrService } from '../../../services/translation-en-fr.service';
+import { Component, OnInit } from "@angular/core";
+import { DataCompanyService } from "../../../services/data-company.service";
+import { TranslationEnFrService } from "../../../services/translation-en-fr.service";
 // for the tree
-import { FlatTreeControl } from '@angular/cdk/tree';
-import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
+import { FlatTreeControl } from "@angular/cdk/tree";
+import {
+  MatTreeFlatDataSource,
+  MatTreeFlattener,
+} from "@angular/material/tree";
+
+// import contentful service
+import { ContentfulDataService } from "./../../../services/contentful-data.service";
+import { Entry } from "contentful";
+import * as contentful from "contentful";
+
+import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
 interface CompanyNode {
   name: string;
+  logo?: string;
   children?: CompanyNode[];
-  logo: string;
 }
-
-
 
 /** Flat node with expandable and level information */
 interface ExampleFlatNode {
@@ -18,20 +27,15 @@ interface ExampleFlatNode {
   name: string;
   level: number;
 }
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
+let TREE_DATA: CompanyNode[] = [];
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.scss']
+  selector: "app-tasks",
+  templateUrl: "./tasks.component.html",
+  styleUrls: ["./tasks.component.scss"],
 })
 export class TasksComponent implements OnInit {
-   TREE_DATA: CompanyNode[] = [];
+  private tableCollected: Observable<any>;
+  usedLanguage = this.translationEnFrService.language; // this one should be an observable
   private _transformer = (node: CompanyNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
@@ -39,53 +43,76 @@ export class TasksComponent implements OnInit {
       logo: node.logo,
       level: level,
     };
-  }
+  };
+  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 
   treeControl = new FlatTreeControl<ExampleFlatNode>(
-    node => node.level, node => node.expandable);
+    (node) => node.level,
+    (node) => node.expandable
+  );
 
   treeFlattener = new MatTreeFlattener(
-    this._transformer, node => node.level, node => node.expandable, node => node.children);
+    this._transformer,
+    (node) => node.level,
+    (node) => node.expandable,
+    (node) => node.children
+  );
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
+  projectListContentfulObject = {};
+  public projectListContentful: Array<any> = [];
+  listOfTaskObservable$: Observable<any>;
 
+  constructor(
+    public translationEnFrService: TranslationEnFrService,
+    public contentfulDataService: ContentfulDataService
+  ) {
+    this.usedLanguage = this.translationEnFrService.language;
+    // get data from contentful,
+    this.listOfTasks(environment.contentfulConfig.contentTypeIds.tasks);
 
-  tiles: Tile[] = [
-    { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
-    { text: 'Two', cols: 1, rows: 2, color: 'lightgreen' },
-    { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
-    { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
-  ];
-
-  projectList: Array<any>;
-
-  constructor(public dataCompanyService: DataCompanyService,
-              public translationEnFrService: TranslationEnFrService) {
   }
-  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 
-  designOption = 'table_bootstrap';
+  designOption = "table_bootstrap";
   onChangeEvent(event) {
     this.designOption = event.target.value; // return option1
-
   }
-  transforDataTree() {
-
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.projectList.length; i++) {
-      this.TREE_DATA.push({ name: this.projectList[i].company, logo: this.projectList[i].logo,   children: this.projectList[i].tasks });
-
-    }
-    return this.TREE_DATA;
+  
+  listOfTasks(contenID) {
+    this.contentfulDataService
+      .getAllContaintfulTaskData(contenID)
+      .subscribe((res) => {
+        console.log(res);
+        this.projectListContentfulObject = res.items[0].fields.tasksByRole;
+        console.log('this.projectListContentfulObject');
+        console.log(this.projectListContentfulObject);
+        for (let i in this.projectListContentfulObject) {
+          //Pay attention to the 'in'
+          this.projectListContentful.push(this.projectListContentfulObject[i]);
+          for (let j in this.projectListContentful[i].fields.tasksListEn) {
+            this.projectListContentful[i].fields.tasksListEn[j] = {
+              name: this.projectListContentful[i].fields.tasksListEn[j],
+            };
+          }
+          for (let j in this.projectListContentful[i].fields.taskListFr) {
+            this.projectListContentful[i].fields.taskListFr[j] = {
+              name: this.projectListContentful[i].fields.taskListFr[j],
+            };
+          }
+        }
+        
+        for (let i = 0; i < this.projectListContentful.length; i++) {
+          TREE_DATA.push({
+            name: (this.usedLanguage == 'en' )? this.projectListContentful[i].fields.role : this.projectListContentful[i].fields.roleFr,
+            logo: this.projectListContentful[i].fields.logo.fields.file.url,
+            children: (this.usedLanguage == 'en' )? this.projectListContentful[i].fields.tasksListEn: this.projectListContentful[i].fields.taskListFr,
+          });
+        }
+        this.dataSource.data = TREE_DATA;
+      });
   }
   ngOnInit() {
-    this.projectList = this.dataCompanyService.projectList;
-    this.dataCompanyService.getData();
-    this.transforDataTree();
-    this.dataSource.data = this.TREE_DATA;
-
+    TREE_DATA = [];
   }
-
 }
-

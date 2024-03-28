@@ -51,9 +51,12 @@
         "Expand_All":"Tout Etendre ",
         "Collapse_All":"Tout Réduire"
     },
+    "tasks_information":{
+        "information": "Affichez vos données comme :"
+    },
     "code": {
         "title1": "Aperçu de l'application",
-        "p1": "Ce site web a été développée en utilisant angular8, html5, javascript et scss.",
+        "p1": "Ce site web a été développée en utilisant angular 8 - 17, html5, javascript et scss.",
         "p2": "Ce projet est un example, incluant l'architecture, la conception, le contenu, l'écriture du code et le déploiement de l'application.",
         "p3": "Dans ce projet, j'ai essayé d'utiliser le maximum des outils offerts par angular (utilisation de composant , service, module, interface, routage, liaison de données, demande httpClient get et post, etc.)",
         "p4": "Pour le déploiement, j'ai utilisé firebase (également utilisé pour le stockage et la base de données).",
