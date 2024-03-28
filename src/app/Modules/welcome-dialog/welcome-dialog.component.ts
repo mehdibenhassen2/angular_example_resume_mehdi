@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, Input, Output, OnChanges, EventEmitter } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-welcome-dialog',
   templateUrl: './welcome-dialog.component.html',
@@ -24,7 +25,8 @@ export class WelcomeDialogComponent implements OnInit {
   @Input() showDialog: boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   constructor(private dialogRef: MatDialogRef<WelcomeDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) data) {
+    @Inject(MAT_DIALOG_DATA) data,
+    private router: Router) {
   }
   ngOnInit() {
   }
@@ -33,4 +35,5 @@ export class WelcomeDialogComponent implements OnInit {
     this.showDialog = !this.showDialog;
     this.visibleChange.emit(this.showDialog);
   }
+
 }

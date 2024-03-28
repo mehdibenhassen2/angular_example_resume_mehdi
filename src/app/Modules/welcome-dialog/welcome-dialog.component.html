@@ -5,11 +5,12 @@
   <div class="full">
     <div mat-dialog-content>
 
-      <p> To develop this application, we used Angular 17, HTML5, CSS3.</p>
-      <p>Last update: <b>February 14, 2024</b></p>
+      <p> To develop this application, we used <strong> Angular 17</strong>, HTML5, CSS3 , Contentful 10 , Firebase 10.</p>
+      <p>Last update: <b>March 28, 2024</b></p>
       <p> To download the source code, <a href="https://github.com/mehdibenhassen2/angular_example_resume_mehdi"
           target="_blank">
-          click here</a> or you can navigate to tab 'Code'.</p>
+          click here</a> or you can navigate to <a [routerLink]="['/Code']" (click) ='close()'>
+          Code</a>.</p>
     </div>
     <button class="button_modal" (click)="close()">Close</button>
   </div>
